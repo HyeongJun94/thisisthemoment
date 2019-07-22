@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 
-const HeaderContainer = ({ xsMatches, mdMatches }) => {
+const HeaderContainer = ({ mediaAndroid, mediaPC }) => {
   const [android, setAndroid] = useState(false);
   useEffect(() => {
-    if (xsMatches) {
-      setAndroid(true); 
+    if (mediaAndroid) {
+      setAndroid(true);
     } else {
       setAndroid(false);
     }

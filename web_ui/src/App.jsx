@@ -3,33 +3,50 @@ import React from 'react';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { CssBaseline } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import { CssBaseline, makeStyles } from '@material-ui/core';
 
 import HeaderContainer from './container/HeaderContainer.jsx'
-import Title from './components/Title.jsx'
-import Content from './components/Content.jsx'
+import ContentContainer from './container/ContentContainer.jsx';
+import FooterContainer from './container/FooterContainer';
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    padding: 0,
+    margin: '0 auto 0 auto',
+  },
+
+}));
 
 export default function App() {
   const theme = useTheme();
   // 이거 어쩔때 rendering 할까?
-  const xsMatches = useMediaQuery(theme.breakpoints.down('xs'));
-  const mdMatches = useMediaQuery(theme.breakpoints.down('md'));
+  const mediaAndroid = useMediaQuery(theme.breakpoints.down('360'));
+  const mediaPC = useMediaQuery(theme.breakpoints.down('1280'));
 
-  const width = xsMatches ? 'sm' : 'lg';
+  const width = mediaAndroid ? 'xs' : 'lg';
+
+  const classes = useStyles();
 
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth={width}>
-        {/* <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} /> */}
-        <div>
-          <HeaderContainer
-            xsMatches={xsMatches}
-            mdMatches={mdMatches}
-          />
-          <Content />
-        </div>
+      <Container
+        fixed={true}
+        maxWidth={width}
+        className={classes.root}
+      >
+        <HeaderContainer
+          mediaAndroid={mediaAndroid}
+          mediaPC={mediaPC}
+        />
+        <ContentContainer
+          mediaAndroid={mediaAndroid}
+          mediaPC={mediaPC}
+        />
+        <FooterContainer
+          mediaAndroid={mediaAndroid}
+          mediaPC={mediaPC}
+        />
       </Container>
     </React.Fragment>
   );
