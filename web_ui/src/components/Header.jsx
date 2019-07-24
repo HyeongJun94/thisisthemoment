@@ -16,7 +16,7 @@ const mediaSize = '360';
 const useStyles = makeStyles(theme => ({
   root: {
     '& *' : {
-      // border: '1px solid black',
+      border: '1px solid black',
       margin: '0px',
       padding: '0px',
       fontSize: 0,
@@ -82,6 +82,9 @@ const useStyles = makeStyles(theme => ({
     },
   },
   bannerImage: {
+    // display: 'absolute',
+    // width: '2000px',
+
     display: 'block',
     margin: '0 auto 0 auto',
     width: '100%',

@@ -16,7 +16,7 @@ import LastBannerAndroid from '../static/images/Android/lastBanner.png';
 
 const ANDROID = 1;
 const PC = 0;
-const mediaSize = 360;
+const mediaSize = 700;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,10 +24,10 @@ const useStyles = makeStyles(theme => ({
     padding: 0,
 
     '& *': {
-      border: '1px solid black',
+      // border: '1px solid black',
       margin: 0,
       padding: 0,
-      fontSize: 10,
+      // fontSize: 10,
     },
   },
   boldText: {
@@ -415,7 +415,7 @@ const useStyles = makeStyles(theme => ({
       '& line': {
         // display: 'flex',
         position: 'absolute',
-        width: '100%',
+        width: '1280px',
         height: 0,
         border: '0.5px solid #ffffff',
         [theme.breakpoints.up(mediaSize)]: {
@@ -615,7 +615,6 @@ function DrawWeddingHall(classes, media) {
       </div>
       <div>
         <line />
-        {/* <line2 /> */}
         <div1>
           {weddingHallLeft.map(weddingHall => (
             <button>{weddingHall.name}</button>

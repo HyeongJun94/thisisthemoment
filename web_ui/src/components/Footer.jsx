@@ -26,11 +26,12 @@ const useStyles = makeStyles(theme => ({
       // border: '10px solid black',
     },
     '& img': {
-      display: 'flex',
+      display: 'block',
       margin: 'auto',
+      width: '100%',
     },
     '& div': {
-      
+      // border: '10px solid black',
       [theme.breakpoints.up(mediaSize)]: {
         margin: '32px',
       },
