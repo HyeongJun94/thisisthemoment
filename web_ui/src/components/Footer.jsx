@@ -11,10 +11,13 @@ const mediaSize = '360';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    borderTop: '6px solid #707070',
+    maxWidth: '1280px',
+    margin: '0 auto 0 auto',
     '& *': {
-      border: '1px solid black',
-      margin: '0px',
-      padding: '0px',
+      // border: '1px solid black',
+      margin: '0',
+      padding: '0',
       fontSize: 0,
     },
   },
