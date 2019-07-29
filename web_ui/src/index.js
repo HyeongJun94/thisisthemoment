@@ -15,6 +15,7 @@ const store = createStore(rootReducer, composeWithDevTools());
 const theme = createMuiTheme({
   spacing: factor => [0, 4, 8, 6][factor],
 });
+// Development version
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <Provider store={store}>

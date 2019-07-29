@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import ShinyoungPC from '../static/images/PC/shinyoung.png';
 import ShinyoungAndroid from '../static/images/Android/shinyoung.png';
 import MiddleBannerPC from '../static/images/PC/middleBanner.png';
+import MiddleBannerPC2X from '../static/images/PC/middleBanner@2x.png';
 import MiddleBannerAndroid from '../static/images/Android/middleBanner.png';
 import WeddingSnapPC from '../static/images/PC/weddingsnap.png';
 import WeddingSnapAndroid from '../static/images/Android/weddingsnap.png';
@@ -20,9 +21,10 @@ const mediaSize = 700;
 
 const useStyles = makeStyles(theme => ({
   root: {
-    margin: 0,
+    margin: '0 auto 0 auto',
     padding: 0,
-
+    maxWidth: '1280px',
+    // border: '10px solid black',
     '& *': {
       // border: '1px solid black',
       margin: 0,
@@ -35,7 +37,7 @@ const useStyles = makeStyles(theme => ({
   },
   wedding: {
     textAlign: 'center',
-    fontFamily: 'PlayfairDisplaySC',
+    fontFamily: 'Playfair Display',
     color: '#b4a570',
     [theme.breakpoints.up(mediaSize)]: {
       fontSize: '30px',
@@ -95,8 +97,9 @@ const useStyles = makeStyles(theme => ({
         },
       },
 
-      '& button': {
-        display: 'block',
+      '& a': {
+        // display: 'block',
+        textDecoration: 'none',
         border: '1px solid #707070',
         backgroundColor: 'transparent',
         color: '#707070',
@@ -128,9 +131,12 @@ const useStyles = makeStyles(theme => ({
   middleBanner: {
     display: 'grid',
     backgroundColor: '#707070',
+    maxWidth: '1920px',
+    // border: '1px solid black',
     [theme.breakpoints.up(mediaSize)]: {
       marginTop: '56px',
       gridTemplateColumns: '62.5% 37.5%',
+      // gridTemplateColumns: 'auto auto',
     },
     [theme.breakpoints.down(mediaSize)]: {
       marginTop: '16px',
@@ -149,6 +155,7 @@ const useStyles = makeStyles(theme => ({
         color: '#707070',
         [theme.breakpoints.up(mediaSize)]: {
           fontSize: '16px',
+          lineHeight: '0.60',
         },
         [theme.breakpoints.down(mediaSize)]: {
           fontSize: '12px',
@@ -238,7 +245,7 @@ const useStyles = makeStyles(theme => ({
     },
     '& p': {
       textAlign: 'center',
-      fontFamily: 'PlayfairDisplaySC',
+      fontFamily: 'Playfair Display',
       color: '#b4a570',
       writingMode: 'vertical-lr',
       marginLeft: 'auto',
@@ -276,7 +283,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: '12px',
       },
       '& h1': {
-        fontFamily: 'PlayfairDisplaySC',
+        fontFamily: 'Playfair Display',
         textDecoration: 'underline',
         [theme.breakpoints.up(mediaSize)]: {
           fontSize: '16px',
@@ -335,7 +342,7 @@ const useStyles = makeStyles(theme => ({
         gridArea: 'item2',
       },
       '& h1': {
-        fontFamily: 'PlayfairDisplaySC',
+        fontFamily: 'Playfair Display',
         textDecoration: 'underline',
         [theme.breakpoints.up(mediaSize)]: {
           fontSize: '16px',
@@ -445,6 +452,7 @@ const useStyles = makeStyles(theme => ({
         fontFamily: 'NotoSansCJKkr',
         fontWeight: '300',
         color: '#707070',
+        border: 'none',
         [theme.breakpoints.up(mediaSize)]: {
           width: '80px',
           height: '80px',
@@ -503,6 +511,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   kakao: {
+    textAlign: 'center',
     [theme.breakpoints.up(mediaSize)]: {
       margin: '80px',
     },
@@ -521,20 +530,19 @@ const useStyles = makeStyles(theme => ({
         fontSize: '12px',
       },
     },
-    '& button': {
-      display: 'block',
+    '& a': {
+      textDecoration: 'none',
       backgroundColor: 'transparent',
-      border: '0.2px solid #707070',
+      border: '1px solid #707070',
       borderRadius: '30px',
       color: '#707070',
       [theme.breakpoints.up(mediaSize)]: {
+        lineHeight: '2',
         padding: '8px',
-        margin: '8px auto 8px auto',
         fontSize: '16px',
       },
       [theme.breakpoints.down(mediaSize)]: {
         padding: '4px',
-        margin: '4px auto 4px auto',
         fontSize: '10px',
       },
     },
@@ -544,9 +552,9 @@ const useStyles = makeStyles(theme => ({
 function DrawKakao(classes) {
   return (
     <div className={classes.kakao}>
-      <p>예약문의는 카카오톡 플러스친구로 문의주시면</p>
+      <p>예약문의는 톡 플러스친구로 문의주시면</p>
       <p>친절하게 상담 도와드리겠습니다.</p>
-      <button>1:1 카카오톡 상담 시작하기</button>
+      <a href="https://pf.kakao.com/_xmXvWC/chat">1:1 카카오톡 상담 시작하기</a>
     </div>
   );
 }
@@ -585,7 +593,7 @@ function DrawWeddingHall(classes, media) {
     return (
       <div className={classes.weddingHall}>
         <div>
-          진정한 웨딩홀
+          진행한 웨딩홀
         </div>
         <div>
           <line />
@@ -611,7 +619,7 @@ function DrawWeddingHall(classes, media) {
   return (
     <div className={classes.weddingHall}>
       <div>
-        진정한 웨딩홀
+        진행한 웨딩홀
       </div>
       <div>
         <line />
@@ -764,6 +772,8 @@ function DrawMiddleBanner(classes, media) {
         <img
           src={media === ANDROID ? MiddleBannerAndroid : MiddleBannerPC}
           alt=""
+          // srcSet={`${MiddleBannerPC2X} 1280w`}
+          srcSet={media ===ANDROID ? MiddleBannerAndroid : `${MiddleBannerPC2X} 1280w`} 
         />
       </div>
       {media === ANDROID ? DrawMiddleBannerAndroid(classes) : DrawMiddleBannerPC(classes)}
@@ -777,13 +787,13 @@ function DraswShinyoungInfo(classes) {
       <div>
         <p>지금이순간 포토부스는 연예인이 애용하는 포토부스입니다.</p>
       </div>
-      <button>사용한 연예인 보러가기</button>
+      <a href="https://www.instagram.com/p/BqCgH2cnXib/"> 사용한 연예인 보러가기</a>
       <div>
         <p>또한, 사회적 공신력이 있는 소설 크라우드 펀딩 플랫폼</p>
         <p>'와디즈'에서 크라우드 펀딩을 성공하였습니다.</p>
         <p>이를 통하여, 저희는 우수함과 신뢰를 고객님들께 검증 받았습니다.</p>
       </div>
-      <button>와디즈 크라우드 펀딩 보러가기</button>
+      <a href="https://www.wadiz.kr/web/campaign/detail/29385">와디즈 크라우드 펀딩 보러가기</a>
     </div>
   );
 }
@@ -852,16 +862,26 @@ function DrawAndroid() {
 function DrawPC() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      {DrawWedding(classes)}
-      {DrawShinyoung(classes, PC)}
-      {DrawMiddleBanner(classes, PC)}
-      {DrawSnap(classes)}
-      {DrawWeddingSnap(classes, PC)}
-      {DrawFinalBanner(classes, PC)}
-      {DrawWeddingHall(classes, PC)}
-      {DrawLastBanner(classes, PC)}
-      {DrawKakao(classes)}
+    <div>
+      <div className={classes.root}>
+        {DrawWedding(classes)}
+        {DrawShinyoung(classes, PC)}
+      </div>
+      <div>
+        {DrawMiddleBanner(classes, PC)}
+      </div>
+      <div className={classes.root}>
+        {DrawSnap(classes)}
+        {DrawWeddingSnap(classes, PC)}
+        {DrawFinalBanner(classes, PC)}
+      </div>
+      <div>
+        {DrawWeddingHall(classes, PC)}
+        {DrawLastBanner(classes, PC)}
+      </div>
+      <div className={classes.root}>
+        {DrawKakao(classes)}
+      </div>
     </div>
   );
 }

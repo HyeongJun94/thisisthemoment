@@ -16,7 +16,7 @@ const mediaSize = '360';
 const useStyles = makeStyles(theme => ({
   root: {
     '& *' : {
-      border: '1px solid black',
+      // border: '1px solid black',
       margin: '0px',
       padding: '0px',
       fontSize: 0,
@@ -47,12 +47,6 @@ const useStyles = makeStyles(theme => ({
     margin: '0 auto 0 auto',
     fontSize: '10px',
     maxWidth: '1280px',
-    // [theme.breakpoints.up('1280')]: {
-    //   width: '1280px',
-    // },
-    // [theme.breakpoints.down('1280')]: {
-    //   width: '100%',
-    // },
     '& div': {
       [theme.breakpoints.up(mediaSize)]: {
         marginLeft: 10 * theme.spacing(2),
@@ -88,6 +82,7 @@ const useStyles = makeStyles(theme => ({
     display: 'block',
     margin: '0 auto 0 auto',
     width: '100%',
+    // border: '10px solid black',
     // maxWidth: '1280px',
   },
   logo: {
