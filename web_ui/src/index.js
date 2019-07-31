@@ -12,10 +12,15 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const store = createStore(rootReducer, composeWithDevTools());
+console.log(store.getState());
 const theme = createMuiTheme({
   spacing: factor => [0, 4, 8, 6][factor],
 });
+<<<<<<< HEAD
 // Release Version
+=======
+// Development version
+>>>>>>> development
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <Provider store={store}>

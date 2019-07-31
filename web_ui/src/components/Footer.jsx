@@ -1,13 +1,11 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
+import global from '../modules/global';
+
 
 import FooterLogoPC from '../static/images/PC/footerLogo.png';
 import FooterLogoAndroid from '../static/images/Android/footerLogo.png';
-
-const ANDROID = 1;
-const PC = 0;
-const mediaSize = '360';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,10 +33,10 @@ const useStyles = makeStyles(theme => ({
     },
     '& div': {
       // border: '10px solid black',
-      [theme.breakpoints.up(mediaSize)]: {
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
         margin: '32px',
       },
-      [theme.breakpoints.down(mediaSize)]: {
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         margin: '8px',
       },
     },
@@ -46,10 +44,10 @@ const useStyles = makeStyles(theme => ({
       fontFamily: 'NotoSansCJKkr',
       color: '#707070',
       fontWeight: '300',
-      [theme.breakpoints.up(mediaSize)]: {
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
         fontSize: '14px',
       },
-      [theme.breakpoints.down(mediaSize)]: {
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         fontSize: '6px',
       },
     },
@@ -61,7 +59,7 @@ function DrawFooter(classes, media) {
     <div className={classes.footer}>
       <div>
         <img
-          src={media === ANDROID ? FooterLogoAndroid : FooterLogoPC}
+          src={media === global.ANDROID ? FooterLogoAndroid : FooterLogoPC}
           alt=""
         />
       </div>
@@ -80,7 +78,7 @@ function DrawAndroid() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      {DrawFooter(classes, ANDROID)}
+      {DrawFooter(classes, global.ANDROID)}
     </div>
     
   );
@@ -90,7 +88,7 @@ function DrawPC() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      {DrawFooter(classes, PC)}
+      {DrawFooter(classes, global.PC)}
     </div>
   );
 }

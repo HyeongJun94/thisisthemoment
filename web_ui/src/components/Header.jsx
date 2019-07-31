@@ -1,17 +1,17 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
+import global from '../modules/global';
+
 import Toolbar from '@material-ui/core/Toolbar';
 import AppBar from '@material-ui/core/AppBar';
 
-import BannerPC from '../static/images/PC/banner.png';
-import BannerAndroid from '../static/images/Android/banner.png';
+import BannerPC from '../static/images/PC/mainBanner.png';
+import BannerPC2X from '../static/images/PC/mainBanner@2x.png';
+import BannerAndroid from '../static/images/Android/mainBanner.png';
+import BannerAndroid2X from '../static/images/Android/mainBanner@2x.png';
+
 import LogoAndroid from '../static/images/Android/logo.jpg';
-
-const ANDROID = 1;
-const PC = 0;
-
-const mediaSize = '360';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   appBar: {
     backgroundColor: 'transparent',
     boxShadow: 'none',
-    [theme.breakpoints.up(mediaSize)]: {
+    [theme.breakpoints.up(global.TabletMinWidth)]: {
       marginTop: 10 * theme.spacing(2),
       fontSize: '28px',
       fontWeight: 'bold',
@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
       letterSpacing: '-1.4px',
       color: '#ffffff',
     },
-    [theme.breakpoints.down(mediaSize)]: {
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
       margin: '104px 0 0 0',
       borderBottom: '10px solid #707070',
       fontSize: 20,
@@ -48,11 +48,11 @@ const useStyles = makeStyles(theme => ({
     fontSize: '10px',
     maxWidth: '1280px',
     '& div': {
-      [theme.breakpoints.up(mediaSize)]: {
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
         marginLeft: 10 * theme.spacing(2),
         width: '1280px',
       },
-      [theme.breakpoints.down(mediaSize)]: {
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         marginLeft: theme.spacing(1) * 3,
         width: '100%',
       },
@@ -60,13 +60,13 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: 'transparent',
         fontFamily: 'NotoSans',
         border: 'none',
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(global.TabletMinWidth)]: {
           marginRight: 2 * theme.spacing(2),
           fontSize: '20px',
           color: '#ffffff',
           fontWeight: 'bold',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
           marginRight: 3 * theme.spacing(1),
           fontSize: '14px',
           color: '#707070',
@@ -96,13 +96,39 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+function DrawBannerAndroid(classes) {
+  return (
+    <picture>
+      <source media="(max-width: 360px)" srcSet={BannerAndroid} />
+      <source media="(min-width: 360px)" srcSet={BannerAndroid2X} />
+      <img
+        className={classes.bannerImage}
+        src={BannerPC}
+        alt=""
+      />
+    </picture>
+  );
+}
+
+function DrawBannerPC(classes) {
+  return (
+    <picture>
+      <source media="(max-width: 1280px)" srcSet={BannerPC}/>
+      <source media="(min-width: 1280px)" srcSet={BannerPC2X}/>
+      <img
+        className={classes.bannerImage}
+        src={BannerPC}
+        alt=""
+      />
+    </picture>
+  );
+}
+
 function DrawBanner(classes, media) {
   return (
-    <img
-      className={classes.bannerImage}
-      src={media === ANDROID ? BannerAndroid : BannerPC}
-      alt=""
-    />
+    <div>
+      { media === global.ANDROID ? DrawBannerAndroid(classes) : DrawBannerPC(classes) }
+    </div>
   );
 }
 
@@ -130,7 +156,7 @@ function DrawAndroid() {
           ))}
         </div>
       </Toolbar>
-      {DrawBanner(classes, ANDROID)}
+      {DrawBanner(classes, global.ANDROID)}
     </div>
   );
 }
@@ -158,7 +184,7 @@ function DrawPC() {
           </div>
         </Toolbar>
       </AppBar>
-      {DrawBanner(classes, PC)}
+      {DrawBanner(classes, global.PC)}
     </div>
   );
 }
