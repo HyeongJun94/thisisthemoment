@@ -1,35 +1,43 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
+import global from '../modules/global';
 
+// images
 import ShinyoungPC from '../static/images/PC/shinyoung.png';
+import ShinyoungPC2X from '../static/images/PC/shinyoung@2x.png';
 import ShinyoungAndroid from '../static/images/Android/shinyoung.png';
+import ShinyoungAndroid2X from '../static/images/Android/shinyoung@2x.png';
 import MiddleBannerPC from '../static/images/PC/middleBanner.png';
 import MiddleBannerPC2X from '../static/images/PC/middleBanner@2x.png';
 import MiddleBannerAndroid from '../static/images/Android/middleBanner.png';
+import MiddleBannerAndroid2X from '../static/images/Android/middleBanner@2x.png';
 import WeddingSnapPC from '../static/images/PC/weddingsnap.png';
+import WeddingSnapPC2X from '../static/images/PC/weddingsnap@2x.png';
 import WeddingSnapAndroid from '../static/images/Android/weddingsnap.png';
+import WeddingSnapAndroid2X from '../static/images/Android/weddingsnap@2x.png';
 import FinalBannerPC from '../static/images/PC/finalBanner.png';
+// import FinalBannerPC2X from '../static/images/PC/finalBanner@2x.png';
 import FinalBannerAndroid from '../static/images/Android/finalBanner.png';
+import FinalBannerAndroid2X from '../static/images/Android/finalBanner@2x.png';
 import LastBannerPC from '../static/images/PC/lastBanner.png';
+import LastBannerPC2X from '../static/images/PC/lastBanner@2x.png';
 import LastBannerAndroid from '../static/images/Android/lastBanner.png';
+import LastBannerAndroid2X from '../static/images/Android/lastBanner@2x.png';
 
 
-const ANDROID = 1;
-const PC = 0;
-const mediaSize = 700;
+const gridSize = 600;
 
 const useStyles = makeStyles(theme => ({
   root: {
     margin: '0 auto 0 auto',
     padding: 0,
-    maxWidth: '1280px',
-    // border: '10px solid black',
+    [theme.breakpoints.up(global.TabletMinWidth)]: {
+      maxWidth: '1280px',
+    },
     '& *': {
-      // border: '1px solid black',
       margin: 0,
       padding: 0,
-      // fontSize: 10,
     },
   },
   boldText: {
@@ -39,58 +47,62 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     fontFamily: 'Playfair Display',
     color: '#b4a570',
-    [theme.breakpoints.up(mediaSize)]: {
+    [theme.breakpoints.up(global.TabletMinWidth)]: {
       fontSize: '30px',
       marginTop: '56px',
     },
-    [theme.breakpoints.down(mediaSize)]: {
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
       fontSize: '14px',
       marginTop: '20px',
     },
     '& div': {
       fontFamily: 'NotoSansCJKkr',
       color: '#707070',
-      [theme.breakpoints.up(mediaSize)]: {
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
         fontSize: '20px',
       },
-      [theme.breakpoints.down(mediaSize)]: {
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         fontSize: '12px',
       },
     },
   },
 
   shinyong: {
-    [theme.breakpoints.up(mediaSize)]: {
+    [theme.breakpoints.up(global.TabletMinWidth)]: {
       marginTop: '56px',
       display: 'grid',
       gridTemplateColumns: '50% 50%',
     },
-    [theme.breakpoints.down(mediaSize)]: {
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
       marginTop: '20px',
     },
 
     '& div': {
       // border: '10px solid black',
       margin: 'auto',
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
+        textAlign: 'center',
+        marginTop: '8px',
+      },
       '& img': {
         width: '100%',
       },
       '& div': {
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(global.TabletMinWidth)]: {
           marginTop: '8px',
           marginBottom: '8px',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
           marginTop: '4px',
           marginBottom: '4px',
         },
         '& p': {
           fontFamily: 'NotoSansCJKkr',
           color: '#707070',
-          [theme.breakpoints.up(mediaSize)]: {
+          [theme.breakpoints.up(global.TabletMinWidth)]: {
             fontSize: '16px',
           },
-          [theme.breakpoints.down(mediaSize)]: {
+          [theme.breakpoints.down(global.TabletMinWidth)]: {
             fontSize: '12px',
             textAlign: 'center',
           },
@@ -103,12 +115,12 @@ const useStyles = makeStyles(theme => ({
         border: '1px solid #707070',
         backgroundColor: 'transparent',
         color: '#707070',
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(global.TabletMinWidth)]: {
           padding: '8px',
           borderRadius: '20px',
           fontSize: '14px',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
           padding: '4px',
           borderRadius: '30px',
           fontSize: '10px',
@@ -122,23 +134,23 @@ const useStyles = makeStyles(theme => ({
   shinyoungImg: {
     display: 'block',
     width: '100%',
-    [theme.breakpoints.up(mediaSize)]: {
+    [theme.breakpoints.up(global.TabletMinWidth)]: {
     },
-    [theme.breakpoints.down(mediaSize)]: {
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
     },
   },
 
   middleBanner: {
     display: 'grid',
     backgroundColor: '#707070',
-    maxWidth: '1920px',
+    maxWidth: '100%',
     // border: '1px solid black',
-    [theme.breakpoints.up(mediaSize)]: {
+    [theme.breakpoints.up(global.TabletMinWidth)]: {
       marginTop: '56px',
       gridTemplateColumns: '62.5% 37.5%',
       // gridTemplateColumns: 'auto auto',
     },
-    [theme.breakpoints.down(mediaSize)]: {
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
       marginTop: '16px',
       gridTemplateRows: 'auto auto',
     },
@@ -153,11 +165,11 @@ const useStyles = makeStyles(theme => ({
       '& div': {
         fontFamily: 'NotoSansCJKkr',
         color: '#707070',
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(global.TabletMinWidth)]: {
           fontSize: '16px',
           lineHeight: '0.60',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
           fontSize: '12px',
         },
         '& h': {
@@ -166,10 +178,10 @@ const useStyles = makeStyles(theme => ({
           fontWeight: 'bold',
           color: '#ffffff',
           fontFamily: 'NotoSansKR',
-          [theme.breakpoints.up(mediaSize)]: {
+          [theme.breakpoints.up(global.TabletMinWidth)]: {
             fontSize: '26px',
           },
-          [theme.breakpoints.down(mediaSize)]: {
+          [theme.breakpoints.down(global.TabletMinWidth)]: {
             fontSize: '14px',
           },
         },
@@ -178,10 +190,10 @@ const useStyles = makeStyles(theme => ({
           fontFamily: 'NotoSansCJKkr',
           color: '#ffffff',
           textAlign: 'center',
-          [theme.breakpoints.up(mediaSize)]: {
+          [theme.breakpoints.up(global.TabletMinWidth)]: {
             fontSize: '16px',
           },
-          [theme.breakpoints.down(mediaSize)]: {
+          [theme.breakpoints.down(global.TabletMinWidth)]: {
             fontSize: '12px',
           },
         },
@@ -192,10 +204,10 @@ const useStyles = makeStyles(theme => ({
           color: '#ffffff',
           textAlign: 'center',
           fontWeight: 'bold',
-          [theme.breakpoints.up(mediaSize)]: {
+          [theme.breakpoints.up(global.TabletMinWidth)]: {
             fontSize: '16px',
           },
-          [theme.breakpoints.down(mediaSize)]: {
+          [theme.breakpoints.down(global.TabletMinWidth)]: {
             fontSize: '12px',
           },
         },
@@ -206,12 +218,12 @@ const useStyles = makeStyles(theme => ({
         border: '1px solid #707070',
         backgroundColor: 'transparent',
         color: '#707070',
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(global.TabletMinWidth)]: {
           padding: '8px',
           borderRadius: '20px',
           fontSize: '14px',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
           padding: '4px',
           borderRadius: '30px',
           fontSize: '10px',
@@ -223,10 +235,10 @@ const useStyles = makeStyles(theme => ({
   },
 
   snap: {
-    [theme.breakpoints.up(mediaSize)]: {
+    [theme.breakpoints.up(global.TabletMinWidth)]: {
       marginTop: '40px',
     },
-    [theme.breakpoints.down(mediaSize)]: {
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
       marginTop: '12px',
     },
     '& div': {
@@ -235,11 +247,11 @@ const useStyles = makeStyles(theme => ({
       marginRight: 'auto',
       border: '0.5px solid #b4a570',
       width: '0px',
-      [theme.breakpoints.up(mediaSize)]: {
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
         height: '100px',
         
       },
-      [theme.breakpoints.down(mediaSize)]: {
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         height: '50px',
       },
     },
@@ -251,21 +263,21 @@ const useStyles = makeStyles(theme => ({
       marginLeft: 'auto',
       marginRight: 'auto',
       // transform: 'rotate(90deg)',
-      [theme.breakpoints.up(mediaSize)]: {
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
         marginTop: '8px',
         fontSize: '30px',
       },
-      [theme.breakpoints.down(mediaSize)]: {
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         marginTop: '8px',
         fontSize: '12px',
       },
     },
   },
   weddingSnap: {
-    [theme.breakpoints.up(mediaSize)]: {
+    [theme.breakpoints.up(global.TabletMinWidth)]: {
       marginTop: '32px',
     },
-    [theme.breakpoints.down(mediaSize)]: {
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
       marginTop: '16px',
     },
 
@@ -276,31 +288,31 @@ const useStyles = makeStyles(theme => ({
     '& div': {
       textAlign: 'center',
       color: '#707070',
-      [theme.breakpoints.up(mediaSize)]: {
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
         marginTop: '64px',
       },
-      [theme.breakpoints.down(mediaSize)]: {
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         marginTop: '12px',
       },
       '& h1': {
         fontFamily: 'Playfair Display',
         textDecoration: 'underline',
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(global.TabletMinWidth)]: {
           fontSize: '16px',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
           fontSize: '10px',
         },
       },
       '& h2': {
         fontFamily: 'NotoSansCJKkr',
         fontWeight: 'bold',
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(global.TabletMinWidth)]: {
           marginTop: '8px',
           marginBottom: '8px',
           fontSize: '24px',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
           marginTop: '4px',
           marginBottom: '4px',
           fontSize: '14px',
@@ -308,10 +320,10 @@ const useStyles = makeStyles(theme => ({
       },
       '& p': {
         fontFamily: 'NotoSansCJKkr',
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(global.TabletMinWidth)]: {
           fontSize: '16px',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
           fontSize: '12px',
         },
       },
@@ -319,11 +331,11 @@ const useStyles = makeStyles(theme => ({
   },
   finalBanner: {
     display: 'grid',
-    [theme.breakpoints.up(mediaSize)]: {
+    [theme.breakpoints.up(global.TabletMinWidth)]: {
       gridTemplateColumns: '50% 50%',
       marginTop: '64px',
     },
-    [theme.breakpoints.down(mediaSize)]: {
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
       gridTemplateAreas: ' "item1" "item2"',
       gridTemplateRows: '1fr auto',
       marginTop: '12px',
@@ -332,10 +344,10 @@ const useStyles = makeStyles(theme => ({
       // textAlign: 'center',
       color: '#707070',
       // border: '10px solid black',
-      [theme.breakpoints.up(mediaSize)]: {
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
         margin: 'auto',
       },
-      [theme.breakpoints.down(mediaSize)]: {
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         textAlign: 'center',
         margin: '0 auto 0 auto',
         marginTop: '12px',
@@ -344,22 +356,22 @@ const useStyles = makeStyles(theme => ({
       '& h1': {
         fontFamily: 'Playfair Display',
         textDecoration: 'underline',
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(global.TabletMinWidth)]: {
           fontSize: '16px',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
           fontSize: '10px',
         },
       },
       '& h2': {
         fontFamily: 'NotoSansCJKkr',
         fontWeight: 'bold',
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(global.TabletMinWidth)]: {
           marginTop: '8px',
           marginBottom: '16px',
           fontSize: '24px',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
           marginTop: '4px',
           marginBottom: '8px',
           fontSize: '14px',
@@ -367,10 +379,10 @@ const useStyles = makeStyles(theme => ({
       },
       '& p': {
         fontFamily: 'NotoSansCJKkr',
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(global.TabletMinWidth)]: {
           fontSize: '16px',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
           fontSize: '12px',
         },
       },
@@ -378,11 +390,15 @@ const useStyles = makeStyles(theme => ({
 
     '& div:nth-child(2)': {
       margin: 'auto',
-      [theme.breakpoints.up(mediaSize)]: {
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
 
       },
-      [theme.breakpoints.down(mediaSize)]: {
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         // gridArea: 'item1',
+      },
+
+      '& img': {
+        width: '100%',
       },
     },
   },
@@ -391,55 +407,62 @@ const useStyles = makeStyles(theme => ({
     gridTemplateRows: 'auto auto auto',
     backgroundColor: '#b4a570',
     zIndex: '-2',
-    [theme.breakpoints.up(mediaSize)]: {
+    // border: '10px solid black',
+    [theme.breakpoints.up(global.TabletMinWidth)]: {
 
     },
-    [theme.breakpoints.down(mediaSize)]: {
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
+      marginTop: '12px',
     },
     '& div:nth-child(1)': {
       fontFamily: 'NotoSansCJKkr',
       fontWeight: 'bold',
       color: '#ffffff',
       textAlign: 'center',
-      [theme.breakpoints.up(mediaSize)]: {
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
         fontSize: '20px',
         marginTop: '24px',
         marginBottom: '24px',
       },
-      [theme.breakpoints.down(mediaSize)]: {
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         fontSize: '10px',
         margin: '8px',
       },
     },
     '& div:nth-child(2)': {
       display: 'grid',
-      [theme.breakpoints.up(mediaSize)]: {
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
         gridTemplateColumns: '50% 50%',
       },
-      [theme.breakpoints.down(mediaSize)]: {
+
+      [theme.breakpoints.up(gridSize)]: {
+        gridTemplateColumns: '50% 50%',
+      },
+      [theme.breakpoints.down(gridSize)]: {
         gridTemplateRows: 'auto auto',
       },
+
       '& line': {
         // display: 'flex',
         position: 'absolute',
-        width: '1280px',
+        width: '100%',
         height: 0,
         border: '0.5px solid #ffffff',
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(global.TabletMinWidth)]: {
           marginTop: '40px',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
           marginTop: '20px',
         },
       },
       '& line2': {
+        position: 'absolute',
         width: 0,
         height: 0,
-        [theme.breakpoints.down(mediaSize)]: {
-          position: 'absolute',
+        [theme.breakpoints.down(gridSize)]: {
           width: '100%',
           height: 0,
-          border: '1px solid #ffffff',
+          border: '0.5px solid #ffffff',
           marginTop: '60px',
         },
       },
@@ -453,7 +476,7 @@ const useStyles = makeStyles(theme => ({
         fontWeight: '300',
         color: '#707070',
         border: 'none',
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(global.TabletMinWidth)]: {
           width: '80px',
           height: '80px',
           fontSize: '14px',
@@ -461,7 +484,7 @@ const useStyles = makeStyles(theme => ({
           marginRight: theme.spacing(3),
           // gridTemplateColumns: '50% 50%',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
           width: '40px',
           height: '40px',
           fontSize: '8px',
@@ -472,19 +495,20 @@ const useStyles = makeStyles(theme => ({
       },
 
       '& div1': {
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(gridSize)]: {
           marginLeft: 'auto',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(gridSize)]: {
           margin: 'auto',
         },
       },
       '& div2': {
-        [theme.breakpoints.up(mediaSize)]: {
+        [theme.breakpoints.up(gridSize)]: {
           marginRight: 'auto',
         },
-        [theme.breakpoints.down(mediaSize)]: {
+        [theme.breakpoints.down(gridSize)]: {
           margin: 'auto',
+          marginTop: '8px',
         },
       },
     },
@@ -492,17 +516,19 @@ const useStyles = makeStyles(theme => ({
       fontFamily: 'NotoSansCJKkr',
       color: '#ffffff',
       textAlign: 'center',
-      [theme.breakpoints.up(mediaSize)]: {
+      // border: '10px solid black',
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
         fontSize: '16px',
         margin: '8px',
       },
-      [theme.breakpoints.down(mediaSize)]: {
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         fontSize: '8px',
         margin: '4px',
       },
     },
   },
   lastBanner: {
+    margin: 0,
     '& img': {
       display: 'block',
       marginLeft: 'auto',
@@ -512,10 +538,10 @@ const useStyles = makeStyles(theme => ({
   },
   kakao: {
     textAlign: 'center',
-    [theme.breakpoints.up(mediaSize)]: {
+    [theme.breakpoints.up(global.TabletMinWidth)]: {
       margin: '80px',
     },
-    [theme.breakpoints.down(mediaSize)]: {
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
       margin: '24px',
     },
     '& p': {
@@ -523,10 +549,10 @@ const useStyles = makeStyles(theme => ({
       fontWeight: 'bold',
       color: '#707070',
       textAlign: 'center',
-      [theme.breakpoints.up(mediaSize)]: {
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
         fontSize: '20px',
       },
-      [theme.breakpoints.down(mediaSize)]: {
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         fontSize: '12px',
       },
     },
@@ -536,12 +562,13 @@ const useStyles = makeStyles(theme => ({
       border: '1px solid #707070',
       borderRadius: '30px',
       color: '#707070',
-      [theme.breakpoints.up(mediaSize)]: {
+      [theme.breakpoints.up(global.TabletMinWidth)]: {
         lineHeight: '2',
         padding: '8px',
         fontSize: '16px',
       },
-      [theme.breakpoints.down(mediaSize)]: {
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
+        lineHeight: '3',
         padding: '4px',
         fontSize: '10px',
       },
@@ -558,14 +585,40 @@ function DrawKakao(classes) {
     </div>
   );
 }
+function DrawLastBannerPC(classes) {
+  return (
+    <div className={classes.lastBanner}>
+      <picure>
+        <source media="(max-width: 1280px)" srcSet={LastBannerPC} />
+        <source media="(min-width: 1280px)" srcSet={LastBannerPC2X} />
+        <img
+          src={LastBannerPC}
+          alt=""
+        />
+      </picure>
+    </div>
+  );
+}
+
+function DrawLastBannerAndroid(classes) {
+  return (
+    <div className={classes.lastBanner}>
+      <picure>
+        <source media="(max-width: 360px)" srcSet={LastBannerAndroid} />
+        <source media="(min-width: 360px)" srcSet={LastBannerAndroid2X} />
+        <img
+          src={LastBannerAndroid2X}
+          alt=""
+        />
+      </picure>
+    </div>
+  );
+}
 
 function DrawLastBanner(classes, media) {
   return (
-    <div className={classes.lastBanner}>
-      <img
-        src={media === ANDROID ? LastBannerAndroid : LastBannerPC}
-        alt=""
-      />
+    <div>
+      {media === global.ANDROID ? DrawLastBannerAndroid(classes) : DrawLastBannerPC(classes) }
     </div>
   );
 }
@@ -589,7 +642,7 @@ function DrawWeddingHall(classes, media) {
     { name: '동대문구' },
   ];
 
-  if (media === ANDROID) {
+  if (media === global.ANDROID) {
     return (
       <div className={classes.weddingHall}>
         <div>
@@ -642,7 +695,7 @@ function DrawWeddingHall(classes, media) {
 }
 
 function DrawFinalBanner(classes, media) {
-  if (media === ANDROID) {
+  if (media === global.ANDROID) {
     return (
       <div className={classes.finalBanner}>
         <div>
@@ -655,10 +708,14 @@ function DrawFinalBanner(classes, media) {
           <p>사진을 즉석에서 무제한으로 인화해드립니다.</p>
         </div>
         <div>
-          <img
-            src={FinalBannerAndroid}
-            alt=""
-          />
+          <picture>
+            <source media="(max-width: 360px)" srcSet={FinalBannerAndroid} />
+            <source media="(min-width: 360px)" srcSet={FinalBannerAndroid2X} />
+            <img
+              src={FinalBannerAndroid}
+              alt=""
+            />
+          </picture>
         </div>
       </div>
     );
@@ -674,10 +731,14 @@ function DrawFinalBanner(classes, media) {
         <p>인화해드립니다.</p>
       </div>
       <div>
-        <img
-          src={FinalBannerPC}
-          alt=""
-        />
+        <picture>
+          {/* <source media="(max-width: 360px)" srcSet={WeddingSnapAndroid} /> */}
+          {/* <source media="(min-width: 360px)" srcSet={WeddingSnapAndroid2X} /> */}
+          <img
+            src={FinalBannerPC}
+            alt=""
+          />
+        </picture>
       </div>
     </div>
   );
@@ -685,13 +746,17 @@ function DrawFinalBanner(classes, media) {
 
 function DrawWeddingSnap(classes, media) {
   
-  if (media === ANDROID) {
+  if (media === global.ANDROID) {
     return (
       <div className={classes.weddingSnap}>
-        <img
-          src={WeddingSnapAndroid}
-          alt=""
-        />
+        <picture>
+          <source media="(max-width: 360px)" srcSet={WeddingSnapAndroid} />
+          <source media="(min-width: 360px)" srcSet={WeddingSnapAndroid2X} />
+          <img
+            src={WeddingSnapAndroid}
+            alt=""
+          />
+        </picture>
         <div>
           <h1>PHOTOGRAPHER</h1>
           <h2>사진작가가 진행하는 포토부스</h2>
@@ -706,10 +771,14 @@ function DrawWeddingSnap(classes, media) {
   }
   return (
     <div className={classes.weddingSnap}>
-      <img
-        src={WeddingSnapPC}
-        alt=""
-      />
+      <picture>
+        <source media="(max-width: 1280px)" srcSet={WeddingSnapPC} />
+        <source media="(min-width: 1280px)" srcSet={WeddingSnapPC2X} />
+        <img
+          src={WeddingSnapPC}
+          alt=""
+        />
+      </picture>
       <div>
         <h1>PHOTOGRAPHER</h1>
         <h2>사진작가가 진행하는 포토부스</h2>
@@ -732,18 +801,30 @@ function DrawSnap(classes) {
 
 function DrawMiddleBannerPC(classes) {
   return (
-    <div>
+    <div className={classes.middleBanner}>
       <div>
-        <h>어떻게 하면</h>
-        <br />
-        <p>일생에 단 한 번뿐인 결혼식의 행복한 신랑, 신부</p>
-        <p>그리고 소중한 걸음 해주신 하객분들까지</p>
-        <p>모두가 즐거운 결혼식을 만들 수 있을까요?</p>
-        <br />
-        <b>&quot;하객들이 결혼식을 기억하는 것.&quot;</b>
-        <br />
-        <p>저희는 하객들의 마음속에</p>
-        <p>여러분을 남깁니다.</p>
+        <picture>
+          <source media="(max-width: 1280px)" srcSet={MiddleBannerPC} />
+          <source media="(min-width: 1280px)" srcSet={MiddleBannerPC2X} />
+          <img
+            src={MiddleBannerPC}
+            alt=""
+          />
+        </picture>
+      </div>
+      <div>
+        <div>
+          <h>어떻게 하면</h>
+          <br />
+          <p>일생에 단 한 번뿐인 결혼식의 행복한 신랑, 신부</p>
+          <p>그리고 소중한 걸음 해주신 하객분들까지</p>
+          <p>모두가 즐거운 결혼식을 만들 수 있을까요?</p>
+          <br />
+          <b>&quot;하객들이 결혼식을 기억하는 것.&quot;</b>
+          <br />
+          <p>저희는 하객들의 마음속에</p>
+          <p>여러분을 남깁니다.</p>
+        </div>
       </div>
     </div>
   );
@@ -751,15 +832,27 @@ function DrawMiddleBannerPC(classes) {
 
 function DrawMiddleBannerAndroid(classes) {
   return (
-    <div>
+    <div className={classes.middleBanner}>
       <div>
-        <h>어떻게 하면</h>
-        <p>일생에 단 한 번뿐인 결혼식의 행복한 신랑, 신부</p>
-        <p>그리고 소중한 걸음 해주신 하객분들까지</p>
-        <p>모두가 즐거운 결혼식을 만들 수 있을까요?</p>
-        <b>&quot;하객들이 결혼식을 기억하는 것.&quot;</b>
-        <p>저희는 하객들의 마음속에</p>
-        <p>여러분을 남깁니다.</p>
+        <picture>
+          <source media="(max-width: 360px)" srcSet={MiddleBannerAndroid} />
+          <source media="(min-width: 360px)" srcSet={MiddleBannerAndroid2X} />
+          <img
+            src={MiddleBannerAndroid}
+            alt=""
+          />
+        </picture>
+      </div>
+      <div>
+        <div>
+          <h>어떻게 하면</h>
+          <p>일생에 단 한 번뿐인 결혼식의 행복한 신랑, 신부</p>
+          <p>그리고 소중한 걸음 해주신 하객분들까지</p>
+          <p>모두가 즐거운 결혼식을 만들 수 있을까요?</p>
+          <b>&quot;하객들이 결혼식을 기억하는 것.&quot;</b>
+          <p>저희는 하객들의 마음속에</p>
+          <p>여러분을 남깁니다.</p>
+        </div>
       </div>
     </div>
   );
@@ -767,16 +860,8 @@ function DrawMiddleBannerAndroid(classes) {
 
 function DrawMiddleBanner(classes, media) {
   return (
-    <div className={classes.middleBanner}>
-      <div>
-        <img
-          src={media === ANDROID ? MiddleBannerAndroid : MiddleBannerPC}
-          alt=""
-          // srcSet={`${MiddleBannerPC2X} 1280w`}
-          srcSet={media ===ANDROID ? MiddleBannerAndroid : `${MiddleBannerPC2X} 1280w`} 
-        />
-      </div>
-      {media === ANDROID ? DrawMiddleBannerAndroid(classes) : DrawMiddleBannerPC(classes)}
+    <div>
+      {media === global.ANDROID ? DrawMiddleBannerAndroid(classes) : DrawMiddleBannerPC(classes)}
     </div>
   );
 }
@@ -801,11 +886,15 @@ function DraswShinyoungInfo(classes) {
 function DrawShinyoungAndroid(classes) {
   return (
     <div className={classes.shinyong}>
-      <img
-        className={classes.shinyoungImg}
-        src={ShinyoungAndroid}
-        alt=""
-      />
+      <picture>
+        <source media="(max-width: 360px)" srcSet={ShinyoungAndroid} />
+        <source media="(min-width: 360px)" srcSet={ShinyoungAndroid2X} />
+        <img
+          className={classes.shinyoungImg}
+          src={ShinyoungAndroid}
+          alt=""
+        />
+      </picture>
       {DraswShinyoungInfo(classes)}
     </div>
   );
@@ -815,10 +904,14 @@ function DrawShinyoungPC(classes) {
   return (
     <div className={classes.shinyong}>
       <div>
-        <img
-          src={ShinyoungPC}
-          alt=""
-        />
+        <picture>
+          <source media="(max-width: 1280px)" srcSet={ShinyoungPC} />
+          <source media="(min-width: 1280px)" srcSet={ShinyoungPC2X} />
+          <img
+            src={ShinyoungPC}
+            alt=""
+          />
+        </picture>
       </div>
       {DraswShinyoungInfo(classes)}
     </div>
@@ -826,7 +919,7 @@ function DrawShinyoungPC(classes) {
 }
 
 function DrawShinyoung(classes, media) {
-  if (media === ANDROID) {
+  if (media === global.ANDROID) {
     return DrawShinyoungAndroid(classes);
   }
 
@@ -847,13 +940,13 @@ function DrawAndroid() {
   return (
     <div className={classes.root}>
       {DrawWedding(classes)}
-      {DrawShinyoung(classes, ANDROID)}
-      {DrawMiddleBanner(classes, ANDROID)}
+      {DrawShinyoung(classes, global.ANDROID)}
+      {DrawMiddleBanner(classes, global.ANDROID)}
       {DrawSnap(classes)}
-      {DrawWeddingSnap(classes, ANDROID)}
-      {DrawFinalBanner(classes, ANDROID)}
-      {DrawWeddingHall(classes, ANDROID)}
-      {DrawLastBanner(classes, ANDROID)}
+      {DrawWeddingSnap(classes, global.ANDROID)}
+      {DrawFinalBanner(classes, global.ANDROID)}
+      {DrawWeddingHall(classes, global.ANDROID)}
+      {DrawLastBanner(classes, global.ANDROID)}
       {DrawKakao(classes)}
     </div>
   );
@@ -865,19 +958,19 @@ function DrawPC() {
     <div>
       <div className={classes.root}>
         {DrawWedding(classes)}
-        {DrawShinyoung(classes, PC)}
+        {DrawShinyoung(classes, global.PC)}
       </div>
       <div>
-        {DrawMiddleBanner(classes, PC)}
+        {DrawMiddleBanner(classes, global.PC)}
       </div>
       <div className={classes.root}>
         {DrawSnap(classes)}
-        {DrawWeddingSnap(classes, PC)}
-        {DrawFinalBanner(classes, PC)}
+        {DrawWeddingSnap(classes, global.PC)}
+        {DrawFinalBanner(classes, global.PC)}
       </div>
       <div>
-        {DrawWeddingHall(classes, PC)}
-        {DrawLastBanner(classes, PC)}
+        {DrawWeddingHall(classes, global.PC)}
+        {DrawLastBanner(classes, global.PC)}
       </div>
       <div className={classes.root}>
         {DrawKakao(classes)}
