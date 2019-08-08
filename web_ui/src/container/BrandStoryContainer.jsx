@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Header';
+import BrandStory from '../components/BrandStory';
 
-const HeaderContainer = ({ mediaAndroid, mediaPC, onChangeMenu }) => {
+const BransStoryContainer = ({ mediaAndroid, mediaPC }) => {
   const [android, setAndroid] = useState(false);
   useEffect(() => {
     if (mediaAndroid) {
@@ -13,8 +13,8 @@ const HeaderContainer = ({ mediaAndroid, mediaPC, onChangeMenu }) => {
 
   return (
     <div>
-      <Header android={android} onChangeMenu={onChangeMenu} />
+      <BrandStory android={android} />
     </div>
   );
 };
-export default HeaderContainer;
+export default BransStoryContainer;

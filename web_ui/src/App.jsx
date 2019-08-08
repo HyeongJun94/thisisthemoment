@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
@@ -7,7 +7,9 @@ import global from './modules/global';
 
 import HeaderContainer from './container/HeaderContainer.jsx'
 import ContentContainer from './container/ContentContainer.jsx';
+import BrandStoryContainer from './container/BrandStoryContainer.jsx';
 import FooterContainer from './container/FooterContainer';
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -27,6 +29,24 @@ export default function App() {
   const mediaPC = useMediaQuery(theme.breakpoints.up(global.TabletMinWidth));
   const classes = useStyles();
 
+  const [menu, setMenu] = useState(global.Main);
+  const [body, setBody] = useState(<ContentContainer mediaAndroid={mediaAndroid} mediaPC={mediaPC} />)
+
+  const onChangeMenu = (e) => {
+    e.preventDefault();
+    setMenu(e.target.value);
+  };
+
+  useEffect(() => {
+    if (menu == global.BrandStory) {
+      setBody(<BrandStoryContainer mediaAndroid={mediaAndroid} mediaPC={mediaPC} />);
+    } else if (menu == global.Reservation){
+      console.log ("Reservation");
+    } else {
+      setBody(<ContentContainer mediaAndroid={mediaAndroid} mediaPC={mediaPC} />);
+    }
+  }, [menu]);
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -34,11 +54,9 @@ export default function App() {
         <HeaderContainer
           mediaAndroid={mediaAndroid}
           mediaPC={mediaPC}
+          onChangeMenu={onChangeMenu}
         />
-        <ContentContainer
-          mediaAndroid={mediaAndroid}
-          mediaPC={mediaPC}
-        />
+        {body}
         <FooterContainer
           mediaAndroid={mediaAndroid}
           mediaPC={mediaPC}

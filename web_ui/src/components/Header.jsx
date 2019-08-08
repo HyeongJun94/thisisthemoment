@@ -132,63 +132,56 @@ function DrawBanner(classes, media) {
   );
 }
 
-function DrawAndroid() {
+
+
+
+const Header = ({ android, onChangeMenu }) => {
   const classes = useStyles();
   const sections = [
-    { name: 'MAIN' },
-    { name: 'BRAND STORY' },
-    { name: 'RESERVATION' },
+    { name: 'MAIN', value: global.Main },
+    { name: 'BRAND STORY', value: global.BrandStory },
+    { name: 'RESERVATION', value: global.Reservation },
   ];
 
-  return (
-    <div className={classes.root}>
-      <Toolbar className={classes.logo}>
-        <img
-          src={LogoAndroid}
-          alt="lgo"
-        />
-      </Toolbar>
-    
-      <Toolbar className={classes.toolBar}>
-        <div>
-          {sections.map(section => (
-            <button>{section.name}</button>
-          ))}
-        </div>
-      </Toolbar>
-      {DrawBanner(classes, global.ANDROID)}
-    </div>
-  );
-}
-
-function DrawPC() {
-  const classes = useStyles();
-  const sections = [
-    { name: 'MAIN' },
-    { name: 'BRAND STORY' },
-    { name: 'RESERVATION' },
-    { name: '+' },
-  ];
-
-  return (
-    <div className={classes.root}>
-      <AppBar
-        position="fixed"
-        className={classes.appBar}
-      >
+  function DrawPC() {
+    return (
+      <div className={classes.root}>
+        <AppBar
+          position="fixed"
+          className={classes.appBar}
+        >
+          <Toolbar className={classes.toolBar}>
+            <div>
+              {sections.map(section => (
+                <button onClick={onChangeMenu} value={section.value}>{section.name}</button>
+              ))}
+            </div>
+          </Toolbar>
+        </AppBar>
+        {DrawBanner(classes, global.PC)}
+      </div>
+    );
+  }
+  function DrawAndroid() {
+    return (
+      <div className={classes.root}>
+        <Toolbar className={classes.logo}>
+          <img
+            src={LogoAndroid}
+            alt="lgo"
+          />
+        </Toolbar>
         <Toolbar className={classes.toolBar}>
           <div>
             {sections.map(section => (
-              <button>{section.name}</button>
+              <button onClick={onChangeMenu} value={section.value}>{section.name}</button>
             ))}
           </div>
         </Toolbar>
-      </AppBar>
-      {DrawBanner(classes, global.PC)}
-    </div>
-  );
-}
-const Header = ({ android }) => {
+        {DrawBanner(classes, global.ANDROID)}
+      </div>
+    );
+  }
   return (
     <div>
       {android ? DrawAndroid() : DrawPC()}
