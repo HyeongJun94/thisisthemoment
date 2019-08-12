@@ -4,8 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import global from '../modules/global';
 
 
-import FooterLogoPC from '../static/images/PC/footerLogo.png';
-import FooterLogoAndroid from '../static/images/Android/footerLogo.png';
+import FooterLogoPC from '../static/images/PC/Footer/footerLogo.png';
+import FooterLogoAndroid from '../static/images/Android/Footer/footerLogo.png';
 
 const useStyles = makeStyles(theme => ({
   root: {

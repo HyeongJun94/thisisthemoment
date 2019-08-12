@@ -4,26 +4,30 @@ import { makeStyles } from '@material-ui/core/styles';
 import global from '../modules/global';
 
 // images
-import ShinyoungPC from '../static/images/PC/shinyoung.png';
-import ShinyoungPC2X from '../static/images/PC/shinyoung@2x.png';
-import ShinyoungAndroid from '../static/images/Android/shinyoung.png';
-import ShinyoungAndroid2X from '../static/images/Android/shinyoung@2x.png';
-import MiddleBannerPC from '../static/images/PC/middleBanner.png';
-import MiddleBannerPC2X from '../static/images/PC/middleBanner@2x.png';
-import MiddleBannerAndroid from '../static/images/Android/middleBanner.png';
-import MiddleBannerAndroid2X from '../static/images/Android/middleBanner@2x.png';
-import WeddingSnapPC from '../static/images/PC/weddingsnap.png';
-import WeddingSnapPC2X from '../static/images/PC/weddingsnap@2x.png';
-import WeddingSnapAndroid from '../static/images/Android/weddingsnap.png';
-import WeddingSnapAndroid2X from '../static/images/Android/weddingsnap@2x.png';
-import FinalBannerPC from '../static/images/PC/finalBanner.png';
+import BannerPC from '../static/images/PC/Main/mainBanner.png';
+import BannerPC2X from '../static/images/PC/Main/mainBanner@2x.png';
+import BannerAndroid from '../static/images/Android/Main/mainBanner.png';
+import BannerAndroid2X from '../static/images/Android/Main/mainBanner@2x.png';
+import ShinyoungPC from '../static/images/PC/Main/shinyoung.png';
+import ShinyoungPC2X from '../static/images/PC/Main/shinyoung@2x.png';
+import ShinyoungAndroid from '../static/images/Android/Main/shinyoung.png';
+import ShinyoungAndroid2X from '../static/images/Android/Main/shinyoung@2x.png';
+import MiddleBannerPC from '../static/images/PC/Main/middleBanner.png';
+import MiddleBannerPC2X from '../static/images/PC/Main/middleBanner@2x.png';
+import MiddleBannerAndroid from '../static/images/Android/Main/middleBanner.png';
+import MiddleBannerAndroid2X from '../static/images/Android/Main/middleBanner@2x.png';
+import WeddingSnapPC from '../static/images/PC/Main/weddingsnap.png';
+import WeddingSnapPC2X from '../static/images/PC/Main/weddingsnap@2x.png';
+import WeddingSnapAndroid from '../static/images/Android/Main/weddingsnap.png';
+import WeddingSnapAndroid2X from '../static/images/Android/Main/weddingsnap@2x.png';
+import FinalBannerPC from '../static/images/PC/Main/finalBanner.png';
 // import FinalBannerPC2X from '../static/images/PC/finalBanner@2x.png';
-import FinalBannerAndroid from '../static/images/Android/finalBanner.png';
-import FinalBannerAndroid2X from '../static/images/Android/finalBanner@2x.png';
-import LastBannerPC from '../static/images/PC/lastBanner.png';
-import LastBannerPC2X from '../static/images/PC/lastBanner@2x.png';
-import LastBannerAndroid from '../static/images/Android/lastBanner.png';
-import LastBannerAndroid2X from '../static/images/Android/lastBanner@2x.png';
+import FinalBannerAndroid from '../static/images/Android/Main/finalBanner.png';
+import FinalBannerAndroid2X from '../static/images/Android/Main/finalBanner@2x.png';
+import LastBannerPC from '../static/images/PC/Main/lastBanner.png';
+import LastBannerPC2X from '../static/images/PC/Main/lastBanner@2x.png';
+import LastBannerAndroid from '../static/images/Android/Main/lastBanner.png';
+import LastBannerAndroid2X from '../static/images/Android/Main/lastBanner@2x.png';
 
 
 const gridSize = 600;
@@ -38,6 +42,20 @@ const useStyles = makeStyles(theme => ({
     '& *': {
       margin: 0,
       padding: 0,
+    },
+  },
+  bannerImage: {
+    display: 'block',
+    margin: '0 auto 0 auto',
+    width: '100%',
+  },
+  logo: {
+    backgroundColor: 'transparent',
+    boxShadow: 'none',
+    borderBottom: '0.5px solid #707070',
+    '& img': {
+      display: 'block',
+      margin: '0 auto 0 auto',
     },
   },
   boldText: {
@@ -935,10 +953,47 @@ function DrawWedding(classes) {
   );
 }
 
+function DrawBannerAndroid(classes) {
+  return (
+    <picture>
+      <source media="(max-width: 360px)" srcSet={BannerAndroid} />
+      <source media="(min-width: 360px)" srcSet={BannerAndroid2X} />
+      <img
+        className={classes.bannerImage}
+        src={BannerPC}
+        alt=""
+      />
+    </picture>
+  );
+}
+
+function DrawBannerPC(classes) {
+  return (
+    <picture>
+      <source media="(max-width: 1280px)" srcSet={BannerPC} />
+      <source media="(min-width: 1280px)" srcSet={BannerPC2X} />
+      <img
+        className={classes.bannerImage}
+        src={BannerPC}
+        alt=""
+      />
+    </picture>
+  );
+}
+
+function DrawBanner(classes, media) {
+  return (
+    <div>
+      { media === global.ANDROID ? DrawBannerAndroid(classes) : DrawBannerPC(classes) }
+    </div>
+  );
+}
+
 function DrawAndroid() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      {DrawBanner(classes, global.ANDROID)}
       {DrawWedding(classes)}
       {DrawShinyoung(classes, global.ANDROID)}
       {DrawMiddleBanner(classes, global.ANDROID)}
@@ -956,6 +1011,9 @@ function DrawPC() {
   const classes = useStyles();
   return (
     <div>
+      <div>
+        {DrawBanner(classes, global.PC)}
+      </div>
       <div className={classes.root}>
         {DrawWedding(classes)}
         {DrawShinyoung(classes, global.PC)}

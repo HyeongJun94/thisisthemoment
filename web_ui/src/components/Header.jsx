@@ -6,12 +6,12 @@ import global from '../modules/global';
 import Toolbar from '@material-ui/core/Toolbar';
 import AppBar from '@material-ui/core/AppBar';
 
-import BannerPC from '../static/images/PC/mainBanner.png';
-import BannerPC2X from '../static/images/PC/mainBanner@2x.png';
-import BannerAndroid from '../static/images/Android/mainBanner.png';
-import BannerAndroid2X from '../static/images/Android/mainBanner@2x.png';
+// import BannerPC from '../static/images/PC/mainBanner.png';
+// import BannerPC2X from '../static/images/PC/mainBanner@2x.png';
+// import BannerAndroid from '../static/images/Android/mainBanner.png';
+// import BannerAndroid2X from '../static/images/Android/mainBanner@2x.png';
 
-import LogoAndroid from '../static/images/Android/logo.jpg';
+import LogoAndroid from '../static/images/Android/Main/logo.jpg';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -75,65 +75,7 @@ const useStyles = makeStyles(theme => ({
       },
     },
   },
-  bannerImage: {
-    // display: 'absolute',
-    // width: '2000px',
-
-    display: 'block',
-    margin: '0 auto 0 auto',
-    width: '100%',
-    // border: '10px solid black',
-    // maxWidth: '1280px',
-  },
-  logo: {
-    backgroundColor: 'transparent',
-    boxShadow: 'none',
-    borderBottom: '0.5px solid #707070',
-    '& img': {
-      display: 'block',
-      margin: '0 auto 0 auto',
-    },
-  },
 }));
-
-function DrawBannerAndroid(classes) {
-  return (
-    <picture>
-      <source media="(max-width: 360px)" srcSet={BannerAndroid} />
-      <source media="(min-width: 360px)" srcSet={BannerAndroid2X} />
-      <img
-        className={classes.bannerImage}
-        src={BannerPC}
-        alt=""
-      />
-    </picture>
-  );
-}
-
-function DrawBannerPC(classes) {
-  return (
-    <picture>
-      <source media="(max-width: 1280px)" srcSet={BannerPC}/>
-      <source media="(min-width: 1280px)" srcSet={BannerPC2X}/>
-      <img
-        className={classes.bannerImage}
-        src={BannerPC}
-        alt=""
-      />
-    </picture>
-  );
-}
-
-function DrawBanner(classes, media) {
-  return (
-    <div>
-      { media === global.ANDROID ? DrawBannerAndroid(classes) : DrawBannerPC(classes) }
-    </div>
-  );
-}
-
-
-
 
 const Header = ({ android, onChangeMenu }) => {
   const classes = useStyles();
@@ -158,7 +100,7 @@ const Header = ({ android, onChangeMenu }) => {
             </div>
           </Toolbar>
         </AppBar>
-        {DrawBanner(classes, global.PC)}
+        {/* {DrawBanner(classes, global.PC)} */}
       </div>
     );
   }
@@ -178,7 +120,7 @@ const Header = ({ android, onChangeMenu }) => {
             ))}
           </div>
         </Toolbar>
-        {DrawBanner(classes, global.ANDROID)}
+        {/* {DrawBanner(classes, global.ANDROID)} */}
       </div>
     );
   }

@@ -29,7 +29,8 @@ export default function App() {
   const mediaPC = useMediaQuery(theme.breakpoints.up(global.TabletMinWidth));
   const classes = useStyles();
 
-  const [menu, setMenu] = useState(global.Main);
+  // const [menu, setMenu] = useState(global.Main);
+  const [menu, setMenu] = useState(global.BrandStory);
   const [body, setBody] = useState(<ContentContainer mediaAndroid={mediaAndroid} mediaPC={mediaPC} />)
 
   const onChangeMenu = (e) => {
