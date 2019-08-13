@@ -24,7 +24,7 @@
   .root * {
     margin: 0;
     padding: 0;
-    font-size: 0;
+    /* font-size: 0; */
   }
   .info {
     margin-top: 64px;
@@ -79,6 +79,7 @@
       'left2 right2'
       'left3 right3';
     grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
   }
 
   .title { 
@@ -99,12 +100,13 @@
     text-align: center;
     color: #ffffff;
   }
-
   .solutionContent {
-    display: block;
-    border: 10px solid black;
-    margin-top: auto;
+    /* display: block; */
+    /* border: 10px solid black; */
+    width: 620px;
+    margin-left: auto;
   }
+
 
   .solutionContent > h1 {
     font-family: NotoSansKR;
@@ -112,6 +114,7 @@
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
+    text-align: left;
     color: #bdbdbd;
   }
   .solutionContent > h2 {
@@ -136,9 +139,10 @@
 
   .leftItem1 { 
     grid-area: left1; 
-    width: 620px;
-    margin: auto 20px auto auto;
-    padding-left: 70px;
+    /* width: 620px; */
+    /* height: 100%; */
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .rightItem1 { 
     grid-area: right1;
@@ -146,18 +150,16 @@
   }
   .leftItem2 { 
     grid-area: left2;
-    width: 620px;
     height: 100%;
-    margin: auto 20px auto auto;
-    padding-left: 70px;
     background-color: #f5f5f5;
+    padding-top: 20%;
   }
   .rightItem2 { grid-area: right2;}
   .leftItem3 {
     grid-area: left3;
-    width: 620px;
-    margin: auto 20px auto auto;
-    padding-left: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* width: 620px; */
   }
   .rightItem3 { 
     grid-area: right3;
@@ -192,12 +194,14 @@
     margin-top: 104px;
     margin-bottom: 104px;
     text-align: center;
+    
     /* border: 1px solid black; */
   }
 
   .finalContent > h1{
     font-family: NotoSansKR;
     font-size: 24px;
+    line-height: 1.5;
     font-weight: bold;
     text-align: center;
     color: #707070;
@@ -242,7 +246,7 @@
     display: block;
     width: 0;
     height: 40px;
-    border: solid 1px #707070;
+    border: solid 0.5px #707070;
     margin: 0 auto 0 auto;
   }
   .info > h1{
@@ -275,7 +279,7 @@
     display: block;
     width: 0;
     height: 120px;
-    border: solid 1px #707070;
+    border: solid 0.5px #707070;
     margin: 0 auto 0 auto;
   }
 
@@ -289,10 +293,12 @@
       'right2'
       'left3'
       'right3';
+      grid-row-gap: 10px;
   }
 
   .title { 
     grid-area: title; 
+    padding: 16px;
     background-color: rgba(180, 165, 112, 0.48);
   }
   .title > h1 {
@@ -343,30 +349,30 @@
 
   .leftItem1 { 
     grid-area: left1; 
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
   .rightItem1 { 
     grid-area: right1;
-    margin-top: 4px;
-    background-color: #f5f5f5;
+    /* margin-top: 4px; */
+    /* background-color: #f5f5f5; */
   }
   .leftItem2 { 
     grid-area: left2;
-    margin-top: 20px;
-    background-color: #f5f5f5;
+    /* margin-top: 20px; */
+    /* background-color: #f5f5f5; */
   }
   .rightItem2 { 
     grid-area: right2;
-    margin-top: 4px;
+    /* margin-top: 4px; */
   }
   .leftItem3 {
     grid-area: left3;
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
   .rightItem3 { 
     grid-area: right3;
     margin-top: 4px;
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
   }
 
   .logo {
@@ -394,6 +400,7 @@
 
   .finalContent{
     margin-bottom: 44px;
+    margin-top: 44px;
     text-align: center;
     /* border: 1px solid black; */
   }
@@ -402,6 +409,7 @@
     font-family: NotoSansKR;
     font-size: 14px;
     font-weight: bold;
+    line-height: 3.5;
     text-align: center;
     color: #707070;
   }

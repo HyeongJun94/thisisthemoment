@@ -26,53 +26,58 @@ import FinalBannerAndroid2x from '../static/images/Android/BrandStory/finalBanne
 //css
 import '../css/BrandStory.css';
 
-const finalContentAndroid = () => (
-  <div className="finalContent">
-    <h1>
-      지금이순간 웨딩 포토부스
-    </h1>
-    <h2>
-      식빵
-      신랑 신부님의 소중한 결혼식은 하객들과 함께 즐길 수 있는 날입니다.
-      <br />
-      신랑 신부님의 결혼식은 인생에 단 한번뿐인 특별한 날입니다.
-      <br />
-      포토부스에서 하객들과 사진을 찍고 포토 방명록에 
-      <br />
-      메시지를 남겨 그날을 기념합니다.
-      <br />
-      <br />
-      예약문의는 카카오톡 플러스친구로 문의주시면
-      <br />
-      친절하게 상담 도와드리겠습니다.
-    </h2>
-    <a href="https://pf.kakao.com/_xmXvWC/chat">1:1 카카오톡 상담 시작하기</a>
-  </div>
-);
 
-const finalContentPC = () => (
-  <div className="finalContent">
-    <h1>
-      지금이순간 웨딩 포토부스
-    </h1>
-    <h2>
-      신랑 신부님의 소중한 결혼식은 하객들과 함께 즐길 수 있는 날입니다.
-      <br />
-      신랑 신부님의 결혼식은 인생에 단 한번뿐인 특별한 날입니다.
-      <br />
-      포토부스에서 하객들과 사진을 찍고 포토 방명록에 메시지를 남겨 그날을 기념합니다.
-      <br />
-      <br />
-      예약문의는 카카오톡 플러스친구로 문의주시면
-      <br />
-      친절하게 상담 도와드리겠습니다.
-      <br />
+function finalContentAndroid() {
+  return (
+    <div className="finalContent">
+      <h1>
+        지금이순간 웨딩 포토부스
+      </h1>
+      <h2>
+        신랑 신부님의 소중한 결혼식은 하객들과 함께 즐길 수 있는 날입니다.
+        <br />
+        신랑 신부님의 결혼식은 인생에 단 한번뿐인 특별한 날입니다.
+        <br />
+        포토부스에서 하객들과 사진을 찍고 포토 방명록에 
+        <br />
+        메시지를 남겨 그날을 기념합니다.
+        <br />
+        <br />
+        예약문의는 카카오톡 플러스친구로 문의주시면
+        <br />
+        친절하게 상담 도와드리겠습니다.
+        <br />
+        <br />
+      </h2>
+      <a href="https://pf.kakao.com/_xmXvWC/chat">1:1 카카오톡 상담 시작하기</a>
+    </div>
+  );
+}
 
-    </h2>
-    <a href="https://pf.kakao.com/_xmXvWC/chat">1:1 카카오톡 상담 시작하기</a>
-  </div>
-);
-
+function finalContentPC() {
+  return (
+    <div className="finalContent">
+      <h1>
+        지금이순간 웨딩 포토부스
+      </h1>
+      <h2>
+        신랑 신부님의 소중한 결혼식은 하객들과 함께 즐길 수 있는 날입니다.
+        <br />
+        신랑 신부님의 결혼식은 인생에 단 한번뿐인 특별한 날입니다.
+        <br />
+        포토부스에서 하객들과 사진을 찍고 포토 방명록에 메시지를 남겨 그날을 기념합니다.
+        <br />
+        <br />
+        예약문의는 카카오톡 플러스친구로 문의주시면
+        <br />
+        친절하게 상담 도와드리겠습니다.
+        <br />
+        <br />
+      </h2>
+      <a href="https://pf.kakao.com/_xmXvWC/chat">1:1 카카오톡 상담 시작하기</a>
+    </div>
+  );
+}
 function DrawFinalInfo(media) {
   return (
     <div>

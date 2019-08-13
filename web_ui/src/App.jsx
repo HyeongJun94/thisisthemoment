@@ -46,7 +46,7 @@ export default function App() {
     } else {
       setBody(<ContentContainer mediaAndroid={mediaAndroid} mediaPC={mediaPC} />);
     }
-  }, [menu]);
+  }, [menu, mediaAndroid, mediaPC]);
 
   return (
     <React.Fragment>

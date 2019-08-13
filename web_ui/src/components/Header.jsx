@@ -47,6 +47,9 @@ const useStyles = makeStyles(theme => ({
     margin: '0 auto 0 auto',
     fontSize: '10px',
     maxWidth: '1280px',
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
+      borderTop: '1px solid black',
+    },
     '& div': {
       [theme.breakpoints.up(global.TabletMinWidth)]: {
         marginLeft: 10 * theme.spacing(2),
@@ -75,6 +78,11 @@ const useStyles = makeStyles(theme => ({
       },
     },
   },
+
+  logo: {
+    display: 'block',
+    margin: '0 auto 0 auto',
+  }
 }));
 
 const Header = ({ android, onChangeMenu }) => {
@@ -107,8 +115,9 @@ const Header = ({ android, onChangeMenu }) => {
   function DrawAndroid() {
     return (
       <div className={classes.root}>
-        <Toolbar className={classes.logo}>
+        <Toolbar>
           <img
+            className={classes.logo}
             src={LogoAndroid}
             alt="lgo"
           />
