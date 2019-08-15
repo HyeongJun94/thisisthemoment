@@ -1,27 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import global from '../modules/global';
 
 //images
 import MainBannerPC from '../static/images/PC/BrandStory/mainBanner.png';
-import MainBannerPC2X from '../static/images/PC/BrandStory/mainBanner@2x.png';
 import MainBannerAndroid from '../static/images/Android/BrandStory/mainBanner.png';
-import MainBannerAndroid2X from '../static/images/Android/BrandStory/mainBanner@2x.png';
+import MainBannerTablet from '../static/images/Tablet/BrandStory/mainBanner.png';
 import Right1PC from '../static/images/PC/BrandStory/right-1.png';
 import Right1Android from '../static/images/Android/BrandStory/right-1.png';
-import Right1Android2X from '../static/images/Android/BrandStory/right-1@2x.png';
+import Right1Tablet from '../static/images/Tablet/BrandStory/right-1.png';
+import Right2PC from '../static/images/PC/BrandStory/right-2.png';
 import Right2Android from '../static/images/Android/BrandStory/right-2.png';
-import Right2Android2X from '../static/images/Android/BrandStory/right-2@2x.png';
+import Right2Tablet from '../static/images/Tablet/BrandStory/right-2.png';
+import Right3PC from '../static/images/PC/BrandStory/right-3.png';
 import Right3Android from '../static/images/Android/BrandStory/right-3.png';
-import Right3Android2X from '../static/images/Android/BrandStory/right-3@2x.png';
+import Right3Tablet from '../static/images/Tablet/BrandStory/right-3.png';
 import LogoPC from '../static/images/PC/BrandStory/logo.png';
-import LogoPC2X from '../static/images/PC/BrandStory/logo@2x.png';
 import LogoAndroid from '../static/images/Android/BrandStory/logo.png';
-import LogoAndroid2X from '../static/images/Android/BrandStory/logo@2x.png';
+import LogoTablet from '../static/images/Tablet/BrandStory/logo.png';
 import FinalBannerPC from '../static/images/PC/BrandStory/finalBanner.png';
-import FinalBannerPC2X from '../static/images/PC/BrandStory/finalBanner@2x.png';
 import FinalBannerAndroid from '../static/images/Android/BrandStory/finalBanner.png';
-import FinalBannerAndroid2x from '../static/images/Android/BrandStory/finalBanner@2x.png';
+import FinalBannerTablet from '../static/images/Tablet/BrandStory/finalBanner.png';
 
 //css
 import '../css/BrandStory.css';
@@ -89,10 +89,9 @@ function DrawFinalInfo(media) {
 function DrawFinalBanner() {
   return (
     <picture>
-      <source media="(max-width: 360px)" srcSet={FinalBannerAndroid} />
-      <source media="(max-width: 720px)" srcSet={FinalBannerAndroid2x} />
-      <source media="(max-width: 1280px)" srcSet={FinalBannerPC} />
-      <source media="(min-width: 1280px)" srcSet={FinalBannerPC2X} />
+      <source media="(max-width: 720px)" srcSet={FinalBannerAndroid} />
+      <source media="(max-width: 1280px)" srcSet={FinalBannerTablet} />
+      <source media="(min-width: 1280px)" srcSet={FinalBannerPC} />
       <img
         className="finalImage"
         src={FinalBannerAndroid}
@@ -106,10 +105,9 @@ function DrawLogo() {
   return (
     <div className="logo">
       <picture>
-        <source media="(max-width: 360px)" srcSet={LogoAndroid} />
-        <source media="(max-width: 720px)" srcSet={LogoAndroid2X} />
-        <source media="(max-width: 1280px)" srcSet={LogoPC} />
-        <source media="(min-width: 1280px)" srcSet={LogoPC2X} />
+        <source media="(max-width: 720px)" srcSet={LogoAndroid} />
+        <source media="(max-width: 1280px)" srcSet={LogoTablet} />
+        <source media="(min-width: 1280px)" srcSet={LogoPC} />
         <img
           className="logoImage"
           src={LogoAndroid}
@@ -121,6 +119,8 @@ function DrawLogo() {
   );
 }
 
+
+
 function DrawSolution() {
   return (
     <div className="solution">
@@ -131,15 +131,15 @@ function DrawSolution() {
       <div className="leftItem1">
         <div className="solutionContent">
           <h1>01</h1>
-          <h2>하객분들의 지금이순간을 담아 드립니다.</h2>
+          <h2>의 지금이순간을 담아 드립니다.</h2>
           <h3>하객분들이 세 컷의 사진을 찍으며 신랑신부님과 기쁨을 나눕니다.</h3>
         </div>
       </div>
       <div className="rightItem1">
         <picture>
-          <source media="(max-width: 360px)" srcSet={Right1Android} />
-          <source media="(max-width: 720px)" srcSet={Right1Android2X} />
-          <source media="(max-width: 1280px)" srcSet={Right1PC} />
+          <source media="(max-width: 720px)" srcSet={Right1Android} />
+          <source media="(max-width: 1280px)" srcSet={Right1Tablet} />
+          <source media="(min-width: 1280px)" srcSet={Right1PC} />
           <img
             className="solutionImage"
             src={Right1PC}
@@ -160,12 +160,12 @@ function DrawSolution() {
       </div>
       <div className="rightItem2">
         <picture>
-          <source media="(max-width: 360px)" srcSet={Right2Android} />
-          <source media="(max-width: 720px)" srcSet={Right2Android2X} />
-          <source media="(max-width: 1280px)" srcSet={Right1PC} />
+          <source media="(max-width: 720px)" srcSet={Right2Android} />
+          <source media="(max-width: 1280px)" srcSet={Right2Tablet} />
+          <source media="(min-width: 1280px)" srcSet={Right2PC} />
           <img
             className="solutionImage"
-            src={Right1PC}
+            src={Right2PC}
             alt=""
           />
         </picture>
@@ -173,21 +173,20 @@ function DrawSolution() {
       <div className="leftItem3">
         <div className="solutionContent">
           <h1>03</h1>
-          <h2>하객분들의 순간들을 담은 책자를 신랑 신부님에게 선물해드립니다.</h2>
-          <h3>
-          신랑 신부님이 앞으로 함께하여
-          언제든지 꺼내서 볼 수 있는 포토방명록을 드립니다.
-          </h3>
+          <h2>하객분들의 순간들을 담은 책자를 신랑 신부님에게 </h2>
+          <h2>선물해드립니다.</h2>
+          <h3>신랑 신부님이 앞으로 함께하여</h3>
+          <h3>언제든지 꺼내서 볼 수 있는 포토방명록을 드립니다.</h3>
         </div>
       </div>
       <div className="rightItem3">
         <picture>
-          <source media="(max-width: 360px)" srcSet={Right3Android} />
-          <source media="(max-width: 720px)" srcSet={Right3Android2X} />
-          <source media="(max-width: 1280px)" srcSet={Right1PC} />
+          <source media="(max-width: 720px)" srcSet={Right3Android} />
+          <source media="(max-width: 1280px)" srcSet={Right3Tablet} />
+          <source media="(min-width: 1280px)" srcSet={Right3PC} />
           <img
             className="solutionImage"
-            src={Right1PC}
+            src={Right3PC}
             alt=""
           />
         </picture>
@@ -199,8 +198,8 @@ function DrawSolution() {
 function DrawMainBannerAndroid() {
   return (
     <picture>
-      <source media="(max-width: 360px)" srcSet={MainBannerAndroid} />
-      <source media="(min-width: 360px)" srcSet={MainBannerAndroid2X} />
+      <source media="(max-width: 720px)" srcSet={MainBannerAndroid} />
+      <source media="(max-width: 1280px)" srcSet={MainBannerTablet} />
       <img
         className="bannerImage"
         src={MainBannerAndroid}
@@ -253,8 +252,7 @@ function DrawInfo(media) {
 function DrawMainBannerPC() {
   return (
     <picture>
-      <source media="max-width: 1280px" srcSet={MainBannerPC} />
-      <source media="min-width: 1280px" srcSet={MainBannerPC2X} />
+      <source srcSet={MainBannerPC} />
       <img
         className="bannerImage"
         src={MainBannerPC}
@@ -302,12 +300,44 @@ function DrawAndroid() {
   );
 }
 
-const BrandStory = ({ android }) => {
+function DrawTablet() {
   return (
-    <div>
-      {android ? DrawAndroid() : DrawPC()}
+    <div className="root">
+      {DrawMainBanner(global.ANDROID)}
+      {DrawInfo(global.TABLET)}
+      {DrawSolution()}
+      {DrawLogo()}
+      {DrawFinalBanner()}
+      {DrawFinalInfo(global.TABLET)}
     </div>
   );
+}
+
+const BrandStory = ({ android, tablet, pc }) => {
+  const [body, setBody] = useState(DrawPC());
+
+  useEffect(() => {
+    if (android === true) {
+      setBody(DrawAndroid());
+    } else if (tablet === true) {
+      setBody(DrawTablet());
+    } else {
+      setBody(DrawPC());
+    }
+  }, [android, tablet, pc]);
+
+  return (
+    <div>
+      {body}
+      {/* {android ? DrawAndroid() : DrawPC()} */}
+    </div>
+  );
+};
+
+BrandStory.propTypes = {
+  android: PropTypes.bool.isRequired,
+  tablet: PropTypes.bool.isRequired,
+  pc: PropTypes.bool.isRequired,
 };
 
 export default BrandStory;

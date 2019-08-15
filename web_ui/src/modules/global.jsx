@@ -1,6 +1,7 @@
 // media type
 const ANDROID = 1;
 const PC = 0;
+const TABLET = 2;
 
 // media size
 const PCMinWidth = 1280;
@@ -21,4 +22,5 @@ export default {
   Main,
   BrandStory,
   Reservation,
+  TABLET,
 };

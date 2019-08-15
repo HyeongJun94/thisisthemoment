@@ -10,8 +10,6 @@ import ContentContainer from './container/ContentContainer.jsx';
 import BrandStoryContainer from './container/BrandStoryContainer.jsx';
 import FooterContainer from './container/FooterContainer';
 
-
-
 const useStyles = makeStyles(theme => ({
   root: {
     padding: 0,
@@ -25,8 +23,9 @@ const useStyles = makeStyles(theme => ({
 export default function App() {
   const theme = useTheme();
   // 이거 어쩔때 rendering 할까?
-  const mediaAndroid = useMediaQuery(theme.breakpoints.down(global.TabletMinWidth));
-  const mediaPC = useMediaQuery(theme.breakpoints.up(global.TabletMinWidth));
+  const mediaAndroid = useMediaQuery(theme.breakpoints.up(global.AndroidMinWidth));
+  const mediaTablet = useMediaQuery(theme.breakpoints.up(global.TabletMinWidth));
+  const mediaPC = useMediaQuery(theme.breakpoints.up(global.PCMinWidth));
   const classes = useStyles();
 
   // const [menu, setMenu] = useState(global.Main);
@@ -40,13 +39,13 @@ export default function App() {
 
   useEffect(() => {
     if (menu == global.BrandStory) {
-      setBody(<BrandStoryContainer mediaAndroid={mediaAndroid} mediaPC={mediaPC} />);
-    } else if (menu == global.Reservation){
+      setBody(<BrandStoryContainer mediaAndroid={mediaAndroid} mediaTablet={mediaTablet} mediaPC={mediaPC} />);
+    } else if (menu == global.Reservation) {
       console.log ("Reservation");
     } else {
-      setBody(<ContentContainer mediaAndroid={mediaAndroid} mediaPC={mediaPC} />);
+      setBody(<ContentContainer mediaAndroid={mediaAndroid} mediaTablet={mediaTablet} mediaPC={mediaPC} />);
     }
-  }, [menu, mediaAndroid, mediaPC]);
+  }, [menu, mediaAndroid, mediaTablet, mediaPC]);
 
   return (
     <React.Fragment>
@@ -54,6 +53,7 @@ export default function App() {
       <div className={classes.root}>
         <HeaderContainer
           mediaAndroid={mediaAndroid}
+          mediaTablet={mediaTablet}
           mediaPC={mediaPC}
           onChangeMenu={onChangeMenu}
         />

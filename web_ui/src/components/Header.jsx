@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import { makeStyles } from '@material-ui/core/styles';
 import global from '../modules/global';
@@ -12,6 +13,7 @@ import AppBar from '@material-ui/core/AppBar';
 // import BannerAndroid2X from '../static/images/Android/mainBanner@2x.png';
 
 import LogoAndroid from '../static/images/Android/Main/logo.jpg';
+import LogoAndroid2X from '../static/images/Android/Main/logo@2x.jpg';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -25,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   appBar: {
     backgroundColor: 'transparent',
     boxShadow: 'none',
-    [theme.breakpoints.up(global.TabletMinWidth)]: {
+    [theme.breakpoints.up(global.PCMinWidth)]: {
       marginTop: 10 * theme.spacing(2),
       fontSize: '28px',
       fontWeight: 'bold',
@@ -33,7 +35,7 @@ const useStyles = makeStyles(theme => ({
       letterSpacing: '-1.4px',
       color: '#ffffff',
     },
-    [theme.breakpoints.down(global.TabletMinWidth)]: {
+    [theme.breakpoints.down(global.PCMinWidth)]: {
       margin: '104px 0 0 0',
       borderBottom: '10px solid #707070',
       fontSize: 20,
@@ -47,15 +49,15 @@ const useStyles = makeStyles(theme => ({
     margin: '0 auto 0 auto',
     fontSize: '10px',
     maxWidth: '1280px',
-    [theme.breakpoints.down(global.TabletMinWidth)]: {
+    [theme.breakpoints.down(global.PCMinWidth)]: {
       borderTop: '1px solid black',
     },
     '& div': {
-      [theme.breakpoints.up(global.TabletMinWidth)]: {
+      [theme.breakpoints.up(global.PCMinWidth)]: {
         marginLeft: 10 * theme.spacing(2),
         width: '1280px',
       },
-      [theme.breakpoints.down(global.TabletMinWidth)]: {
+      [theme.breakpoints.down(global.PCMinWidth)]: {
         marginLeft: theme.spacing(1) * 3,
         width: '100%',
       },
@@ -63,13 +65,13 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: 'transparent',
         fontFamily: 'NotoSans',
         border: 'none',
-        [theme.breakpoints.up(global.TabletMinWidth)]: {
+        [theme.breakpoints.up(global.PCMinWidth)]: {
           marginRight: 2 * theme.spacing(2),
           fontSize: '20px',
           color: '#ffffff',
           fontWeight: 'bold',
         },
-        [theme.breakpoints.down(global.TabletMinWidth)]: {
+        [theme.breakpoints.down(global.PCMinWidth)]: {
           marginRight: 3 * theme.spacing(1),
           fontSize: '14px',
           color: '#707070',
@@ -78,14 +80,16 @@ const useStyles = makeStyles(theme => ({
       },
     },
   },
-
   logo: {
     display: 'block',
     margin: '0 auto 0 auto',
-  }
+    // marginLeft: 'auto',
+  },
 }));
 
-const Header = ({ android, onChangeMenu }) => {
+const Header = ({
+  android, tablet, pc, onChangeMenu,
+}) => {
   const classes = useStyles();
   const sections = [
     { name: 'MAIN', value: global.Main },
@@ -112,15 +116,19 @@ const Header = ({ android, onChangeMenu }) => {
       </div>
     );
   }
-  function DrawAndroid() {
+
+  function DrawTablet() {
     return (
       <div className={classes.root}>
         <Toolbar>
-          <img
-            className={classes.logo}
-            src={LogoAndroid}
-            alt="lgo"
-          />
+          <picture className={classes.logo}>
+            <source media="(max-width:360px)" srcSet={LogoAndroid} />
+            <source media="(min-width:360px)" srcSet={LogoAndroid2X} />
+            <img
+              src={LogoAndroid}
+              alt="logo"
+            />
+          </picture>
         </Toolbar>
         <Toolbar className={classes.toolBar}>
           <div>
@@ -133,11 +141,55 @@ const Header = ({ android, onChangeMenu }) => {
       </div>
     );
   }
+
+  function DrawAndroid() {
+    return (
+      <div className={classes.root}>
+        <Toolbar>
+          <picture className={classes.logo}>
+            <source media="(max-width:360px)" srcSet={LogoAndroid} />
+            <source media="(min-width:360px)" srcSet={LogoAndroid2X} />
+            <img
+              src={LogoAndroid}
+              alt="logo"
+            />
+          </picture>
+        </Toolbar>
+        <Toolbar className={classes.toolBar}>
+          <div>
+            {sections.map(section => (
+              <button onClick={onChangeMenu} value={section.value}>{section.name}</button>
+            ))}
+          </div>
+        </Toolbar>
+        {/* {DrawBanner(classes, global.ANDROID)} */}
+      </div>
+    );
+  }
+
+  const [body, setBody] = useState(DrawPC());
+
+  useEffect(() => {
+    if (android === true) {
+      setBody(DrawAndroid());
+    } else if (tablet === true) {
+      setBody(DrawTablet());
+    } else {
+      setBody(DrawPC());
+    }
+  }, [android, tablet, pc]);
   return (
     <div>
-      {android ? DrawAndroid() : DrawPC()}
+      {body}
     </div>
   );
+};
+
+Header.propTypes = {
+  android: PropTypes.bool.isRequired,
+  tablet: PropTypes.bool.isRequired,
+  pc: PropTypes.bool.isRequired,
+  onChangeMenu: PropTypes.func.isRequired,
 };
 
 export default Header;
