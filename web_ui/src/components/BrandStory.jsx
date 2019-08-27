@@ -131,7 +131,7 @@ function DrawSolution() {
       <div className="leftItem1">
         <div className="solutionContent">
           <h1>01</h1>
-          <h2>의 지금이순간을 담아 드립니다.</h2>
+          <h2>하객분들의 지금이순간을 담아 드립니다.</h2>
           <h3>하객분들이 세 컷의 사진을 찍으며 신랑신부님과 기쁨을 나눕니다.</h3>
         </div>
       </div>

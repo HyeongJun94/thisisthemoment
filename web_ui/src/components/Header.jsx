@@ -95,6 +95,9 @@ const Header = ({
     { name: 'MAIN', value: global.Main },
     { name: 'BRAND STORY', value: global.BrandStory },
     { name: 'RESERVATION', value: global.Reservation },
+    { name: 'SERVICE', value: global.Service },
+    { name: 'CUSTOMIZE', value: global.Customize },
+    { name: 'FAQ', value: global.FAQ },
   ];
 
   function DrawPC() {

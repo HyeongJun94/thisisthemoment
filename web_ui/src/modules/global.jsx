@@ -12,6 +12,9 @@ const AndroidMinWidth = 360;
 const Main = 0;
 const BrandStory = 1;
 const Reservation = 2;
+const Service = 3;
+const Customize = 4;
+const FAQ = 5;
 
 export default {
   ANDROID,
@@ -23,4 +26,7 @@ export default {
   BrandStory,
   Reservation,
   TABLET,
+  Service,
+  Customize,
+  FAQ,
 };

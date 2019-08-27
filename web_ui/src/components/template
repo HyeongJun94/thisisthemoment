@@ -1,0 +1,65 @@
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+
+import global from '../modules/global';
+
+//css
+import '../css/Service.css';
+
+
+//imagaes
+
+function DrawPC() {
+  return (
+    <div>
+      PC
+    </div>
+  );
+}
+
+function DrawTablet() {
+  return (
+    <div >
+      Tablet
+    </div>
+  );
+}
+
+function DrawAndroid() {
+  return (
+    <div >
+      Android
+    </div>
+  );
+}
+
+const Service = ({
+  android, tablet, pc,
+}) => {
+  const [body, setBody] = useState(DrawPC());
+
+  useEffect(() => {
+    if (android === true) {
+      console.log('Draw Android');
+      setBody(DrawAndroid());
+    } else if (tablet === true) {
+      setBody(DrawTablet());
+    } else {
+      console.log('Draw PC');
+      setBody(DrawPC());
+    }
+  }, [android, tablet, pc]);
+  return (
+    <div>
+      {body}
+    </div>
+  );
+};
+
+Service.propTypes = {
+  android: PropTypes.bool.isRequired,
+  tablet: PropTypes.bool.isRequired,
+  pc: PropTypes.bool.isRequired,
+};
+
+export default Service;

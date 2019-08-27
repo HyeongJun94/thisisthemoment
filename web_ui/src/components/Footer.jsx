@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
   footer: {
     display: 'grid',
-    gridTemplateColumns: '27.5% auto',
+    gridTemplateColumns: '27.5% auto auto',
     '& div:nth-child(1)': {
       margin: 'auto',
       // border: '10px solid black',
@@ -31,8 +31,9 @@ const useStyles = makeStyles(theme => ({
       margin: 'auto',
       width: '100%',
     },
-    '& div': {
-      // border: '10px solid black',
+    '& div:nth-child(2)': {
+      border: '1px solid black',
+      width: '40%',
       [theme.breakpoints.up(global.TabletMinWidth)]: {
         margin: '32px',
       },
@@ -51,6 +52,11 @@ const useStyles = makeStyles(theme => ({
         fontSize: '6px',
       },
     },
+    '& div:nth-child(3)': {
+      fontSize: '10px',
+      marginRight: '100px',
+      border: '1px solid black',
+    },
   },
 }));
 
@@ -65,9 +71,14 @@ function DrawFooter(classes, media) {
       </div>
       <div>
         <p>상호명 : 지금 이 순간</p>
+        <p>사업자등록번호:540-36-00375</p>
         <p>대표자 : 이동현 주상욱 이정석</p>
         <p>주소:서울특별시 노원구 동일로 174길 27,201사업자등록번호:540-36-00375</p>
-        <p>고객문의전화:02-6315-0503 Work:10:00-18:00 Lunch:12:00-13:00</p>
+      </div>
+      <div>
+        <p>고객문의전화:02-6315-0503</p>
+        <p>Work: 10:00 - 18:00</p>
+        <p>Lunch: 12:00 - 13:00</p>
         <p>CopyrightⓒTHISISTHEMOMENT</p>
       </div>
     </div>

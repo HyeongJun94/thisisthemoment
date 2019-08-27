@@ -234,12 +234,13 @@
   .root {
     margin: 0 auto 0 auto;
     padding: 0;
+    /* border: 10px solid black; */
   }
   .root * {
     margin: 0;
     padding: 0;
     font-size: 0;
-    /* border: 1px solid black; */
+    /* border: 10px solid black; */
   }
   .info {
     margin-top: 40px;
@@ -346,8 +347,10 @@
 
   .solutionImage {
     display: block;
-    width: 69.4%;
-    margin: auto;
+    width: 100%;
+    /* margin: auto; */
+    margin-left: 100px;
+    /* border: 10px solid black; */
   }
 
   .leftItem1 { 
@@ -356,8 +359,9 @@
   }
   .rightItem1 { 
     grid-area: right1;
-    /* margin-top: 4px; */
-    /* background-color: #f5f5f5; */
+    /* margin: auto; */
+    /* margin-left: 100px; */
+    /* border: 10px solid black; */
   }
   .leftItem2 { 
     grid-area: left2;
@@ -380,7 +384,10 @@
 
   .logo {
     margin: 48px auto 48px auto;
-    /* border: 1px solid #707070; */
+  }
+
+  .logo > picture > img{
+    margin: auto;
   }
 
   .logo > h1 {
@@ -393,7 +400,6 @@
   .logoImage{
     display: block;
     width: 47.9%;
-    margin: auto;
   }
 
   .finalImage{

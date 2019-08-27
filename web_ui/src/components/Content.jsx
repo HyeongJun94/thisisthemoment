@@ -12,6 +12,7 @@ import ShinyoungPC from '../static/images/PC/Main/shinyoung.png';
 import ShinyoungTablet from '../static/images/Tablet/Main/shinyoung.png';
 import ShinyoungAndroid from '../static/images/Android/Main/shinyoung.png';
 import MiddleBannerPC from '../static/images/PC/Main/middleBanner.png';
+import MiddleBannerPC2 from '../static/images/PC/Main/middleBanner2.png';
 import MiddleBannerTablet from '../static/images/Tablet/Main/middleBanner.png';
 import MiddleBannerAndroid from '../static/images/Android/Main/middleBanner.png';
 import WeddingSnapPC from '../static/images/PC/Main/weddingsnap.png';
@@ -39,6 +40,13 @@ const useStyles = makeStyles(theme => ({
       padding: 0,
     },
   },
+
+  myroot: {
+
+    backgroundColor: '#f7f7f7',
+
+  },
+
   bannerImage: {
     display: 'block',
     margin: '0 auto 0 auto',
@@ -58,15 +66,18 @@ const useStyles = makeStyles(theme => ({
   },
   wedding: {
     textAlign: 'center',
-    fontFamily: 'Playfair Display',
+    fontFamily: 'Playfair Display SC',
     color: '#b4a570',
+    // border: '1px solid black',
     [theme.breakpoints.up(global.PCMinWidth)]: {
-      fontSize: '30px',
+      fontSize: '36px',
       marginTop: '56px',
+      letterSpacing: '-1.44px',
     },
     [theme.breakpoints.down(global.PCMinWidth)]: {
       fontSize: '28px',
-      marginTop: '24px',
+      marginTop: '40px',
+      marginBottom: '40px',
     },
     [theme.breakpoints.down(global.TabletMinWidth)]: {
       fontSize: '14px',
@@ -74,13 +85,16 @@ const useStyles = makeStyles(theme => ({
       marginTop: '20px',
     },
     '& div': {
-      fontFamily: 'NotoSansCJKkr',
+      fontFamily: 'Noto Sans KR',
+      // fontWeight: '100',
       color: '#707070',
       [theme.breakpoints.up(global.PCMinWidth)]: {
-        fontSize: '20px',
+        fontSize: '24px',
+        letterSpacing: '-0.48px',
       },
       [theme.breakpoints.down(global.PCMinWidth)]: {
         fontSize: '20px',
+        letterSpacing: '-0.42px',
       },
       [theme.breakpoints.down(global.TabletMinWidth)]: {
         fontSize: '12px',
@@ -124,15 +138,18 @@ const useStyles = makeStyles(theme => ({
         marginTop: '8px',
       },
       '& img': {
-        width: '100%',
+        display: 'block',
+        width: '90%',
+        margin: 'auto',
       },
       '& div': {
+        textAlign: 'center',
         [theme.breakpoints.up(global.PCMinWidth)]: {
           marginTop: '8px',
           marginBottom: '8px',
         },
         [theme.breakpoints.down(global.PCMinWidth)]: {
-          marginTop: '8px',
+          marginTop: '40px',
           marginBottom: '8px',
         },
         [theme.breakpoints.down(global.TabletMinWidth)]: {
@@ -140,18 +157,22 @@ const useStyles = makeStyles(theme => ({
           marginBottom: '4px',
         },
         '& p': {
-          fontFamily: 'NotoSansCJKkr',
+          fontFamily: 'Noto Sans KR',
           color: '#707070',
           [theme.breakpoints.up(global.PCMinWidth)]: {
             fontSize: '16px',
           },
           [theme.breakpoints.down(global.PCMinWidth)]: {
-            fontSize: '20px',
+            fontSize: '18px',
             textAlign: 'center',
+            lineHeight: '1.8',
+            letterSpacing: '-0.36px',
           },
-          [theme.breakpoints.down(global.PCMinWidth)]: {
+          [theme.breakpoints.down(global.TabletMinWidth)]: {
             fontSize: '12px',
             textAlign: 'center',
+            lineHeight: '1.8',
+            letterSpacing: '-0.36px',
           },
         },
       },
@@ -162,25 +183,70 @@ const useStyles = makeStyles(theme => ({
         border: '1px solid #707070',
         backgroundColor: 'transparent',
         color: '#707070',
+        margin: 'auto',
         textAlign: 'center',
         [theme.breakpoints.up(global.PCMinWidth)]: {
-          width: '240px',
+          marginTop: '16px',
+          marginBottom: '40px',
+          width: '183px',
           lineHeight: 2,
           // padding: '8px',
           borderRadius: '20px',
           fontSize: '16px',
         },
         [theme.breakpoints.down(global.PCMinWidth)]: {
+          marginTop: '8px',
+          marginBottom: '24px',
           lineHeight: 2,
-          width: '210px',
+          width: '148px',
           borderRadius: '30px',
-          fontSize: '16px',
+          fontSize: '14px',
           marginLeft: 'auto',
           marginRight: 'auto',
         },
         [theme.breakpoints.down(global.TabletMinWidth)]: {
+          marginTop: '4px',
+          marginBottom: '8px',
           lineHeight: 2,
-          width: '170px',
+          width: '102px',
+          borderRadius: '30px',
+          fontSize: '10px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        },
+      },
+      '& a2': {
+        display: 'block',
+        textDecoration: 'none',
+        border: '1px solid #707070',
+        backgroundColor: 'transparent',
+        color: '#707070',
+        margin: 'auto',
+        textAlign: 'center',
+        [theme.breakpoints.up(global.PCMinWidth)]: {
+          marginTop: '16px',
+          marginBottom: '40px',
+          width: '226px',
+          lineHeight: 2,
+          // padding: '8px',
+          borderRadius: '20px',
+          fontSize: '16px',
+        },
+        [theme.breakpoints.down(global.PCMinWidth)]: {
+          marginTop: '8px',
+          marginBottom: '24px',
+          lineHeight: 2,
+          width: '186px',
+          borderRadius: '30px',
+          fontSize: '14px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        },
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
+          marginTop: '4px',
+          marginBottom: '8px',
+          lineHeight: 2,
+          width: '129px',
           borderRadius: '30px',
           fontSize: '10px',
           marginLeft: 'auto',
@@ -208,7 +274,7 @@ const useStyles = makeStyles(theme => ({
     // border: '1px solid black',
     [theme.breakpoints.up(global.PCMinWidth)]: {
       marginTop: '56px',
-      gridTemplateColumns: '62.5% 37.5%',
+      gridTemplateColumns: '66.7% auto',
       // gridTemplateColumns: 'auto auto',
     },
     [theme.breakpoints.down(global.PCMinWidth)]: {
@@ -221,22 +287,32 @@ const useStyles = makeStyles(theme => ({
     },
 
     '& img': {
+      display: 'block',
       width: '100%',
+      // height: '100%',
+      // border: '1px solid black',
     },
 
     '& div': {
       // border: '10px solid black',
       margin: 'auto',
+      // border: '1px solid black',
       '& div': {
-        fontFamily: 'NotoSansCJKkr',
+        // fontFamily: 'NotoSansCJKkr',
+        // border: '1px solid black',
+        fontFamily: 'Noto Sans KR',
         color: '#707070',
         [theme.breakpoints.up(global.PCMinWidth)]: {
+          // marginTop: '31px',
+          // marginBottom: '31px',
+          // margint: 
           fontSize: '16px',
           lineHeight: '0.60',
         },
         [theme.breakpoints.down(global.PCMinWidth)]: {
-          marginTop: '24px',
-          marginBottom: '24px',
+          marginTop: '16px',
+          marginBottom: '16px',
+          // marginBottom: '24px',
         },
         [theme.breakpoints.down(global.TabletMinWidth)]: {
           marginTop: '8px',
@@ -247,44 +323,52 @@ const useStyles = makeStyles(theme => ({
           textAlign: 'center',
           fontWeight: 'bold',
           color: '#ffffff',
-          fontFamily: 'NotoSansKR',
+          fontFamily: 'Noto Sans KR',
           [theme.breakpoints.up(global.PCMinWidth)]: {
-            fontSize: '26px',
+            fontSize: '36px',
             marginBottom: '16px',
+            letterSpacing: '-0.42px',
           },
           [theme.breakpoints.down(global.PCMinWidth)]: {
             fontSize: '24px',
-            marginBottom: '16px',
+            marginBottom: '14px',
           },
           [theme.breakpoints.down(global.TabletMinWidth)]: {
             fontSize: '14px',
+            marginBottom: '4px',
           },
         },
 
         '& p': {
-          fontFamily: 'NotoSansCJKkr',
+          fontFamily: 'Noto Sans KR',
           color: '#ffffff',
           textAlign: 'center',
           [theme.breakpoints.up(global.PCMinWidth)]: {
-            fontSize: '20px',
-            lineHeight: '0.2',
+            fontSize: '21px',
+            lineHeight: '0.6',
+            letterSpacing: '-0.42px',
           },
           [theme.breakpoints.down(global.PCMinWidth)]: {
             fontSize: '16px',
+            lineHeight: '1.78',
+            letterSpacing: '-0.36px',
           },
           [theme.breakpoints.down(global.TabletMinWidth)]: {
-            fontSize: '12px',
+            fontSize: '10px',
+            lineHeight: '1.8',
+            letterSpacing: '-0.36px',
           },
         },
 
         '& b': {
           display: 'block',
-          fontFamily: 'NotoSansCJKkr',
+          fontFamily: 'Noto Sans KR',
           color: '#ffffff',
           textAlign: 'center',
           fontWeight: 'bold',
           [theme.breakpoints.up(global.PCMinWidth)]: {
-            fontSize: '20x',
+            fontSize: '21px',
+            letterSpacing: '-0.42px',
           },
           [theme.breakpoints.down(global.PCMinWidth)]: {
             fontSize: '12px',
@@ -314,28 +398,26 @@ const useStyles = makeStyles(theme => ({
   },
 
   snap: {
-    [theme.breakpoints.up(global.PCMinWidth)]: {
-      marginTop: '40px',
-    },
-    [theme.breakpoints.down(global.PCMinWidth)]: {
-      marginTop: '12px',
-    },
+    marginTop: '0px',
     '& div': {
-      backgroundColor: '#ffffff',
+      backgroundColor: '#424242',
       marginLeft: 'auto',
       marginRight: 'auto',
       border: '0.5px solid #b4a570',
       width: '0px',
       [theme.breakpoints.up(global.PCMinWidth)]: {
-        height: '100px',
+        height: '80px',
       },
       [theme.breakpoints.down(global.PCMinWidth)]: {
-        height: '50px',
+        height: '52px',
+      },
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
+        height: '36px',
       },
     },
     '& p': {
       textAlign: 'center',
-      fontFamily: 'Playfair Display',
+      fontFamily: 'Playfair Display SC',
       color: '#b4a570',
       writingMode: 'vertical-lr',
       marginLeft: 'auto',
@@ -343,27 +425,36 @@ const useStyles = makeStyles(theme => ({
       // transform: 'rotate(90deg)',
       [theme.breakpoints.up(global.PCMinWidth)]: {
         marginTop: '8px',
-        fontSize: '30px',
+        fontSize: '36px',
+        letterSpacing: '-1.44px',
       },
       [theme.breakpoints.down(global.PCMinWidth)]: {
         marginTop: '8px',
-        fontSize: '28px',
+        fontSize: '24px',
+        letterSpacing: '-0.96px',
       },
       [theme.breakpoints.down(global.TabletMinWidth)]: {
         marginTop: '8px',
-        fontSize: '12px',
+        fontSize: '16px',
+        letterSpacing: '-0.64px',
       },
     },
   },
   weddingSnap: {
     [theme.breakpoints.up(global.PCMinWidth)]: {
-      marginTop: '32px',
+      marginTop: '64px',
+      marginLeft: '110px',
+      marginRight: '110px',
     },
     [theme.breakpoints.down(global.PCMinWidth)]: {
-      marginTop: '24px',
+      marginTop: '40px',
+      marginLeft: '110px',
+      marginRight: '110px',
     },
     [theme.breakpoints.down(global.TabletMinWidth)]: {
-      marginTop: '16px',
+      marginTop: '12px',
+      marginLeft: '24px',
+      marginRight: '24px',
     },
 
     '& img': {
@@ -377,36 +468,50 @@ const useStyles = makeStyles(theme => ({
         marginTop: '64px',
       },
       [theme.breakpoints.down(global.PCMinWidth)]: {
-        marginTop: '24px',
+        marginTop: '40px',
       },
       [theme.breakpoints.down(global.TabletMinWidth)]: {
         marginTop: '12px',
       },
       '& h1': {
-        fontFamily: 'Playfair Display',
-        textDecoration: 'underline',
+        fontFamily: 'Playfair Display SC',
+        margin: 'auto',
         [theme.breakpoints.up(global.PCMinWidth)]: {
+          borderBottom: '1px solid black',
           fontSize: '16px',
+          width: '121px',
+          paddingBottom: '4px',
+          letterSpacing: '-0.72px',
         },
         [theme.breakpoints.down(global.PCMinWidth)]: {
+          borderBottom: '1px solid black',
           fontSize: '16px',
+          width: '121px',
+          paddingBottom: '4px',
+          letterSpacing: '-0.72px',
         },
         [theme.breakpoints.down(global.TabletMinWidth)]: {
+          borderBottom: '0.5px solid black',
           fontSize: '10px',
+          width: '72px',
+          paddingBottom: '0px',
+          letterSpacing: '-0.72px',
         },
       },
       '& h2': {
-        fontFamily: 'NotoSansCJKkr',
+        fontFamily: 'Noto Sans KR',
         fontWeight: 'bold',
         [theme.breakpoints.up(global.PCMinWidth)]: {
           marginTop: '8px',
           marginBottom: '8px',
           fontSize: '24px',
+          letterSpacing: '-0.36px',
         },
         [theme.breakpoints.down(global.PCMinWidth)]: {
           marginTop: '4px',
           marginBottom: '4px',
-          fontSize: '24px',
+          fontSize: '21px',
+          letterSpacing: '-0.36px',
         },
         [theme.breakpoints.down(global.TabletMinWidth)]: {
           marginTop: '4px',
@@ -415,12 +520,16 @@ const useStyles = makeStyles(theme => ({
         },
       },
       '& p': {
-        fontFamily: 'NotoSansCJKkr',
+        fontFamily: 'Noto Sans KR',
         [theme.breakpoints.up(global.PCMinWidth)]: {
-          fontSize: '20px',
+          fontSize: '21px',
+          letterSpacing: '-0.36px',
+          lineHeight: '1.78',
         },
         [theme.breakpoints.down(global.PCMinWidth)]: {
-          fontSize: '14px',
+          fontSize: '18px',
+          letterSpacing: '-0.36px',
+          lineHeight: '1.78',
         },
         [theme.breakpoints.down(global.TabletMinWidth)]: {
           fontSize: '12px',
@@ -430,15 +539,20 @@ const useStyles = makeStyles(theme => ({
   },
   finalBanner: {
     display: 'grid',
+    
+    // border: '1px solid black',
     [theme.breakpoints.up(global.PCMinWidth)]: {
       gridTemplateColumns: '50% 50%',
       marginTop: '64px',
+      backgroundColor: '#f7f7f7',
     },
     [theme.breakpoints.down(global.PCMinWidth)]: {
       gridTemplateAreas: ' "item1" "item2"',
       gridTemplateRows: '1fr auto',
       marginTop: '12px',
+      backgroundColor: 'white',
     },
+
     '& div:nth-child(1)': {
       // textAlign: 'center',
       color: '#707070',
@@ -449,58 +563,85 @@ const useStyles = makeStyles(theme => ({
       [theme.breakpoints.down(global.PCMinWidth)]: {
         textAlign: 'center',
         margin: '0 auto 0 auto',
-        marginTop: '12px',
+        marginTop: '16px',
+        marginBottom: '28px',
+        gridArea: 'item2',
+      },
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
+        textAlign: 'center',
+        margin: '0 auto 0 auto',
+        marginTop: '0px',
+        marginBottom: '12px',
         gridArea: 'item2',
       },
       '& h1': {
         fontFamily: 'Playfair Display',
-        textDecoration: 'underline',
+        
         [theme.breakpoints.up(global.PCMinWidth)]: {
           fontSize: '16px',
+          borderBottom: '1px solid black',
+          width: '112px',
+          letterSpacing: '-0.72px',
         },
         [theme.breakpoints.down(global.PCMinWidth)]: {
+          margin: 'auto',
           fontSize: '16px',
+          borderBottom: '1px solid black',
+          width: '112px',
+          letterSpacing: '-0.72px',
         },
         [theme.breakpoints.down(global.TabletMinWidth)]: {
           fontSize: '10px',
+          borderBottom: '0.5px solid black',
+          width: '70px',
+          letterSpacing: '-0.72px',
         },
       },
       '& h2': {
-        fontFamily: 'NotoSansCJKkr',
+        fontFamily: 'Noto Sans KR',
         fontWeight: 'bold',
         [theme.breakpoints.up(global.PCMinWidth)]: {
           marginTop: '8px',
-          marginBottom: '16px',
+          marginBottom: '8px',
           fontSize: '24px',
+          letterSpacing: '-0.36px',
         },
         [theme.breakpoints.down(global.PCMinWidth)]: {
           marginTop: '4px',
           marginBottom: '8px',
-          fontSize: '24px',
+          fontSize: '21px',
+          letterSpacing: '-0.36px',
         },
         [theme.breakpoints.down(global.TabletMinWidth)]: {
           marginTop: '4px',
-          marginBottom: '8px',
+          marginBottom: '4px',
           fontSize: '14px',
+          letterSpacing: '-0.36px',
         },
       },
       '& p': {
-        fontFamily: 'NotoSansCJKkr',
+        fontFamily: 'Noto Sans KR',
         // border: '10px solid black',
         [theme.breakpoints.up(global.PCMinWidth)]: {
           fontSize: '20px',
+          letterSpacing: '-0.36px',
+          lineHeight: '1.76',
         },
         [theme.breakpoints.down(global.PCMinWidth)]: {
           fontSize: '14px',
+          letterSpacing: '-0.36px',
+          lineHeight: '1.76',
         },
         [theme.breakpoints.down(global.TabletMinWidth)]: {
           fontSize: '12px',
+          letterSpacing: '-0.36px',
+          lineHeight: '1.75',
         },
       },
     },
 
     '& div:nth-child(2)': {
-      margin: 'auto',
+      margin: '24px',
       width: '100%',
       // border: '10px solid black',
       [theme.breakpoints.up(global.PCMinWidth)]: {
@@ -509,8 +650,16 @@ const useStyles = makeStyles(theme => ({
       [theme.breakpoints.down(global.PCMinWidth)]: {
         // gridArea: 'item1',
       },
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
+        // gridArea: 'item1',
+        // margin: '0px 8px 0px 8px',
+        margin: '0px',
+        padding: '8px',
+      },
       '& img': {
-        // width: '100%',
+        // border: '1px solid black',
+        display: 'block',
+        width: '100%',
       },
     },
   },
@@ -534,24 +683,30 @@ const useStyles = makeStyles(theme => ({
     zIndex: '-2',
     // border: '10px solid black',
     [theme.breakpoints.up(global.PCMinWidth)]: {
-      marginTop: '72px',
     },
     [theme.breakpoints.down(global.PCMinWidth)]: {
-      marginTop: '12px',
+      // marginTop: '12px',
     },
     '& div:nth-child(1)': {
-      fontFamily: 'NotoSansCJKkr',
+      fontFamily: 'Noto Sans KR',
       fontWeight: 'bold',
       color: '#ffffff',
       textAlign: 'center',
       [theme.breakpoints.up(global.PCMinWidth)]: {
-        fontSize: '20px',
+        fontSize: '24px',
         marginTop: '24px',
         marginBottom: '24px',
+        letterSpacing: '-0.36px',
       },
       [theme.breakpoints.down(global.PCMinWidth)]: {
+        fontSize: '20px',
+        margin: '16px',
+        letterSpacing: '-0.36px',
+      },
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         fontSize: '10px',
-        margin: '8px',
+        margin: '4px',
+        letterSpacing: '-0.36px',
       },
     },
     '& div:nth-child(2)': {
@@ -597,7 +752,7 @@ const useStyles = makeStyles(theme => ({
         zIndex: '1',
         backgroundColor: '#ffffff',
         borderRadius: '50%',
-        fontFamily: 'NotoSansCJKkr',
+        fontFamily: 'Noto Sans KR',
         fontWeight: '300',
         color: '#707070',
         border: 'none',
@@ -605,6 +760,7 @@ const useStyles = makeStyles(theme => ({
           width: '80px',
           height: '80px',
           fontSize: '14px',
+          letterSpacing: '-0.36px',
           marginLeft: theme.spacing(3),
           marginRight: theme.spacing(3),
           // gridTemplateColumns: '50% 50%',
@@ -612,7 +768,17 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down(global.PCMinWidth)]: {
           width: '40px',
           height: '40px',
+          fontSize: '10px',
+          letterSpacing: '-0.36px',
+          marginLeft: theme.spacing(1),
+          marginRight: theme.spacing(1),
+          // gridTemplateRows: 'auto auto',
+        },
+        [theme.breakpoints.down(global.TabletMinWidth)]: {
+          width: '40px',
+          height: '40px',
           fontSize: '8px',
+          letterSpacing: '-0.36px',
           marginLeft: theme.spacing(1),
           marginRight: theme.spacing(1),
           // gridTemplateRows: 'auto auto',
@@ -638,17 +804,24 @@ const useStyles = makeStyles(theme => ({
       },
     },
     '& div:nth-child(3)': {
-      fontFamily: 'NotoSansCJKkr',
+      fontFamily: 'Noto Sans KR',
       color: '#ffffff',
       textAlign: 'center',
       // border: '10px solid black',
       [theme.breakpoints.up(global.PCMinWidth)]: {
         fontSize: '16px',
-        margin: '8px',
+        margin: '16px',
+        letterSpacing: '-0.36px',
       },
       [theme.breakpoints.down(global.PCMinWidth)]: {
+        fontSize: '14px',
+        margin: '16px',
+        letterSpacing: '-0.36px',
+      },
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
         fontSize: '8px',
         margin: '4px',
+        letterSpacing: '-0.36px',
       },
     },
   },
@@ -664,21 +837,36 @@ const useStyles = makeStyles(theme => ({
   kakao: {
     textAlign: 'center',
     [theme.breakpoints.up(global.PCMinWidth)]: {
-      margin: '80px',
+      margin: '120px',
     },
     [theme.breakpoints.down(global.PCMinWidth)]: {
-      margin: '24px',
+      margin: '40px',
+    },
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
+      margin: '16px',
     },
     '& p': {
-      fontFamily: 'NotoSansCJkkr',
+      fontFamily: 'Noto Sans KR',
       fontWeight: 'bold',
       color: '#707070',
       textAlign: 'center',
       [theme.breakpoints.up(global.PCMinWidth)]: {
-        fontSize: '20px',
+        fontSize: '24px',
+        letterSpacing: '-0.36px',
+        lineHeight: '1.54',
+        marginBottom: '24px',
       },
       [theme.breakpoints.down(global.PCMinWidth)]: {
-        fontSize: '12px',
+        fontSize: '21px',
+        letterSpacing: '-0.36px',
+        lineHeight: '1.54',
+        marginBottom: '16px',
+      },
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
+        fontSize: '14px',
+        letterSpacing: '-0.36px',
+        lineHeight: '1.54',
+        marginBottom: '8px',
       },
     },
     '& a': {
@@ -691,11 +879,19 @@ const useStyles = makeStyles(theme => ({
         lineHeight: '2',
         padding: '8px',
         fontSize: '16px',
+        letterSpacing: '-0.36px',
       },
       [theme.breakpoints.down(global.PCMinWidth)]: {
         lineHeight: '3',
         padding: '4px',
+        fontSize: '14px',
+        letterSpacing: '-0.36px',
+      },
+      [theme.breakpoints.down(global.TabletMinWidth)]: {
+        lineHeight: '3',
+        padding: '4px',
         fontSize: '10px',
+        letterSpacing: '-0.36px',
       },
     },
   },
@@ -704,9 +900,11 @@ const useStyles = makeStyles(theme => ({
 function DrawKakao(classes) {
   return (
     <div className={classes.kakao}>
-      <p>예약문의는 카톡 플러스친구로 문의주시면</p>
-      <p>친절하게 상담 도와드리겠습니다.</p>
-      <br />
+      <p>
+        예약문의는 카톡 플러스친구로 문의주시면
+        <br />
+        친절하게 상담 도와드리겠습니다.
+      </p>
       <a href="https://pf.kakao.com/_xmXvWC/chat">1:1 카카오톡 상담 시작하기</a>
     </div>
   );
@@ -828,7 +1026,7 @@ function DrawFinalBanner(classes, media) {
           <h2>무제한으로 드리는 포토부스</h2>
           <p>하객들은 친구들과 함께 다양한 포즈로 </p>
           <p>사진을 찍고 추억을 남기고 싶어 합니다.</p>
-          <p> &apos;간&apos;은 결혼식에 온 모든 하객분들이</p>
+          <p> &apos;지금 이 순간&apos;은 결혼식에 온 모든 하객분들이</p>
           <p>기념사진을 가져갈 수 있도록</p>
           <p>사진을 즉석에서 무제한으로 인화해드립니다.</p>
         </div>
@@ -851,10 +1049,10 @@ function DrawFinalBanner(classes, media) {
       <div>
         <h1>PHOTO-BOOTH</h1>
         <h2>무제한으로 드리는 포토부스</h2>
-        <p>하객들은 자신을 사진을</p>
-        <p>다양한 포즈로 친구들과 함께 찍고 추억을 남기고 싶어 합니다.</p>
-        <p>저희는 결혼식에 온 모든 하객분들이 사진을 가져갈 수 있도록</p>
-        <p>즉석에서 사진을 무제한으로 인화해드립니다.</p>
+        <p>하객들은 친구들과 함께 다양한 포즈로 사진을 찍고</p>
+        <p>추억을 남기고 싶어 합니다. &apos;지금 이 순간&apos;은 결혼식</p>
+        <p>에 온 모든 하객분들이 기념사진을 가져갈 수 있도록</p>
+        <p>사진을 즉석에서 무제한으로 인화해드립니다.</p>
       </div>
       <div>
         <picture>
@@ -885,11 +1083,10 @@ function DrawWeddingSnap(classes, media) {
         <div>
           <h1>PHOTOGRAPHER</h1>
           <h2>사진작가가 진행하는 포토부스</h2>
-          <p>저희는 타 포토부스와 다르게 사진 작가</p>
-          <p>출신의 대표가 포토부스를 운영합니다.</p>
-          <p>포토부스 러닝타임 동안 대표가 직접 웨딩 스냅을 촬영하고</p>
-          <p>지금이순간 디자이너의 리터칭 작업이 끝난 후</p>
-          <p>본식 스냅을 선물해드리고 있습니다.</p>
+          <p>저희는 타 포토부스와 다르게</p>
+          <p>사진 작가 출신의 대표가 포토부스를 운영합니다.</p>
+          <p>포토부스를 운영하는 시간 동안, 대표가 직접 웨딩 스냅을 촬영하고</p>
+          <p>지금이순간 디자이너의 보정 후 스냅 사진으로 선물해드려요.</p>
         </div>
       </div>
     );
@@ -907,8 +1104,8 @@ function DrawWeddingSnap(classes, media) {
         <h1>PHOTOGRAPHER</h1>
         <h2>사진작가가 진행하는 포토부스</h2>
         <p>저희는 타 포토부스와 다르게 사진 작가 출신의 대표가 포토부스를 운영합니다.</p>
-        <p>포토부스 러닝타임 동안 대표가 직접 웨딩 스냅을 촬영하고</p>
-        <p>지금이순간 디자이너의 리터칭 작업이 끝난 후 본식 스냅을 선물해드리고 있습니다.</p>
+        <p>포토부스를 운영하는 시간 동안, 대표가 직접 웨딩 스냅을 촬영하고</p>
+        <p>지금이순간 디자이너가 보정 후 스냅 사진으로 선물해드려요.</p>
       </div>
     </div>
   );
@@ -918,7 +1115,7 @@ function DrawSnap(classes) {
   return (
     <div className={classes.snap}>
       <div />
-      <p>WEDDINGSNAP</p>
+      <p>WEDDING SNAP</p>
     </div>
   );
 }
@@ -930,6 +1127,7 @@ function DrawMiddleBanner(classes, media) {
       <div className={classes.middleBanner}>
         <div>
           <picture>
+            <source media="(min-width: 1600px)" srcSet={MiddleBannerPC2} />
             <source srcSet={MiddleBannerPC} />
             <img
               src={MiddleBannerPC}
@@ -970,9 +1168,9 @@ function DrawMiddleBanner(classes, media) {
         <div>
           <div>
             <h>어떻게 하면</h>
-            <p>일생에 단 한 번뿐인 결혼식의 행복한 신랑, 신부</p>
-            <p>그리고 소중한 걸음 해주신 하객분들까지 모두가 즐거운 결혼식을 만들 수 있을까요?</p>
-            <p>&quot;하객들이 결혼식을 기억하는 것.&quot; 저희는 하객들의 마음속에 여러분을 남깁니다.</p>
+            <p>일생에 단 한 번뿐인 결혼식의 행복한 신랑, 신부 그리고 소중한 걸음 해주신 하객분들까지</p>
+            <p>모두가 즐거운 결혼식을 만들 수 있을까요? &quot;하객들이 결혼식을 기억하는 것.&quot; </p>
+            <p>저희는 하객들의 마음속에 여러분을 남깁니다.</p>
           </div>
         </div>
       </div>
@@ -996,12 +1194,9 @@ function DrawMiddleBanner(classes, media) {
         <div>
           <div>
             <h>어떻게 하면</h>
-            <p>일생에 단 한 번뿐인 결혼식의 행복한 신랑, 신부</p>
-            <p>그리고 소중한 걸음 해주신 하객분들까지</p>
-            <p>모두가 즐거운 결혼식을 만들 수 있을까요?</p>
-            <b>&quot;하객들이 결혼식을 기억하는 것.&quot;</b>
-            <p>저희는 하객들의 마음속에</p>
-            <p>여러분을 남깁니다.</p>
+            <p>일생에 단 한 번뿐인 결혼식의 행복한 신랑, 신부 그리고 소중한 걸음 해주신 하객분들까지</p>
+            <p>모두가 즐거운 결혼식을 만들 수 있을까요? &quot;하객들이 결혼식을 기억하는 것.&quot; </p>
+            <p>저희는 하객들의 마음속에 여러분을 남깁니다.</p>
           </div>
         </div>
       </div>
@@ -1027,7 +1222,6 @@ function DrawMiddleBanner(classes, media) {
 function DraswShinyoungInfo(classes) {
   return (
     <div>
-      <h1>왜 지금 이 순간이어야할까요?</h1>
       <div>
         <p><strong className={classes.boldText}>&apos;지금이순간&apos;</strong> 포토부스는 연예인이 애용하는 포토부스입니다.</p>
       </div>
@@ -1037,7 +1231,7 @@ function DraswShinyoungInfo(classes) {
         <p>'와디즈'에서 크라우드 펀딩을 성공하였습니다.</p>
         <p>이를 통하여, 저희는 우수함과 신뢰를 고객님들께 검증 받았습니다.</p>
       </div>
-      <a href="https://www.wadiz.kr/web/campaign/detail/29385">와디즈 크라우드 펀딩 보러가기</a>
+      <a2 href="https://www.wadiz.kr/web/campaign/detail/29385">와디즈 크라우드 펀딩 보러가기</a2>
     </div>
   );
 }
@@ -1181,7 +1375,11 @@ const Content = ({
         <div className={classes.root}>
           {DrawSnap(classes)}
           {DrawWeddingSnap(classes, global.PC)}
-          {DrawFinalBanner(classes, global.PC)}
+        </div>
+        <div className={classes.myroot}>
+          <div className={classes.root}>
+            {DrawFinalBanner(classes, global.PC)}
+          </div>
         </div>
         <div>
           {DrawWeddingHall(classes, global.PC)}

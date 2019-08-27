@@ -1,0 +1,457 @@
+.mainBannerImage {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+.root * {
+  font-size: 0px;
+  padding: 0px;
+  margin: 0;
+  /* border: 1px solid black;  */
+}
+/* 
+.tmp {
+  border: 1px solid black;
+} */
+.tmp {
+  font-size: 10px;
+  color: black;
+  /* border: 1px solid black; */
+}
+@media (min-width: 1280px) {
+  .rootWidth {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0;
+    /* border: 11px solid black; */
+  }
+  .rootWidth * {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black; */
+  }
+  .info {
+    text-align: center;
+    margin-top: 80px;
+    padding: 0px;
+
+  }
+  .info > h1 {
+    margin: 0;
+    font-family: PlayfairDisplaySC;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    color: #b4a570;
+  }
+
+  .info > h2 {
+    margin: 0;
+    font-family: NotoSansKR;
+    font-size: 24px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: -0.48px;
+    color: #707070;
+  }
+
+  .info > line {
+    margin: 48px auto 48px auto;
+    width: 40px;
+    height: 0;
+    border: solid 1px #707070;
+  }
+
+  .info > h3 {
+    margin: 0;
+    margin-bottom: 24px;
+    font-family: NotoSansKR;
+    font-size: 21px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.76;
+    letter-spacing: -0.42px;
+    color: #707070;
+  }
+
+  .info > a {
+    text-decoration: none;
+    border-radius: 20px;
+    border: solid 1px #707070;
+    font-family: NotoSansKR;
+    font-size: 16px;
+    font-weight: 300;
+    color: #707070;
+    padding: 8px;
+    line-height: 2;
+  }
+
+  .wedding {
+    margin: 80px auto 0 auto;
+    text-align: center;
+  }
+
+  .wedding > h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: -1.44px;
+    color: #b4a570;
+  }
+
+  .wedding > h2 {
+    margin : 0;
+    font-size: 24px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: -0.48px;
+    color: #707070;
+  }
+  
+  .contact {
+    margin: 64px auto 0 auto;
+    text-align: center;
+  }
+
+  .contact > h1 {
+    font-family: PlayfairDisplaySC;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    /* line-height: 1.75; */
+    letter-spacing: -1.44px;
+    text-align: center;
+    color: #b4a570;
+  }
+
+  .contact > h2 {
+    margin-top: 6px;
+    font-size: 24px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    /* line-height: 1.75; */
+    letter-spacing: -0.48px;
+    text-align: center;
+    color: #707070;
+  }
+
+  .contact > line {
+    display: block;
+    margin: 48px auto 48px auto;
+    width: 40px;
+    height: 0px;
+    border: 1px solid #707070;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+  }
+  .slide-container {
+    width: 70%;
+    margin: auto;
+    border: none;
+    /* border: 10px solid black; */
+  }
+  
+  .each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 581px;
+  }
+  
+  .each-slide span {
+    margin-top: 482px;
+    text-align: center;
+  }
+
+  .each-slide span > h1 {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: -0.72px;
+    color: #707070;
+  }
+  .each-slide span > h2 {
+    font-size: 21px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.76;
+    letter-spacing: -0.42px;
+    color: #707070;
+  }
+}
+
+@media (max-width: 1280px) {
+  .info {
+    text-align: center;
+    margin-top: 40px;
+    padding: 0px;
+
+  }
+  .info > h1 {
+    margin: 0;
+    font-family: PlayfairDisplaySC;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    color: #b4a570;
+  }
+
+  .info > h2 {
+    margin: 0;
+    font-family: NotoSansKR;
+    font-size: 21px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: -0.42px;
+    color: #707070;
+  }
+
+  .info > line {
+    margin: 24px auto 24px auto;
+    width: 40px;
+    height: 0;
+    border: solid 1px #707070;
+  }
+
+  .info > h3 {
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: NotoSansKR;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.78;
+    letter-spacing: -0.36px;
+    color: #707070;
+  }
+
+  .info > a {
+    text-decoration: none;
+    border-radius: 20px;
+    border: solid 1px #707070;
+    font-family: NotoSansKR;
+    font-size: 14px;
+    font-weight: 300;
+    color: #707070;
+    padding: 8px;
+    line-height: 2;
+  }
+
+  .wedding {
+    margin: 40px auto 0 auto;
+    text-align: center;
+  }
+
+  .wedding > h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: -0.96px;
+    color: #b4a570;
+  }
+
+  .wedding > h2 {
+    margin : 0;
+    font-size: 21px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: -0.42px;
+    color: #707070;
+  }
+
+  .contact {
+    margin: 40px auto 0 auto;
+    text-align: center;
+  }
+
+  .contact > h1 {
+    font-family: PlayfairDisplaySC;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.96px;
+    color: #b4a570;
+  }
+
+  .contact > h2 {
+    margin-top: 4px;
+    font-size: 21px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.42px;
+    color: #707070;
+  }
+
+  .contact > line {
+    display: block;
+    margin: 24px auto 24px auto;
+    width: 40px;
+    height: 0px;
+    border: 1px solid #707070;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+  }
+}
+
+@media (max-width: 720px) {
+  .info {
+    text-align: center;
+    margin-top: 20px;
+    padding: 0px;
+
+  }
+  .info > h1 {
+    margin: 0;
+    font-family: PlayfairDisplaySC;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    color: #b4a570;
+  }
+
+  .info > h2 {
+    margin: 0;
+    font-family: NotoSansKR;
+    font-size: 14px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: -0.28px;
+    color: #707070;
+  }
+
+  .info > line {
+    margin: 8px auto 8px auto;
+    width: 20px;
+    height: 0;
+    border: solid 0.5px #707070;
+  }
+
+  .info > h3 {
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: NotoSansKR;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: -0.24px;
+    color: #707070;
+  }
+
+  .info > a {
+    text-decoration: none;
+    border-radius: 20px;
+    border: solid 0.5px #707070;
+    font-family: NotoSansKR;
+    font-size: 10px;
+    font-weight: 300;
+    color: #707070;
+    padding: 4px;
+    line-height: 1.0;
+  }
+
+  .wedding {
+    margin: 20px auto 0 auto;
+    text-align: center;
+  }
+
+  .wedding > h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: -0.64px;
+    color: #b4a570;
+  }
+
+  .wedding > h2 {
+    margin : 0;
+    font-size: 14px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: -0.28px;
+    color: #707070;
+  }
+  .contact {
+    margin: 20px auto 0 auto;
+    text-align: center;
+  }
+
+  .contact > h1 {
+    font-family: PlayfairDisplaySC;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.64px;
+    color: #b4a570;
+  }
+
+  .contact > h2 {
+    font-size: 14px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.28px;
+    color: #707070;
+  }
+
+  .contact > line {
+    display: block;
+    margin: 8px auto 8px auto;
+    width: 20px;
+    height: 0px;
+    border: 1px solid #707070;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+  }
+}
+
+

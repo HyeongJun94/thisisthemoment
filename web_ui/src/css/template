@@ -1,0 +1,19 @@
+.mainBannerImage {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+@media (min-width: 1280px) {
+  
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 720px) {
+
+}
+
+
