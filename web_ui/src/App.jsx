@@ -33,12 +33,12 @@ export default function App() {
   const mediaPC = useMediaQuery(theme.breakpoints.up(global.PCMinWidth));
   const classes = useStyles();
 
-  // const [menu, setMenu] = useState(global.Main);
+  const [menu, setMenu] = useState(global.Main);
   // const [menu, setMenu] = useState(global.BrandStory);
   // const [menu, setMenu] = useState(global.Reservation);
   // const [menu, setMenu] = useState(global.Service);
   // const [menu, setMenu] = useState(global.Customize);
-  const [menu, setMenu] = useState(global.FAQ);
+  // const [menu, setMenu] = useState(global.FAQ);
   const [body, setBody] = useState(<ContentContainer mediaAndroid={mediaAndroid} mediaPC={mediaPC} />)
 
   const onChangeMenu = (e) => {

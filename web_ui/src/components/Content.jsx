@@ -8,6 +8,7 @@ import global from '../modules/global';
 import BannerPC from '../static/images/PC/Main/mainBanner.png';
 import BannerTablet from '../static/images/Tablet/Main/mainBanner.png';
 import BannerAndroid from '../static/images/Android/Main/mainBanner.png';
+import BannerLogo from '../static/images/PC/Main/bannerlogo.png';
 import ShinyoungPC from '../static/images/PC/Main/shinyoung.png';
 import ShinyoungTablet from '../static/images/Tablet/Main/shinyoung.png';
 import ShinyoungAndroid from '../static/images/Android/Main/shinyoung.png';
@@ -903,6 +904,37 @@ const useStyles = makeStyles(theme => ({
       },
     },
   },
+
+  bannerBox: {
+    // display: 'flex',
+    // position: 'absolute',
+    position: 'absolute',
+    fontSize: '100px',
+    top: '14.6%',
+    right: '50px',
+    width: '110px',
+    lineHeight: '1.1',
+    textAlign: 'center',
+    border: '1px solid black',
+  },
+
+  bannerBox2: {
+    position: 'absolute',
+    fontSize: '50px',
+    top: '14.6%',
+    right: '90px',
+    width: '110px',
+    lineHeight: '1.1',
+    textAlign: 'center',
+    writingMode: 'vertical-lr',
+    border: '1px solid black',
+  },
+
+  bannerLogo: {
+    position: 'absolute',
+    width: '15.6%',
+    top: '20%',
+  },
 }));
 
 function DrawKakao(classes) {
@@ -1333,14 +1365,30 @@ function DrawBannerAndroid(classes) {
 
 function DrawBannerPC(classes) {
   return (
-    <picture>
-      <source srcSet={BannerPC} />
-      <img
-        className={classes.bannerImage}
-        src={BannerPC}
-        alt=""
-      />
-    </picture>
+    <>
+      <picture>
+        <source srcSet={BannerPC} />
+        <img
+          className={classes.bannerImage}
+          src={BannerPC}
+          alt=""
+        />
+      </picture>
+      <div className={classes.bannerBox}>
+        웨<br />딩<br />포<br />토<br />부<br />스
+      </div>
+      <div className={classes.bannerBox2}>
+        THISISTHEMOMENT
+      </div>
+      <picture>
+        <source srcSet={BannerLogo} />
+        <img
+          className={classes.bannerLogo}
+          src={BannerLogo}
+          alt=""
+        />
+      </picture>
+    </>
   );
 }
 

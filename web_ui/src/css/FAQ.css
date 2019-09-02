@@ -3,11 +3,15 @@
   width: 100%;
   margin: auto;
 }
+
+.root {
+  margin: auto;
+  padding: 0;
+}
+
 .root * {
-  /* font-size: 0px; */
-  padding: 0px;
+  padding: 0;
   margin: 0;
-  /* border: 1px solid black;  */
 }
 
 @media (min-width: 1280px) {
@@ -15,22 +19,19 @@
     max-width: 1280px;
     margin: auto;
     padding: 0;
-    /* font-size: 10px; */
-    /* background-color: white; */
-    /* border: 11px solid black; */
   }
+
   .rootWidth * {
     margin: 0;
     padding: 0;
-    /* font-size: 10px; */
-    /* border: 1px solid black; */
   }
+
   .wedding {
     margin: 80px auto 40px auto;
   }
 
   .wedding > h1 {
-    font-family: PlayfairDisplaySC;
+    font-family: Playfair Display SC;
     font-size: 36px;
     font-weight: normal;
     font-style: normal;
@@ -42,7 +43,7 @@
   }
 
   .wedding > h2 {
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 24px;
     font-weight: 100;
     font-style: normal;
@@ -74,19 +75,21 @@
 
   .info-content {
     font-size: 10px;
+    margin-bottom: 120px;
   }
 
   .info-content > div {
     /* font-size: 10px; */
     border-bottom: solid 1px #b4a570;
-    padding: 24px 0px 24px 0px;
+    padding: 24px 0px 8px 0px;
   }
 
   .info-content > div > h1 {
     display: inline;
     font-family: Noto Sans KR;
     font-size: 14px;
-    font-weight: 300;
+    /* font-weight: 500; */
+    font-weight: bold;
     font-style: normal;
     font-stretch: normal;
     line-height: 2.86;
@@ -109,15 +112,261 @@
     font-size: 10px;
     /* height: 0px; */
   }
-  
+
+  .btn {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    padding: 0;
+    border: none;
+  }
+
+  .btn p {
+    line-height: 1.1;
+    font-size: 35px;
+  }
+  .collapse {
+    margin-top: 4px;
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.79;
+    letter-spacing: -0.28px;
+    text-align: left;
+    color: #707070;
+  }
 }
 
 @media (max-width: 1280px) {
+  .wedding {
+    margin: 40px auto 24px auto;
+  }
 
+  .wedding > h1 {
+    font-family: Playfair Display SC;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.55;
+    letter-spacing: -0.96px;
+    text-align: center;
+    color: #b4a570;
+  }
+
+  .wedding > h2 {
+    font-family: Noto Sans KR;
+    font-size: 21px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: -0.42px;
+    text-align: center;
+    color: #707070;
+  }
+
+  .info{
+    /* border: 1px solid black; */
+    padding-left: 24px;
+    text-align: left;
+    margin-right: auto;
+  }
+  .info > button {
+    margin-right: 16px;
+    font-family: Noto Sans KR;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.22;
+    letter-spacing: -0.36px;
+    text-align: center;
+    color: #707070;
+  }
+
+  .info-content {
+    /* font-size: 10px; */
+    margin-bottom: 40px;
+  }
+
+  .info-content > div {
+    /* font-size: 10px; */
+    border-bottom: solid 1px #b4a570;
+    padding: 24px 0px 8px 0px;
+  }
+
+  .info-content > div > h1 {
+    display: inline;
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    /* font-weight: 500; */
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.86;
+    letter-spacing: -0.28px;
+    color: #707070;
+  }
+  .info-content > div > button {
+    /* display: inline; */
+    float: right;
+    font-weight: bold;
+    font-size: 40px;
+    color: #b4a570;
+  }
+
+  .list {
+    font-size: 10px;
+  }
+
+  .my-info-faq {
+    font-size: 10px;
+    /* height: 0px; */
+  }
+
+  .btn {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    padding: 0;
+    border: none;
+  }
+
+  .btn p {
+    line-height: 1.1;
+    font-size: 35px;
+  }
+  .collapse {
+    margin-top: 4px;
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.79;
+    letter-spacing: -0.28px;
+    text-align: left;
+    color: #707070;
+  }
 }
 
 @media (max-width: 720px) {
+  .wedding {
+    margin: 21px auto 8px auto;
+  }
 
+  .wedding > h1 {
+    font-family: Playfair Display SC;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.55;
+    letter-spacing: -0.64x;
+    text-align: center;
+    color: #b4a570;
+  }
+
+  .wedding > h2 {
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: -0.28px;
+    text-align: center;
+    color: #707070;
+  }
+
+  .info{
+    /* border: 1px solid black; */
+    padding-left: 16px;
+    text-align: left;
+    /* margin-bottom: 100px; */
+  }
+  .info > button {
+    width: 50%;
+    margin:0;
+    justify-content: center;
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.22;
+    letter-spacing: -0.36px;
+    text-align: center;
+    color: #707070;
+  }
+
+  .info-content {
+    /* font-size: 10px; */
+    margin-bottom: 20px;
+  }
+
+  .info-content > div {
+    /* font-size: 10px; */
+    border-bottom: solid 1px #b4a570;
+    padding: 16px 0px 8px 0px;
+  }
+
+  .info-content > div > h1 {
+    display: inline;
+    font-family: Noto Sans KR;
+    font-size: 12px;
+    /* font-weight: 500; */
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.86;
+    letter-spacing: -0.24px;
+    color: #707070;
+  }
+  .info-content > div > button {
+    /* display: inline; */
+    float: right;
+    font-weight: bold;
+    font-size: 40px;
+    color: #b4a570;
+  }
+
+  .list {
+    font-size: 10px;
+  }
+
+  .my-info-faq {
+    font-size: 10px;
+    /* height: 0px; */
+  }
+
+  .btn {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    padding: 0;
+    border: none;
+  }
+
+  .btn p {
+    line-height: 1.1;
+    font-size: 25px;
+  }
+  .collapse {
+    margin-top: 4px;
+    font-family: Noto Sans KR;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.79;
+    letter-spacing: -0.28px;
+    text-align: left;
+    color: #707070;
+  }
 }
 
 
