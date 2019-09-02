@@ -4,7 +4,7 @@
   margin: auto;
 }
 .root * {
-  font-size: 0px;
+  /* font-size: 0px; */
   padding: 0px;
   margin: 0;
   /* border: 1px solid black;  */
@@ -15,12 +15,14 @@
     max-width: 1280px;
     margin: auto;
     padding: 0;
+    /* font-size: 10px; */
     /* background-color: white; */
     /* border: 11px solid black; */
   }
   .rootWidth * {
     margin: 0;
     padding: 0;
+    /* font-size: 10px; */
     /* border: 1px solid black; */
   }
   .wedding {
@@ -102,6 +104,12 @@
   .list {
     font-size: 10px;
   }
+
+  .my-info-faq {
+    font-size: 10px;
+    /* height: 0px; */
+  }
+  
 }
 
 @media (max-width: 1280px) {

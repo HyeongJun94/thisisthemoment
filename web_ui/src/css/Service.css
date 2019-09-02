@@ -18,52 +18,17 @@
     padding: 0;
     /* border: 1px solid black; */
   }
-  .slide-container {
-    width: 100%;
-    margin: auto;
-    border: none;
+  .my-info {
+    /* margin: 80px auto 80px auto; */
     /* border: 10px solid black; */
-  }
-  
-  .each-slide > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    height: 581px;
-  }
-  
-  .each-slide span {
-    margin-top: 482px;
-    text-align: center;
-  }
-
-  .each-slide span > h1 {
-    font-size: 24px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: -0.72px;
-    color: #707070;
-  }
-  .each-slide span > h2 {
-    font-size: 21px;
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.76;
-    letter-spacing: -0.42px;
-    color: #707070;
-  }
-
-  .info {
-    margin: 80px auto 80px auto;
     text-align: center;
   }
   
-  .info > h1 {
-    font-family: PlayfairDisplaySC;
+  .my-info > h1 {
+    /* border: 1px solid black; */
+    margin-top: 80px;
+    text-align: center;
+    font-family: Playfair Display SC;
     font-size: 36px;
     font-weight: normal;
     font-style: normal;
@@ -72,7 +37,10 @@
     color: #b4a570;
   }
 
-  .info > h2 {
+  .my-info > h2 {
+    margin: 0px;
+    margin-bottom: 80px;
+    text-align: center;
     font-size: 24px;
     font-weight: 100;
     font-style: normal;
@@ -81,12 +49,77 @@
     color: #707070;
   }
 
+  .slide-container-service {
+    width: 100%;
+    margin: auto;
+  }
+
+  .react-slideshow-wrapper.slide {
+    /* border: 1px solid black; */
+    width: 100%;
+    overflow: hidden;
+    /* height: 500px; */
+    /* padding-bottom: 150px; */
+    margin-bottom: 0px;
+  }
+  
+  .each-slide-service > div {
+    /* width: 1280px; */
+    height: 299px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: auto;
+    background-position: right;
+  }
+  .each-slide-service span {
+    /* border: 1px solid black; */
+    margin: 0px auto 0 180px;
+    text-align: left;
+  }
+
+  .each-slide-service > div > span > h1 {
+    font-family: Noto Sans KR;
+    font-size: 36px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: -2.88px;
+    color: #bdbdbd;
+  }
+  .each-slide-service span > h2 {
+    margin-bottom: 0px;
+    font-family: Noto Sans KR;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.78;
+    letter-spacing: -0.54px;
+    color: #707070;
+  }
+  .each-slide-service span > h3 {
+    margin-bottom: 0px;
+    font-family: Noto Sans KR;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: -0.32px;
+    text-align: left;
+    color: #767676;
+  }
+
   .product {
-    margin: 80px auto 0 auto;
+    /* margin: 80px auto 0 auto; */
     text-align: center;
   }
   .product > h1 {
-    font-family: PlayfairDisplaySC;
+    margin-top: 80px;
+    font-family: Playfair Display SC;
     font-size: 36px;
     font-weight: normal;
     font-style: normal;
@@ -95,7 +128,8 @@
     color: #b4a570;
   }
   .product > h2 {
-    font-family: NotoSansKR;
+    margin-bottom: 40px;
+    font-family: Noto Sans KR;
     font-size: 24px;
     font-weight: 100;
     font-style: normal;
@@ -115,6 +149,32 @@
     grid-gap: 16px;
   }
 
+  .item1,
+  .item1 > picture > img,
+  .item2,
+  .item2 > picture > img,
+  .item3,
+  .item3 > picture > img,
+  .item4,
+  .item4 > picture > img,
+  .item5,
+  .item5 > picture > img,
+  .item6,
+  .item6 > picture > img,
+  .item7,
+  .item7 > picture > img,
+  .item8,
+  .item8 > picture > img,
+  .item9,
+  .item9 > picture > img,
+  .item10,
+  .item10 > picture > img,
+  .item11,
+  .item11 > picture > img,
+  .item12,
+  .item12 > picture > img {
+    border-radius: 25px 25px 0px 0px;
+  }
 
   .item1 > h1,
   .item2 > h1,
@@ -129,7 +189,7 @@
   .item11 > h1,
   .item12 > h1 {
     background-color: #b4a570;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 16px;
     font-weight: 300;
     font-style: normal;
@@ -139,13 +199,14 @@
   }
 
   .service {
-    margin-top: 77px;
-    margin-bottom: 120px;
+    /* margin-top: 77px; */
+    /* margin-bottom: 120px; */
     text-align: center;
   }
 
   .service > h1 {
-    font-family: PlayfairDisplaySC;
+    margin-top: 77px;
+    font-family: Playfair Display SC;
     font-size: 36px;
     font-weight: normal;
     font-style: normal;
@@ -155,7 +216,8 @@
   }
   
   .service > h2 {
-    font-family: NotoSansKR;
+    margin-bottom: 80px;
+    font-family: Noto Sans KR;
     font-size: 24px;
     font-weight: 100;
     font-style: normal;
@@ -165,8 +227,11 @@
   }
 
   .service-container {
+    /* border: 10px solid black; */
+    /* display: block; */
     margin: 0px;
     margin-top: 80px;
+    /* margin-bottom: 120px; */
     display: grid;
     grid-template: 
       'left1 right1'
@@ -180,20 +245,32 @@
   }
   .left-item2 {
     grid-area: left2;
+    /* margin-bottom: 120px; */
   }
   .right-item2 {
     grid-area: right2;
+    /* margin-bottom: 120px; */
   }
 
   .right-item1,
   .left-item2 {
+    /* border: 1px solid black; */
     text-align: center;
     margin: auto;
   }
+  .right-item1 > div,
+  .left-item2 > div {
+    /* display: block; */
+    /* border: 10px solid black; */
+    /* text-align: center; */
+    margin-top: 15%;
+  }
 
-  .right-item1 > h1,
-  .left-item2 > h1 {
-    font-family: NotoSansKR;
+  .right-item1 > div > h1,
+  .left-item2 > div > h1 {
+    /* margin: auto; */
+    /* border: 1px solid black; */
+    font-family: Noto Sans KR;
     font-size: 24px;
     font-weight: bold;
     font-style: normal;
@@ -202,11 +279,11 @@
     color: #707070;
   }
 
-  .right-item1 > h2,
-  .left-item2 > h2 {
+  .right-item1 > div > h2,
+  .left-item2 > div > h2 {
     margin-top: 16px;
     margin-bottom: 16px;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 21px;
     font-weight: 300;
     font-style: normal;
@@ -217,12 +294,15 @@
     color: #707070;
   }
 
-  .left-item2 > h2 {
+  .left-item2 > div > h2 {
+    width: 55%;
+    margin: 16px auto 16px auto;
+    /* border: 1px solid black; */
     text-align: left;
   }
 
-  .right-item1 > h3 {
-    font-family: NotoSansKR;
+  .right-item1 > div > h3 {
+    font-family: Noto Sans KR;
     font-size: 12px;
     font-weight: 300;
     font-style: normal;
@@ -232,16 +312,32 @@
     color: #707070;
   }
 
-  .left-item2 > a {
+  .left-item2 > div > a {
     text-decoration: none;
     border-radius: 20px;
     border: solid 1px #707070;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 16px;
     font-weight: 300;
     color: #707070;
     padding: 8px;
     line-height: 2;
+  }
+  
+  .empty {
+    height: 120px;
+  }
+
+  .tmp {
+    display: block;
+  }
+
+  .tmp2 {
+    display: inline;
+  }
+
+  .tmp3 {
+    display: inline;
   }
 }
 
@@ -256,53 +352,14 @@
     padding: 0;
     /* border: 1px solid black; */
   }
-  .slide-container {
-    width: 100%;
-    margin: auto;
-    border: none;
-    /* border: 10px solid black; */
-  }
-  
-  .each-slide > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    height: 400px;
-  }
-  
-  .each-slide span {
-    margin-top: 309px;
-    margin-bottom: 0px;
-    text-align: center;
-  }
 
-  .each-slide span > h1 {
-    font-size: 24px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: -0.72px;
-    color: #707070;
-  }
-  .each-slide span > h2 {
-    font-size: 21px;
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.76;
-    letter-spacing: -0.42px;
-    color: #707070;
-  }
-
-  .info {
-    margin: 40px auto 24px auto;
+  .my-info {
+    /* margin: 40px auto 24px auto; */
     text-align: center;
   }
   
-  .info > h1 {
-    font-family: PlayfairDisplaySC;
+  .my-info > h1 {
+    font-family: Playfair Display SC;
     font-size: 24px;
     font-weight: normal;
     font-style: normal;
@@ -311,13 +368,72 @@
     color: #b4a570;
   }
 
-  .info > h2 {
+  .my-info > h2 {
+    margin-bottom: 24px;
     font-size: 21px;
     font-weight: 100;
     font-style: normal;
     font-stretch: normal;
     letter-spacing: -0.42px;
     color: #707070;
+  }
+
+  .slide-container-service2 {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .each-slide-service2 > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    /* margin-bottom: 200px; */
+  }
+  .each-slide-service2 span {
+    margin-top: 46.5%;
+    text-align: center;
+  }
+
+  .each-slide-service2 > div > span > h1 {
+    font-family: Noto Sans KR;
+    font-size: 36px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: -2.88px;
+    color: #bdbdbd;
+  }
+  .each-slide-service2 > div > span > h2 {
+    margin-bottom: 0px;
+    font-family: Noto Sans KR;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.78;
+    letter-spacing: -0.54px;
+    color: #707070;
+  }
+  .each-slide-service2 > div > span > h3 {
+    /* display: block; */
+    /* margin: auto; */
+    margin-bottom: 0px;
+    font-family: Noto Sans KR;
+    /* border: 1px solid black; */
+    text-align: center;
+    /* padding: auto; */
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: -0.32px;
+    color: #767676;
   }
 
   .product {
@@ -349,6 +465,33 @@
     grid-gap: 16px;
   }
 
+  .item1,
+  .item1 > picture > img,
+  .item2,
+  .item2 > picture > img,
+  .item3,
+  .item3 > picture > img,
+  .item4,
+  .item4 > picture > img,
+  .item5,
+  .item5 > picture > img,
+  .item6,
+  .item6 > picture > img,
+  .item7,
+  .item7 > picture > img,
+  .item8,
+  .item8 > picture > img,
+  .item9,
+  .item9 > picture > img,
+  .item10,
+  .item10 > picture > img,
+  .item11,
+  .item11 > picture > img,
+  .item12,
+  .item12 > picture > img {
+    border-radius: 25px 25px 0px 0px;
+  }
+
   .item1 > h1,
   .item2 > h1,
   .item3 > h1,
@@ -362,7 +505,7 @@
   .item11 > h1,
   .item12 > h1 {
     background-color: #b4a570;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 16px;
     font-weight: 300;
     font-style: normal;
@@ -424,9 +567,9 @@
     margin: auto;
   }
 
-  .right-item1 > h1,
-  .left-item2 > h1 {
-    font-family: NotoSansKR;
+  .right-item1 > div > h1,
+  .left-item2 > div > h1 {
+    font-family: Noto Sans KR;
     font-size: 18px;
     font-weight: bold;
     font-style: normal;
@@ -435,11 +578,11 @@
     color: #707070;
   }
 
-  .right-item1 > h2,
-  .left-item2 > h2 {
+  .right-item1 > div > h2,
+  .left-item2 > div > h2 {
     margin-top: 16px;
     margin-bottom: 16px;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 16px;
     font-weight: 300;
     font-style: normal;
@@ -450,12 +593,12 @@
     color: #707070;
   }
 
-  .left-item2 > h2 {
+  .left-item2 > div > h2 {
     text-align: left;
   }
 
-  .right-item1 > h3 {
-    font-family: NotoSansKR;
+  .right-item1 > div > h3 {
+    font-family: Noto Sans KR;
     font-size: 12px;
     font-weight: 300;
     font-style: normal;
@@ -465,16 +608,31 @@
     color: #707070;
   }
 
-  .left-item2 > a {
+  .left-item2 > div > a {
+    display: block;
+    width: 142px;
+    margin: auto;
     text-decoration: none;
     border-radius: 16px;
     border: solid 1px #707070;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 16px;
     font-weight: 300;
     color: #707070;
-    padding: 8px;
+    padding: 0px;
     line-height: 2;
+  }
+
+  .tmp {
+    display: inline;
+  }
+
+  .tmp2 {
+    display: block;
+  }
+
+  .tmp3 {
+    display: inline;
   }
 }
 
@@ -495,47 +653,15 @@
     border: none;
     /* border: 10px solid black; */
   }
-  
-  .each-slide > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    height: 400px;
-  }
-  
-  .each-slide span {
-    margin-top: 309px;
-    margin-bottom: 0px;
-    text-align: center;
-  }
 
-  .each-slide span > h1 {
-    font-size: 24px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: -0.72px;
-    color: #707070;
-  }
-  .each-slide span > h2 {
-    font-size: 21px;
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.76;
-    letter-spacing: -0.42px;
-    color: #707070;
-  }
-
-  .info {
+  .my-info {
     margin: 12px auto 12px auto;
     text-align: center;
   }
   
-  .info > h1 {
-    font-family: PlayfairDisplaySC;
+  .my-info > h1 {
+    margin-top: 12px;
+    font-family: Playfair Display SC;
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
@@ -544,7 +670,8 @@
     color: #b4a570;
   }
 
-  .info > h2 {
+  .my-info > h2 {
+    margin-bottom: 12px;
     font-size: 14px;
     font-weight: 100;
     font-style: normal;
@@ -552,7 +679,63 @@
     letter-spacing: -0.28px;
     color: #707070;
   }
+  .slide-container-service3 {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .each-slide-service3 > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    /* margin-bottom: 200px; */
+  }
+  .each-slide-service3 span {
+    margin-top: 46.5%;
+    text-align: center;
+  }
 
+  .each-slide-service3 > div > span > h1 {
+    font-family: Noto Sans KR;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: -1.92px;
+    color: #bdbdbd;
+  }
+  .each-slide-service3 > div > span > h2 {
+    margin-bottom: 0px;
+    font-family: Noto Sans KR;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.78;
+    letter-spacing: -0.42px;
+    color: #707070;
+  }
+  .each-slide-service3 > div > span > h3 {
+    /* display: block; */
+    /* margin: auto; */
+    margin-bottom: 0px;
+    font-family: Noto Sans KR;
+    /* border: 1px solid black; */
+    text-align: center;
+    /* padding: auto; */
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: -0.24px;
+    color: #767676;
+  }
   .product {
     margin-top: 12px;
     text-align: center;
@@ -565,6 +748,7 @@
   }
   .product > h2 {
     margin:0;
+    /* margin-bottom: 40px; */
     padding:0;
     font-size: 0;
     line-height: 0;
@@ -581,6 +765,32 @@
     grid-auto-columns: 1fr;
     grid-gap: 16px;
   }
+  .item1,
+  .item1 > picture > img,
+  .item2,
+  .item2 > picture > img,
+  .item3,
+  .item3 > picture > img,
+  .item4,
+  .item4 > picture > img,
+  .item5,
+  .item5 > picture > img,
+  .item6,
+  .item6 > picture > img,
+  .item7,
+  .item7 > picture > img,
+  .item8,
+  .item8 > picture > img,
+  .item9,
+  .item9 > picture > img,
+  .item10,
+  .item10 > picture > img,
+  .item11,
+  .item11 > picture > img,
+  .item12,
+  .item12 > picture > img {
+    border-radius: 25px 25px 0px 0px;
+  }
 
   .item1 > h1,
   .item2 > h1,
@@ -595,7 +805,7 @@
   .item11 > h1,
   .item12 > h1 {
     background-color: #b4a570;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 9px;
     font-weight: 300;
     font-style: normal;
@@ -605,9 +815,11 @@
   }
 
   .service {
-    margin-top: 12px;
-    margin-bottom: 20px;
+    /* margin-top: 12px; */
+    /* margin-bottom: 20px; */
     text-align: center;
+    /* border: 1px solid black; */
+    padding: 0px;
   }
 
   .service > h1 {
@@ -625,7 +837,8 @@
   }
 
   .service-container {
-    margin: 0 auto 0 auto;
+    margin: 9px auto 20px auto;
+    width: 100%;
     display: grid;
     grid-template: 
       'left1'
@@ -634,7 +847,8 @@
       'left2';
     /* grid-template-columns: 50% 50%; */
     /* grid-template-rows: 50% 50%; */
-    grid-gap: 24px;
+    grid-gap: 8px;
+    /* border: 1px solid black; */
   }
 
   .left-item1 {
@@ -652,19 +866,21 @@
 
   .left-item1,
   .right-item2 {
+    /* border: 10px solid black; */
     margin:auto;
     width: 67.8%;
   }
 
   .right-item1,
   .left-item2 {
+    /* border: 1px solid black; */
     text-align: center;
     margin: auto;
   }
 
-  .right-item1 > h1,
-  .left-item2 > h1 {
-    font-family: NotoSansKR;
+  .right-item1 > div > h1,
+  .left-item2 > div > h1 {
+    font-family: Noto Sans KR;
     font-size: 16px;
     font-weight: bold;
     font-style: normal;
@@ -673,42 +889,58 @@
     color: #707070;
   }
 
-  .right-item1 > h2,
-  .left-item2 > h2 {
-    /* margin-top: 16px; */
-    /* margin-bottom: 16px; */
-    font-family: NotoSansKR;
+  .right-item1 > div > h2,
+  .left-item2 > div > h2 {
+    margin: 4px 0px 0px 0px;
+    font-family: Noto Sans KR;
     font-size: 12px;
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.76;
-    letter-spacing: -0.32px;
+    letter-spacing: -0.24px;
     text-align: center;
     color: #707070;
+    
   }
 
-  .left-item2 > h2 {
+  .left-item2 > div > h2 {
     text-align: left;
   }
 
-  .right-item1 > h3 {
+  .right-item1 > div > h3 {
     margin: 0;
     padding: 0;
     font-size: 0px;
     line-height: 0;
   }
 
-  .left-item2 > a {
+  .left-item2 > div > a {
+    display: block;
+    margin-top: 12px;
+    width: 77px;
     text-decoration: none;
     border-radius: 16px;
     border: solid 1px #707070;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 10px;
     font-weight: 300;
+    letter-spacing: -0.2px;
     color: #707070;
-    padding: 8px;
+    padding: 0px;
     line-height: 2;
+  }
+
+  .tmp {
+    display: inline;
+  }
+
+  .tmp2 {
+    display: inline;
+  }
+
+  .tmp3 {
+    display: block;
   }
 }
 

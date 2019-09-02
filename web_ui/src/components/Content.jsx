@@ -80,9 +80,10 @@ const useStyles = makeStyles(theme => ({
       marginBottom: '40px',
     },
     [theme.breakpoints.down(global.TabletMinWidth)]: {
-      fontSize: '14px',
+      fontSize: '16px',
       // fontSize: '100px',
       marginTop: '20px',
+      marginBottom: '12px',
     },
     '& div': {
       fontFamily: 'Noto Sans KR',
@@ -97,7 +98,7 @@ const useStyles = makeStyles(theme => ({
         letterSpacing: '-0.42px',
       },
       [theme.breakpoints.down(global.TabletMinWidth)]: {
-        fontSize: '12px',
+        fontSize: '14px',
       },
     },
   },
@@ -246,7 +247,7 @@ const useStyles = makeStyles(theme => ({
           marginTop: '4px',
           marginBottom: '8px',
           lineHeight: 2,
-          width: '129px',
+          width: '135px',
           borderRadius: '30px',
           fontSize: '10px',
           marginLeft: 'auto',
@@ -260,6 +261,8 @@ const useStyles = makeStyles(theme => ({
     display: 'block',
     width: '100%',
     margin: 'auto',
+    // border: '10px solid black',
+    // marginTop: '0px',
     [theme.breakpoints.up(global.PCMinWidth)]: {
     },
     [theme.breakpoints.down(global.PCMinWidth)]: {
@@ -269,7 +272,7 @@ const useStyles = makeStyles(theme => ({
 
   middleBanner: {
     display: 'grid',
-    backgroundColor: '#707070',
+    backgroundColor: '#9E9E9E',
     maxWidth: '100%',
     // border: '1px solid black',
     [theme.breakpoints.up(global.PCMinWidth)]: {
@@ -294,7 +297,7 @@ const useStyles = makeStyles(theme => ({
     },
 
     '& div': {
-      // border: '10px solid black',
+      // border: '1px solid black',
       margin: 'auto',
       // border: '1px solid black',
       '& div': {
@@ -326,6 +329,7 @@ const useStyles = makeStyles(theme => ({
           fontFamily: 'Noto Sans KR',
           [theme.breakpoints.up(global.PCMinWidth)]: {
             fontSize: '36px',
+            marginTop: '16px',
             marginBottom: '16px',
             letterSpacing: '-0.42px',
           },
@@ -683,9 +687,13 @@ const useStyles = makeStyles(theme => ({
     zIndex: '-2',
     // border: '10px solid black',
     [theme.breakpoints.up(global.PCMinWidth)]: {
+      paddingBottom: '24px',
     },
     [theme.breakpoints.down(global.PCMinWidth)]: {
-      // marginTop: '12px',
+      paddingBottom: '16px',
+    },
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
+      paddingBottom: '8px',
     },
     '& div:nth-child(1)': {
       fontFamily: 'Noto Sans KR',
@@ -889,7 +897,7 @@ const useStyles = makeStyles(theme => ({
       },
       [theme.breakpoints.down(global.TabletMinWidth)]: {
         lineHeight: '3',
-        padding: '4px',
+        padding: '5px',
         fontSize: '10px',
         letterSpacing: '-0.36px',
       },
@@ -985,9 +993,9 @@ function DrawWeddingHall(classes, media) {
             ))}
           </div2>
         </div>
-        <div>
+        {/* <div>
           &lt;클릭해서 웨딩홀 확인하기&gt;
-        </div>
+        </div> */}
       </div>
     );
   }
@@ -1010,15 +1018,15 @@ function DrawWeddingHall(classes, media) {
           ))}
         </div2>
       </div>
-      <div>
+      {/* <div>
         &lt;클릭해서 웨딩홀 확인하기&gt;
-      </div>
+      </div> */}
     </div>
   );
 }
 
 function DrawFinalBanner(classes, media) {
-  if (media === global.ANDROID) {
+  if (media == global.ANDROID) {
     return (
       <div className={classes.finalBanner}>
         <div>
@@ -1037,6 +1045,28 @@ function DrawFinalBanner(classes, media) {
             <img
               className={classes.finalBannerImg}
               src={FinalBannerAndroid}
+              alt=""
+            />
+          </picture>
+        </div>
+      </div>
+    );
+  } else if (media == global.TABLET) {
+    return (
+      <div className={classes.finalBanner}>
+        <div>
+          <h1>PHOTO-BOOTH</h1>
+          <h2>무제한으로 드리는 포토부스</h2>
+          <p>하객들은 친구들과 함께 다양한 포즈로 사진을 찍고 추억을 남기고 싶어 합니다.</p>
+          <p>&apos;지금 이 순간&apos;은 결혼식에 온 모든 하객분들이</p>
+          <p>기념사진을 가져갈 수 있도록 사진을 즉석에서 무제한으로 인화해드립니다.</p>
+        </div>
+        <div>
+          <picture>
+            <source srcSet={FinalBannerTablet} />
+            <img
+              className={classes.finalBannerImg}
+              src={FinalBannerTablet}
               alt=""
             />
           </picture>

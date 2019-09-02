@@ -4,21 +4,17 @@
   margin: auto;
 }
 
+.root {
+  margin: auto;
+  padding: 0;
+}
 .root * {
-  font-size: 0px;
+  /* font-size: 0px; */
   padding: 0px;
   margin: 0;
   /* border: 1px solid black;  */
 }
-/* 
-.tmp {
-  border: 1px solid black;
-} */
-.tmp {
-  font-size: 10px;
-  color: black;
-  /* border: 1px solid black; */
-}
+
 @media (min-width: 1280px) {
   .rootWidth {
     max-width: 1280px;
@@ -28,28 +24,35 @@
   }
   .rootWidth * {
     margin: 0;
-    padding: 0;
+    padding: 0px;
+    /* padding-right: 100px; */
     /* border: 1px solid black; */
   }
-  .info {
-    text-align: center;
-    margin-top: 80px;
-    padding: 0px;
-
+  .info2 {
+    /* border: 1px solid black; */
   }
-  .info > h1 {
+
+  .info2 * {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+  .info2 > h1 {
     margin: 0;
-    font-family: PlayfairDisplaySC;
+    margin-top: 80px;
+    /* text-align: center; */
+    font-family: Playfair Display SC;
     font-size: 36px;
+    letter-spacing: -1.44px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     color: #b4a570;
   }
 
-  .info > h2 {
+  .info2 > h2 {
     margin: 0;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 24px;
     font-weight: 100;
     font-style: normal;
@@ -59,17 +62,18 @@
     color: #707070;
   }
 
-  .info > line {
+  .info2 > line1 {
+    display: block;
     margin: 48px auto 48px auto;
     width: 40px;
     height: 0;
     border: solid 1px #707070;
   }
 
-  .info > h3 {
+  .info2 > h3 {
     margin: 0;
     margin-bottom: 24px;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 21px;
     font-weight: 300;
     font-style: normal;
@@ -79,16 +83,20 @@
     color: #707070;
   }
 
-  .info > a {
+  .info2 > a {
+    display: block;
+    width: 206px;
+    margin: auto;
     text-decoration: none;
     border-radius: 20px;
     border: solid 1px #707070;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 16px;
     font-weight: 300;
     color: #707070;
-    padding: 8px;
+    padding: 4px;
     line-height: 2;
+    letter-spacing: -0.32px;
   }
 
   .wedding {
@@ -119,12 +127,13 @@
   }
   
   .contact {
-    margin: 64px auto 0 auto;
+    /* margin: 64px auto 0 auto; */
     text-align: center;
   }
 
   .contact > h1 {
-    font-family: PlayfairDisplaySC;
+    margin-top: 24px;
+    font-family: Playfair Display SC;
     font-size: 36px;
     font-weight: normal;
     font-style: normal;
@@ -155,24 +164,34 @@
     border: 1px solid #707070;
   }
 
+  .contact > div > img {
+    margin: 8px;
+    margin-bottom: 120px;
+  }
+
   .icon {
+    /* display: inline; */
+    /* display: block; */
     width: 24px;
     height: 24px;
-    margin: 8px;
+    /* margin: 8px; */
   }
   .slide-container {
-    width: 70%;
+    width: 100%;
+    /* height: 10px; */
     margin: auto;
     border: none;
     /* border: 10px solid black; */
   }
   
   .each-slide > div {
+    /* border: 1px solid black; */
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
     height: 581px;
+    /* height: 10px; */
   }
   
   .each-slide span {
@@ -181,6 +200,7 @@
   }
 
   .each-slide span > h1 {
+    font-family: Noto Sans KR;
     font-size: 24px;
     font-weight: bold;
     font-style: normal;
@@ -190,6 +210,7 @@
     color: #707070;
   }
   .each-slide span > h2 {
+    font-family: Noto Sans KR;
     font-size: 21px;
     font-weight: 300;
     font-style: normal;
@@ -201,25 +222,27 @@
 }
 
 @media (max-width: 1280px) {
-  .info {
+  .info2 {
     text-align: center;
-    margin-top: 40px;
+    
     padding: 0px;
 
   }
-  .info > h1 {
+  .info2 > h1 {
     margin: 0;
-    font-family: PlayfairDisplaySC;
+    margin-top: 40px;
+    font-family: Playfair Display SC;
     font-size: 24px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
+    letter-spacing: -0.72px;
     color: #b4a570;
   }
 
-  .info > h2 {
+  .info2 > h2 {
     margin: 0;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 21px;
     font-weight: 100;
     font-style: normal;
@@ -229,17 +252,18 @@
     color: #707070;
   }
 
-  .info > line {
+  .info2 > line1 {
+    display: block;
     margin: 24px auto 24px auto;
     width: 40px;
     height: 0;
     border: solid 1px #707070;
   }
 
-  .info > h3 {
+  .info2 > h3 {
     margin: 0;
     margin-bottom: 16px;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 18px;
     font-weight: 300;
     font-style: normal;
@@ -249,25 +273,30 @@
     color: #707070;
   }
 
-  .info > a {
+  .info2 > a {
+    display: block;
+    width: 168px;
+    margin: auto;
+    letter-spacing: -0.28px;
     text-decoration: none;
     border-radius: 20px;
     border: solid 1px #707070;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 14px;
     font-weight: 300;
     color: #707070;
-    padding: 8px;
+    padding: 4px;
     line-height: 2;
   }
 
   .wedding {
-    margin: 40px auto 0 auto;
+    /* margin: 40px auto 0 auto; */
     text-align: center;
   }
 
   .wedding > h1 {
-    margin: 0;
+    margin: 40px auto 0 auto;
+    font-family: Playfair Display SC;
     font-size: 24px;
     font-weight: normal;
     font-style: normal;
@@ -279,6 +308,7 @@
 
   .wedding > h2 {
     margin : 0;
+    font-family: Noto Sans KR;
     font-size: 21px;
     font-weight: 100;
     font-style: normal;
@@ -289,12 +319,13 @@
   }
 
   .contact {
-    margin: 40px auto 0 auto;
+    /* margin: 40px auto 0 auto; */
     text-align: center;
   }
 
   .contact > h1 {
-    font-family: PlayfairDisplaySC;
+    margin-top: 24px;
+    font-family: Playfair Display SC;
     font-size: 24px;
     font-weight: normal;
     font-style: normal;
@@ -305,6 +336,7 @@
 
   .contact > h2 {
     margin-top: 4px;
+    font-family: Noto Sans KR;
     font-size: 21px;
     font-weight: 100;
     font-style: normal;
@@ -321,33 +353,89 @@
     border: 1px solid #707070;
   }
 
+  .contact > div > img {
+    margin: 8px;
+    margin-bottom: 40px;
+  }
+
   .icon {
     width: 24px;
     height: 24px;
     margin: 8px;
   }
+
+  .slide-container2 {
+    width: 100%;
+    margin: auto;
+  }
+
+  .react-slideshow-wrapper.slide {
+    /* border: 1px solid black; */
+    width: 100%;
+    overflow: hidden;
+    /* height: 500px; */
+    /* padding-bottom: 150px; */
+    margin-bottom: 0px;
+  }
+  
+  .each-slide2 > div {
+    /* width: 720px; */
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  }
+  .each-slide2 span {
+    margin-top: 63%;
+    text-align: center;
+  }
+
+  .each-slide2 > div > span > h1 {
+    font-family: Noto Sans KR;
+    font-size: 21px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: -0.72px;
+    color: #707070;
+  }
+  .each-slide2 span > h2 {
+    margin-bottom: 0px;
+    font-family: Noto Sans KR;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.76;
+    letter-spacing: -0.42px;
+    color: #707070;
+  }
 }
 
 @media (max-width: 720px) {
-  .info {
+  .info2 {
+    /* border: 1px solid black; */
     text-align: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     padding: 0px;
 
   }
-  .info > h1 {
-    margin: 0;
-    font-family: PlayfairDisplaySC;
+  .info2 > h1 {
+    margin: 20px auto 0 auto;
+    font-family: Playfair Display SC;
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     color: #b4a570;
+    line-height: 1.0;
   }
 
-  .info > h2 {
+  .info2 > h2 {
     margin: 0;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 14px;
     font-weight: 100;
     font-style: normal;
@@ -357,17 +445,17 @@
     color: #707070;
   }
 
-  .info > line {
+  .info2 > line1 {
     margin: 8px auto 8px auto;
     width: 20px;
     height: 0;
-    border: solid 0.5px #707070;
+    border: solid 0.25px #707070;
   }
 
-  .info > h3 {
+  .info2 > h3 {
     margin: 0;
     margin-bottom: 8px;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 12px;
     font-weight: 300;
     font-style: normal;
@@ -377,15 +465,18 @@
     color: #707070;
   }
 
-  .info > a {
+  .info2 > a {
+    display: block;
+    width: 125px;
+    letter-spacing: -0.2px;
     text-decoration: none;
     border-radius: 20px;
     border: solid 0.5px #707070;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 10px;
     font-weight: 300;
     color: #707070;
-    padding: 4px;
+    padding: 6px;
     line-height: 1.0;
   }
 
@@ -395,18 +486,20 @@
   }
 
   .wedding > h1 {
-    margin: 0;
+    margin: 20px auto 0 auto;
+    font-family: Playfair Display SC;
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.75;
+    line-height: 1.0;
     letter-spacing: -0.64px;
     color: #b4a570;
   }
 
   .wedding > h2 {
     margin : 0;
+    font-family: Noto Sans KR;
     font-size: 14px;
     font-weight: 100;
     font-style: normal;
@@ -421,7 +514,7 @@
   }
 
   .contact > h1 {
-    font-family: PlayfairDisplaySC;
+    font-family: Playfair Display SC;
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
@@ -444,13 +537,57 @@
     margin: 8px auto 8px auto;
     width: 20px;
     height: 0px;
-    border: 1px solid #707070;
+    border: 0.5px solid #707070;
+  }
+
+  .contact > div > img {
+    margin: 0px 8px 20px 8px;
   }
 
   .icon {
     width: 24px;
     height: 24px;
     margin: 8px;
+  }
+  .slide-container3 {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .each-slide3 > div {
+    /* width: 720px; */
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+  }
+  .each-slide3 span {
+    margin-top: 65%;
+    text-align: center;
+  }
+
+  .each-slide3 > div > span > h1 {
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: -0.72px;
+    color: #707070;
+  }
+  .each-slide3 span > h2 {
+    margin-bottom: 0px;
+    font-family: Noto Sans KR;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.76;
+    letter-spacing: -0.42px;
+    color: #707070;
   }
 }
 

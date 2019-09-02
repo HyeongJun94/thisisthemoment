@@ -16,14 +16,37 @@ function DrawInfo(key) {
   // let item1 = 0;
 
   // const onChage
+  const [toggle1, setToggle1] = useState(false);
+  const [info1, setInfo] = useState('0px');
+  const onToggleInfo = (e) => {
+    e.preventDefault();
+    // console.log(e.target.value);
+    if (e.target.value === '1') {
+      // console.log(e.target.value);
+      setToggle1(!toggle1);
+    }
+  }
+
+  useEffect(() => {
+    if (toggle1) {
+      setInfo('10rem');
+    } else if (toggle1 == false) {
+      setInfo('0px');
+    }
+  }, [toggle1]);
 
   if (key == 0) {
     return (
       <div className="info-content">
         <div>
           <h1>Q 사람들이 많이 찍지 않을까봐 걱정됩니다.</h1>
-          <button>+</button>
-          {/* { item1 == 1 ? DrawList1() : DrawList1()} */}
+          <button value="1" onClick={onToggleInfo}>+</button>
+          {/* <h3 className="my-info-faq" style={{ 'font-size': `${info1}` }}>
+            A. 걱정하지 마세요 : 지금이순간 대표와 스태프가 직접 하객분들에게 스티커 사진을 찍고 메시지를 남길 수 있또록 안내해드립니다.
+          </h3> */}
+          <div className="tmp">
+            hello;
+          </div>
         </div>
         <div>
           <h1>Q &lt;지금이순간&gt;웨딩 포토부스 서비스 포함사항이 어떻게 되나요?</h1>
@@ -132,7 +155,7 @@ function DrawTablet(info, onChangeInfo) {
     <div className="root">
       {DrawMainBanner()}
       {DrawWedding()}
-      <DrawSections info={info} onChangeInfo={onChangeInfo} />geInfo} />
+      <DrawSections info={info} onChangeInfo={onChangeInfo} />
     </div>
   );
 }

@@ -26,44 +26,47 @@
     padding: 0;
     /* font-size: 0; */
   }
-  .info {
+  .my-info {
     margin-top: 64px;
     margin-bottom: 64px;
   }
-  .info > line{
+  .my-info > line1{
     display: block;
     width: 0;
     height: 120px;
     border: solid 1px #707070;
-    margin: 0 auto 0 auto;
+    margin: 64px auto 0 auto;
   }
-  .info > h1{
+  .my-info > h1{
     margin-top: 16px;
-    font-family: NotoSans;
+    font-family: Noto Sans;
     font-size: 160px;
     font-weight: bold;
     text-align: center;
     color: #b4a570;
+    line-height: 0.9;
+    /* border: 1px solid black; */
     
   }
-  .info > h2{
-    margin-top: 8px;
-    font-family: NotoSansKR;
+  .my-info > h2{
+    margin-top: 24px;
+    font-family: Noto Sans KR;
     font-size: 36px;
     text-align: center;
     color: #707070;
   }
-  .info > h3{
+  .my-info > h3{
     margin-top: 16px;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 21px;
     font-weight: 300;
     font-stretch: normal;
     text-align: center;
     color: #767676;
-    margin-bottom: 72px;
+    margin-bottom: 64px;
+    line-height: 1.76;
   }
-  .info > line2{
+  .my-info > line2{
     display: block;
     width: 0;
     height: 480px;
@@ -72,6 +75,7 @@
   }
 
   .solution {
+    margin-top: 64px;
     display: grid;
     grid-template: 
       'title title'
@@ -89,13 +93,14 @@
     padding: 48px;
   }
   .title > h1 {
-    font-family: PlayfairDisplaySC;
+    font-family: Playfair Display SC;
     font-size: 48px;
+    font-weight: normal;
     text-align: center;
     color: #b4a570;
   }
   .title > h2 {
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 36px;
     font-weight: bold;
     text-align: center;
@@ -111,32 +116,39 @@
 
 
   .solutionContent > h1 {
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 48px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
     text-align: left;
     color: #bdbdbd;
+    letter-spacing: -3.84px;
+    line-height: 1.6;
   }
   .solutionContent > h2 {
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 24px;
     font-weight: bold;
     text-align: left;
+    line-height: 1.5;
+    letter-spacing: -0.72px;  
     color: #707070;
+    margin-bottom: 8px;
   }
   .solutionContent > h3 {
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 18px;
     font-weight: 300;
     text-align: left;
     color: #767676;
+    line-height: 1.78;
+    letter-spacing: -0.36px;
   }
 
   .solutionImage {
     display: block;
-    width: 90%;
+    width: 553px;
     margin: 55px auto 55px 55px;
   }
 
@@ -146,6 +158,7 @@
     /* height: 100%; */
     margin-top: auto;
     margin-bottom: auto;
+    padding-left: 70px;
   }
   .rightItem1 { 
     grid-area: right1;
@@ -156,13 +169,14 @@
     height: 100%;
     background-color: #f5f5f5;
     padding-top: 20%;
+    padding-left: 70px;
   }
   .rightItem2 { grid-area: right2;}
   .leftItem3 {
     grid-area: left3;
     margin-top: auto;
     margin-bottom: auto;
-    /* width: 620px; */
+    padding-left: 70px;
   }
   .rightItem3 { 
     grid-area: right3;
@@ -176,8 +190,10 @@
   }
 
   .logo > h1 {
-    font-family: PlayfairDisplaySC;
+    font-family: Playfair Display SC;
     font-size: 36px;
+    font-weight: normal;
+    letter-spacing: -0.9px;
     text-align: center;
     color: #b4a570;
   }
@@ -194,39 +210,49 @@
   }
 
   .finalContent{
-    margin-top: 104px;
-    margin-bottom: 104px;
+    display: block;
     text-align: center;
-    
-    /* border: 1px solid black; */
   }
 
   .finalContent > h1{
-    font-family: NotoSansKR;
+    margin-top: 120px;
+    font-family: Noto Sans KR;
     font-size: 24px;
     line-height: 1.5;
     font-weight: bold;
     text-align: center;
+    letter-spacing: -0.72px;
     color: #707070;
   }
 
   .finalContent > h2{
-    font-family: NotoSansKR;
+    margin-top: 16px;
+    font-family: Noto Sans KR;
     font-size: 18px;
     font-weight: 300;
     text-align: center;
+    line-height: 1.78;
+    letter-spacing: -0.36px;
     color: #767676;
   }
   .finalContent > a {
+    display: block;
+    margin: auto;
+    margin-bottom: 120px;
+    width: 206px;
     text-decoration: none;
     border-radius: 20px;
     border: solid 1px #707070;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 16px;
     font-weight: 300;
     color: #707070;
-    padding: 8px;
+    padding: 4px;
     line-height: 2;
+  }
+
+  .my-line {
+    display: block;
   }
 }
 
@@ -242,49 +268,54 @@
     font-size: 0;
     /* border: 10px solid black; */
   }
-  .info {
-    margin-top: 40px;
-    margin-bottom: 16px;
+  .my-info {
+    /* margin-top: 40px; */
+    /* margin-bottom: 16px; */
   }
-  .info > line{
+  .my-info > line1{
     display: block;
     width: 0;
     height: 60px;
-    border: solid 1px #707070;
-    margin: 0 auto 0 auto;
+    border: solid 0.5px #707070;
+    margin: 40px auto 0 auto;
   }
-  .info > h1{
+  .my-info > h1{
     margin-top: 16px;
-    font-family: NotoSans;
+    font-family: Noto Sans;
     font-size: 96px;
     font-weight: bold;
     text-align: center;
+    letter-spacing: -3.84px;
+    line-height: 1.4;
     color: #b4a570;
     
   }
-  .info > h2{
-    margin-top: 8px;
-    font-family: NotoSansKR;
+  .my-info > h2{
+    margin-top: 0px;
+    font-family: Noto Sans KR;
     font-size: 24px;
     text-align: center;
+    letter-spacing: -0.48px;
     color: #707070;
   }
-  .info > h3{
+  .my-info > h3{
     margin-top: 8px;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 14px;
     font-weight: 300;
     font-stretch: normal;
     text-align: center;
     color: #767676;
     margin-bottom: 16px;
+    line-height: 1.79;
+    letter-spacing: -0.28px;
   }
-  .info > line2{
+  .my-info > line2{
     display: block;
     width: 0;
     height: 300px;
-    border: solid 1px #707070;
-    margin: 0 auto 0 auto;
+    border: solid 0.5px #707070;
+    margin: 0 auto 24px auto;
   }
 
   .solution {
@@ -301,26 +332,35 @@
   }
 
   .title { 
+    /* display: block; */
+    /* border: 1px solid black; */
     grid-area: title; 
     padding: 16px;
     background-color: rgba(180, 165, 112, 0.48);
   }
   .title > h1 {
-    font-family: PlayfairDisplaySC;
+    margin-top: 24px;
+    font-family: Playfair Display SC;
     font-size: 24px;
     text-align: center;
+    font-weight: normal;
+    letter-spacing: -0.96px;
     color: #b4a570;
   }
   .title > h2 {
-    font-family: NotoSansKR;
+    margin-top: 4px;
+    margin-bottom: 24px;
+    font-family: Noto Sans KR;
     font-size: 21px;
     font-weight: bold;
     text-align: center;
+    letter-spacing: -0.42px;
     color: #ffffff;
   }
 
   .solutionContent > h1 {
-    font-family: NotoSansKR;
+    margin-top: 40px;
+    font-family: Noto Sans KR;
     font-size: 36px;
     font-weight: bold;
     font-style: normal;
@@ -329,23 +369,28 @@
     color: #bdbdbd;
   }
   .solutionContent > h2 {
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 18px;
     font-weight: bold;
     text-align: left;
     text-align: center;
+    letter-spacing: -0.54px;
     color: #707070;
   }
   .solutionContent > h3 {
-    font-family: NotoSansKR;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    font-family: Noto Sans KR;
     font-size: 14px;
     font-weight: 300;
     text-align: left;
     text-align: center;
+    letter-spacing: -0.26px;
     color: #767676;
   }
 
   .solutionImage {
+    /* margin-top: 80px; */
     display: block;
     width: 100%;
     /* margin: auto; */
@@ -377,29 +422,34 @@
     /* margin-top: 20px; */
   }
   .rightItem3 { 
+    /* border: 1px solid black; */
     grid-area: right3;
     margin-top: 4px;
     /* background-color: #f5f5f5; */
-  }
-
-  .logo {
-    margin: 48px auto 48px auto;
+    /* margin-bottom: 80px; */
   }
 
   .logo > picture > img{
-    margin: auto;
+    margin: 80px auto 0px auto;
+    /* margin: auto; */
   }
 
   .logo > h1 {
-    font-family: PlayfairDisplaySC;
-    font-size: 16px;
+    font-family: Playfair Display SC;
+    font-size: 21px;
+    font-weight: normal;
     text-align: center;
     color: #b4a570;
+    letter-spacing: -0.53px;
+    margin-bottom: 80px;
   }
   
   .logoImage{
+    
     display: block;
     width: 47.9%;
+    /* margin-top: 80px; */
+    /* border: 1px solid black; */
   }
 
   .finalImage{
@@ -408,40 +458,54 @@
   }
 
   .finalContent{
-    margin-bottom: 44px;
-    margin-top: 44px;
+    /* margin-bottom: 44px; */
+    /* margin-top: 44px; */
     text-align: center;
     /* border: 1px solid black; */
   }
 
   .finalContent > h1{
-    font-family: NotoSansKR;
+    margin-top: 80px;
+    font-family: Noto Sans KR;
     font-size: 18px;
     font-weight: bold;
-    line-height: 3.5;
+    line-height: 2.2;
     text-align: center;
     color: #707070;
   }
 
   .finalContent > h2{
-    font-family: NotoSansKR;
+    /* margin-top:8px; */
+    font-family: Noto Sans KR;
     font-size: 14px;
     font-weight: 300;
     line-height: 1.75;
     letter-spacing: -0.24px;
     text-align: center;
     color: #767676;
+    margin-bottom: 0px;
   }
   .finalContent > a {
+    display: block;
+    /* margin-bottom: 80px; */
+    width: 147px;
+    margin: 0px auto 80px auto;
     text-decoration: none;
     border-radius: 12px;
     border: solid 1px #707070;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 10px;
     font-weight: 300;
     color: #707070;
-    padding: 4px;
+    padding: 2px;
     line-height: 2;
+  }
+
+  .my-line {
+    display: inline;
+  }
+  .my-line2{
+    display: block;
   }
 }
 
@@ -456,49 +520,50 @@
     font-size: 0;
     /* border: 1px solid black; */
   }
-  .info {
-    margin-top: 20px;
-    margin-bottom: 16px;
-  }
-  .info > line{
+
+  .my-info > line1{
     display: block;
     width: 0;
     height: 40px;
     border: solid 0.5px #707070;
-    margin: 0 auto 0 auto;
+    margin: 20px auto 0 auto;
   }
-  .info > h1{
-    margin-top: 16px;
-    font-family: NotoSans;
+  .my-info > h1{
+    margin-top: 8px;
+    font-family: Noto Sans;
     font-size: 48px;
     font-weight: bold;
     text-align: center;
+    letter-spacing: -1.92px;
     color: #b4a570;
     
   }
-  .info > h2{
-    margin-top: 8px;
-    font-family: NotoSansKR;
+  .my-info > h2{
+    margin-top: 4px;
+    font-family: Noto Sans KR;
     font-size: 14px;
+    letter-spacing: -0.28px;
     text-align: center;
     color: #707070;
   }
-  .info > h3{
+  .my-info > h3{
     margin-top: 8px;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 12px;
     font-weight: 300;
     font-stretch: normal;
     text-align: center;
     color: #767676;
+    letter-spacing: -0.48px;
+    line-height: 1.75;
     margin-bottom: 16px;
   }
-  .info > line2{
+  .my-info > line2{
     display: block;
     width: 0;
     height: 120px;
     border: solid 0.5px #707070;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 16px auto;
   }
 
   .solution {
@@ -511,30 +576,35 @@
       'right2'
       'left3'
       'right3';
-      grid-row-gap: 10px;
+      grid-row-gap: 0px;
   }
 
   .title { 
     grid-area: title; 
-    padding: 16px;
+    /* padding: 12px; */
     background-color: rgba(180, 165, 112, 0.48);
   }
   .title > h1 {
-    font-family: PlayfairDisplaySC;
+    margin-top: 12px;
+    font-family: Playfair Display SC;
     font-size: 18px;
+    font-weight: normal;
     text-align: center;
     color: #b4a570;
   }
   .title > h2 {
-    font-family: NotoSansKR;
+    margin-bottom: 12px;
+    font-family: Noto Sans KR;
     font-size: 16px;
+    letter-spacing: -0.4px;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
   }
 
   .solutionContent > h1 {
-    font-family: NotoSansKR;
+    margin-top: 24px;
+    font-family: Noto Sans KR;
     font-size: 24px;
     font-weight: bold;
     font-style: normal;
@@ -543,15 +613,16 @@
     color: #bdbdbd;
   }
   .solutionContent > h2 {
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 14px;
     font-weight: bold;
     text-align: left;
     text-align: center;
     color: #707070;
+    /* margin-bottom: 0px; */
   }
   .solutionContent > h3 {
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 12px;
     font-weight: 300;
     text-align: left;
@@ -562,7 +633,11 @@
   .solutionImage {
     display: block;
     width: 67.2%;
-    margin: auto;
+    /* width: 100%; */
+    /* margin: auto; */
+    /* border: 10px solid black; */
+    /* margin-left: 20px; */
+    /* margin-left: 1000px; */
   }
 
   .leftItem1 { 
@@ -571,8 +646,6 @@
   }
   .rightItem1 { 
     grid-area: right1;
-    /* margin-top: 4px; */
-    /* background-color: #f5f5f5; */
   }
   .leftItem2 { 
     grid-area: left2;
@@ -593,14 +666,26 @@
     /* background-color: #f5f5f5; */
   }
 
-  .logo {
-    margin: 48px auto 48px auto;
-    /* border: 1px solid #707070; */
+
+  .rightItem1 > picture >img,
+  .rightItem2 > picture >img,
+  .rightItem3 > picture >img {
+    margin: 0px auto 0 auto;
+    /* border: 10px solid black; */
+  }
+
+  .logo > picture > img{
+    margin: 48px auto 0px auto;
+    /* margin: auto; */
   }
 
   .logo > h1 {
-    font-family: PlayfairDisplaySC;
+    /* margin-top: 0px; */
+    margin-bottom: 48px;
+    font-family: Playfair Display SC;
     font-size: 16px;
+    font-weight: normal;
+    letter-spacing: -0.4px;
     text-align: center;
     color: #b4a570;
   }
@@ -608,7 +693,7 @@
   .logoImage{
     display: block;
     width: 44.4%;
-    margin: auto;
+    /* margin: auto; */
   }
 
   .finalImage{
@@ -616,24 +701,19 @@
     width: 100%;
   }
 
-  .finalContent{
-    margin-bottom: 44px;
-    margin-top: 44px;
-    text-align: center;
-    /* border: 1px solid black; */
-  }
-
   .finalContent > h1{
-    font-family: NotoSansKR;
+    margin-top: 48px;
+    font-family: Noto Sans KR;
     font-size: 14px;
     font-weight: bold;
     line-height: 3.5;
+    letter-spacing: -0.42px;
     text-align: center;
     color: #707070;
   }
 
   .finalContent > h2{
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 12px;
     font-weight: 300;
     line-height: 1.75;
@@ -642,15 +722,25 @@
     color: #767676;
   }
   .finalContent > a {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 48px;
+    width: 125px;
     text-decoration: none;
     border-radius: 10px;
     border: solid 1px #707070;
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 10px;
     font-weight: 300;
     color: #707070;
-    padding: 4px;
+    padding: 1px;
     line-height: 2;
+  }
+  .my-line {
+    display: block;
+  }
+  .my-line2{
+    display: block;
   }
 }
 

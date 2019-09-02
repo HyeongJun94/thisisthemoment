@@ -2,6 +2,13 @@
   display: block;
   width: 100%;
   margin: auto;
+  /* border: 1px solid black; */
+  /* margin-bottom: 0px; */
+}
+
+.root * {
+  margin: 0px;
+  padding: 0px;
 }
 
 @media (min-width: 1280px) {
@@ -19,11 +26,15 @@
   }
 
   .wedding {
+    display: block;
     margin: 80px auto 40px auto;
+    padding: 0px;
+    /* border: 1px solid black; */
   }
 
   .wedding > h1 {
-    font-family: PlayfairDisplaySC;
+    margin-top: 0px;
+    font-family: Playfair Display SC;
     font-size: 36px;
     font-weight: normal;
     font-style: normal;
@@ -35,7 +46,7 @@
   }
 
   .wedding > h2 {
-    font-family: NotoSansKR;
+    font-family: Noto Sans KR;
     font-size: 24px;
     font-weight: 100;
     font-style: normal;
@@ -49,14 +60,46 @@
   .grid-container {
     display: grid;
     margin-top: 40px;
+    /* margin-bottom: 120px; */
     grid-template: 
      'item1 item2 item3 item4';
     grid-auto-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 40px;
   }
 
+
+  .grid-container > div > h1 {
+    font-family: NotoSans;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.22;
+    letter-spacing: -0.54px;
+    text-align: center;
+    color: #707070;
+    background-color: white;
+  }
+
+  .grid-container > div > h2 {
+    font-family: Noto Sans KR;
+    font-size: 16px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: -0.48px;
+    text-align: center;
+    color: #707070;
+    margin-bottom: 14px;
+  }
+
   .item1 {
     grid-area: item1;
+  }
+
+  .item1 > h2 {
+    font-size: 10px;
   }
   .item2 {
     grid-area: item2;
@@ -68,11 +111,8 @@
     grid-area: item4;
   }
 
-  .info {
-    margin-top: 16px;
-  }
-  
-  .info > h3 {
+  .myinfo > div > h3 {
+    /* display: block; */
     font-family: NotoSansCJKKR;
     font-size: 12px;
     font-weight: 100;
@@ -83,14 +123,223 @@
     text-align: left;
     color: #707070;
   }
+
+  .empty {
+    height: 120px;
+  }
 }
+
 
 @media (max-width: 1280px) {
 
+  .wedding > h1 {
+    margin-top: 40px;
+    font-family: Playfair Display SC;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.8;
+    letter-spacing: -0.96px;
+    text-align: center;
+    color: #b4a570;
+  }
+
+  .wedding > h2 {
+    margin-bottom: 24px;
+    font-family: Noto Sans KR;
+    font-size: 21px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: -0.42px;
+    text-align: center;
+    color: #707070;
+  }
+
+  
+  .grid-container {
+    display: grid;
+    width: 100%;
+    /* border: 1px solid black; */
+    /* margin: auto; */
+    grid-template: 
+     'item1 item2'
+     'item3 item4';
+    grid-auto-columns: 45% 45%;
+    grid-auto-rows: 1fr 1fr;
+    justify-content: center;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+  }
+
+
+  .grid-container > div > h1 {
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.22;
+    letter-spacing: -0.54px;
+    text-align: center;
+    color: #707070;
+    background-color: white;
+  }
+
+  .grid-container > div > h2 {
+    font-family: Noto Sans KR;
+    font-size: 16px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: -0.48px;
+    text-align: center;
+    color: #707070;
+    margin-bottom: 14px;
+  }
+
+  .item1 {
+    grid-area: item1;
+  }
+
+  .item1 > h2 {
+    font-size: 10px;
+  }
+  .item2 {
+    grid-area: item2;
+  }
+  .item3 {
+    grid-area: item3;
+  }
+  .item4 {
+    grid-area: item4;
+  }
+
+  .myinfo > div > h3 {
+    /* display: block; */
+    font-family: NotoSansCJKKR;
+    font-size: 12px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: -0.24px;
+    text-align: left;
+    color: #707070;
+  }
+
+  .empty {
+    height: 40px;
+  }
 }
 
 @media (max-width: 720px) {
 
+  .wedding > h1 {
+    margin-top: 20px;
+    font-family: Playfair Display SC;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.1;
+    letter-spacing: -0.64px;
+    text-align: center;
+    color: #b4a570;
+  }
+
+  .wedding > h2 {
+    margin-bottom: 8px;
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 3;
+    letter-spacing: -0.28px;
+    text-align: center;
+    color: #707070;
+  }
+
+  
+  .grid-container {
+    display: grid;
+    width: 100%;
+    /* border: 1px solid black; */
+    /* margin: auto; */
+    grid-template: 
+     'item1 item2'
+     'item3 item4';
+    grid-auto-columns: 45% 45%;
+    grid-auto-rows: 1fr 1fr;
+    justify-content: center;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+  }
+
+
+  .grid-container > div > h1 {
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: -0.54px;
+    text-align: center;
+    color: #707070;
+    background-color: white;
+  }
+
+  .grid-container > div > h2 {
+    font-family: Noto Sans KR;
+    font-size: 16px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: -0.48px;
+    text-align: center;
+    color: #707070;
+    margin-bottom: 14px;
+  }
+
+  .item1 {
+    grid-area: item1;
+  }
+
+  .item1 > h2 {
+    font-size: 10px;
+  }
+  .item2 {
+    grid-area: item2;
+  }
+  .item3 {
+    grid-area: item3;
+  }
+  .item4 {
+    grid-area: item4;
+  }
+
+  .myinfo > div > h3 {
+    /* display: block; */
+    font-family: NotoSansCJKKR;
+    font-size: 10px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.6;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: #707070;
+  }
+
+  .empty {
+    height: 20px;
+  }
 }
 
 

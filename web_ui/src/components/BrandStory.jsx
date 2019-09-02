@@ -39,15 +39,17 @@ function finalContentAndroid() {
         신랑 신부님의 결혼식은 인생에 단 한번뿐인 특별한 날입니다.
         <br />
         포토부스에서 하객들과 사진을 찍고 포토 방명록에 
-        <br />
+        <line className="my-line2"/>
+        <line className="my-line2"/>
         메시지를 남겨 그날을 기념합니다.
+        <line className="my-line2"/>
         <br />
-        <br />
+        {/* <br /> */}
         예약문의는 카카오톡 플러스친구로 문의주시면
         <br />
         친절하게 상담 도와드리겠습니다.
-        <br />
-        <br />
+        {/* <br /> */}
+        {/* <br /> */}
       </h2>
       <a href="https://pf.kakao.com/_xmXvWC/chat">1:1 카카오톡 상담 시작하기</a>
     </div>
@@ -80,7 +82,7 @@ function finalContentPC() {
 }
 function DrawFinalInfo(media) {
   return (
-    <div>
+    <div className="tmp">
       {media === global.ANDROID ? finalContentAndroid() : finalContentPC()}
     </div>
   );
@@ -153,7 +155,8 @@ function DrawSolution() {
           <h2>하객분들이 직접 신랑 신부님의 영원을 축복합니다.</h2>
           <h3>
           하객분들이 신랑 신부님에게 사진 한 장과
-          <br />
+          {/* <br /> */}
+          <line className="my-line"/ >
           정성스레 쓰인 축하의 메시지를 남깁니다.
           </h3>
         </div>
@@ -173,10 +176,16 @@ function DrawSolution() {
       <div className="leftItem3">
         <div className="solutionContent">
           <h1>03</h1>
-          <h2>하객분들의 순간들을 담은 책자를 신랑 신부님에게 </h2>
-          <h2>선물해드립니다.</h2>
-          <h3>신랑 신부님이 앞으로 함께하여</h3>
-          <h3>언제든지 꺼내서 볼 수 있는 포토방명록을 드립니다.</h3>
+          <h2>
+            하객분들의 순간들을 담은 책자를 신랑 신부님에게 
+            <line className="my-line"/ >
+            선물해드립니다.
+          </h2>
+          <h3>
+            신랑 신부님이 앞으로 함께하여
+            <line className="my-line"/ >
+            언제든지 꺼내서 볼 수 있는 포토방명록을 드립니다.
+          </h3>
         </div>
       </div>
       <div className="rightItem3">
@@ -239,8 +248,8 @@ const contentPC = () => (
 
 function DrawInfo(media) {
   return (
-    <div className="info">
-      <line />
+    <div className="my-info">
+      <line1 />
       <h1>BRAND STORY</h1>
       <h2>결혼식을 기억하지 못하는 하객들과 슬픈 신부님들을 위하여</h2>
       {media === global.ANDROID ? contentAndroid() : contentPC() }

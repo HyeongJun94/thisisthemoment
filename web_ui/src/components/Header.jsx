@@ -12,8 +12,8 @@ import AppBar from '@material-ui/core/AppBar';
 // import BannerAndroid from '../static/images/Android/mainBanner.png';
 // import BannerAndroid2X from '../static/images/Android/mainBanner@2x.png';
 
-import LogoAndroid from '../static/images/Android/Main/logo.jpg';
-import LogoAndroid2X from '../static/images/Android/Main/logo@2x.jpg';
+import LogoAndroid from '../static/images/Android/Main/logo.png';
+// import LogoAndroid2X from '../static/images/Android/Main/logo@2x.jpg';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,13 +44,28 @@ const useStyles = makeStyles(theme => ({
       letterSpacing: -0.42,
       color: '#707070',
     },
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
+      margin: '104px 0 0 0',
+      borderBottom: '10px solid #707070',
+      fontSize: 20,
+      fontWeight: 300,
+      lineHeight: 2.86,
+      letterSpacing: -0.42,
+      color: '#707070',
+    },
   },
   toolBar: {
     margin: '0 auto 0 auto',
     fontSize: '10px',
     maxWidth: '1280px',
     [theme.breakpoints.down(global.PCMinWidth)]: {
-      borderTop: '1px solid black',
+      borderTop: '1px solid #707070',
+    },
+    [theme.breakpoints.down(global.PCMinWidth)]: {
+      borderTop: '1px solid #707070',
+    },
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
+      borderTop: '1px solid #707070',
     },
     '& div': {
       [theme.breakpoints.up(global.PCMinWidth)]: {
@@ -63,7 +78,7 @@ const useStyles = makeStyles(theme => ({
       },
       '& button': {
         backgroundColor: 'transparent',
-        fontFamily: 'NotoSans',
+        fontFamily: 'Noto Sans',
         border: 'none',
         [theme.breakpoints.up(global.PCMinWidth)]: {
           marginRight: 2 * theme.spacing(2),
@@ -75,16 +90,31 @@ const useStyles = makeStyles(theme => ({
           marginRight: 3 * theme.spacing(1),
           fontSize: '14px',
           color: '#707070',
-          fontWeight: '300',
+          fontWeight: '900',
         },
       },
     },
   },
   logo: {
-    display: 'block',
-    margin: '0 auto 0 auto',
-    // marginLeft: 'auto',
+    width: '100%',
   },
+
+  logoImg: {
+    // border: '10px solid black',
+    display: 'block',
+    
+    [theme.breakpoints.down(global.PCMinWidth)]: {
+      width: '25.7%',
+      margin: '24px auto 24px auto',
+    },
+    [theme.breakpoints.down(global.TabletMinWidth)]: {
+      width: '23%',
+      margin: '12px auto 12px auto',
+      // height: '52px',
+      // width: 'auto',
+    },
+  },
+
 }));
 
 const Header = ({
@@ -125,9 +155,10 @@ const Header = ({
       <div className={classes.root}>
         <Toolbar>
           <picture className={classes.logo}>
-            <source media="(max-width:360px)" srcSet={LogoAndroid} />
-            <source media="(min-width:360px)" srcSet={LogoAndroid2X} />
+            {/* <source media="(max-width:360px)" srcSet={LogoAndroid} /> */}
+            {/* <source media="(min-width:360px)" srcSet={LogoAndroid2X} /> */}
             <img
+              className={classes.logoImg}
               src={LogoAndroid}
               alt="logo"
             />
@@ -150,9 +181,10 @@ const Header = ({
       <div className={classes.root}>
         <Toolbar>
           <picture className={classes.logo}>
-            <source media="(max-width:360px)" srcSet={LogoAndroid} />
-            <source media="(min-width:360px)" srcSet={LogoAndroid2X} />
+            {/* <source media="(max-width:360px)" srcSet={LogoAndroid} /> */}
+            {/* <source media="(min-width:360px)" srcSet={LogoAndroid2X} /> */}
             <img
+              className={classes.logoImg}
               src={LogoAndroid}
               alt="logo"
             />
