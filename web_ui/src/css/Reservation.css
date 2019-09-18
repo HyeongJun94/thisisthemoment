@@ -164,7 +164,7 @@
     border: 1px solid #707070;
   }
 
-  .contact > div > img {
+  .contact > div > a > img {
     margin: 8px;
     margin-bottom: 120px;
   }
@@ -353,7 +353,7 @@
     border: 1px solid #707070;
   }
 
-  .contact > div > img {
+  .contact > div > a > img {
     margin: 8px;
     margin-bottom: 40px;
   }
@@ -385,6 +385,8 @@
     align-items: center;
     justify-content: center;
     background-size: cover;
+    background-position: center;
+
   }
   .each-slide2 span {
     margin-top: 63%;
@@ -539,8 +541,8 @@
     height: 0px;
     border: 0.5px solid #707070;
   }
-
-  .contact > div > img {
+  /* .contact > div > a > img, */
+  .contact > div > a > img {
     margin: 0px 8px 20px 8px;
   }
 

@@ -443,7 +443,7 @@ const DrawMainBanner = () => (
 
 function DrawPC(info, onChangeInfo) {
   return (
-    <div className="root">
+    <div>
       {DrawMainBanner()}
       <div className="rootWidth">
         {DrawWedding()}

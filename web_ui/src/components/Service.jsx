@@ -83,7 +83,7 @@ const DrawService = () => (
             <br />
             - 신랑, 신부님 촬영
           </h2>
-          <a>MOMENT SNAP</a>
+          <a href="https://www.instagram.com/themoment_photobooth/">MOMENT SNAP</a>
         </div>
       </div>
       <div className="right-item2">
@@ -106,62 +106,62 @@ const DrawProduct = ({ media }) => {
   const sections = [
     {
       name: '웨딩포토부스',
-      className: 'item1',
+      className: 'my-item1',
       srcImg: 'item1',
     },
     {
       name: '포토방명록',
-      className: 'item2',
+      className: 'my-item2',
       srcImg: 'item2',
     },
     {
       name: '백그라운드',
-      className: 'item3',
+      className: 'my-item3',
       srcImg: 'item3',
     },
     {
       name: '가랜드',
-      className: 'item4',
+      className: 'my-item4',
       srcImg: 'item4',
     },
     {
       name: '포토테이블',
-      className: 'item5',
+      className: 'my-item5',
       srcImg: 'item5',
     },
     {
       name: '포토템플릿',
-      className: 'item6',
+      className: 'my-item6',
       srcImg: 'item6',
     },
     {
       name: '테이블 액자',
-      className: 'item7',
+      className: 'my-item7',
       srcImg: 'item7',
     },
     {
       name: '프롭스',
-      className: 'item8',
+      className: 'my-item8',
       srcImg: 'item8',
     },
     {
       name: 'OPP 봉투',
-      className: 'item9',
+      className: 'my-item9',
       srcImg: 'item9',
     },
     {
       name: '웨딩 부케',
-      className: 'item10',
+      className: 'my-item10',
       srcImg: 'item10',
     },
     {
       name: '스튜디오 조명',
-      className: 'item11',
+      className: 'my-item11',
       srcImg: 'item11',
     },
     {
       name: '진행 인원 2명',
-      className: 'item12',
+      className: 'my-item12',
       srcImg: 'item12',
     },
   ];

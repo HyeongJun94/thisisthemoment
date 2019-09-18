@@ -28,7 +28,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: 'transparent',
     boxShadow: 'none',
     [theme.breakpoints.up(global.PCMinWidth)]: {
-      marginTop: 10 * theme.spacing(2),
+      // marginTop: 10 * theme.spacing(2),
+      marginTop: '50px',
       fontSize: '28px',
       fontWeight: 'bold',
       lineHeight: 1.43,
@@ -126,7 +127,7 @@ const Header = ({
     { name: 'BRAND STORY', value: global.BrandStory },
     { name: 'RESERVATION', value: global.Reservation },
     { name: 'SERVICE', value: global.Service },
-    { name: 'CUSTOMIZE', value: global.Customize },
+    { name: 'CUSTOMIZING', value: global.Customize },
     { name: 'FAQ', value: global.FAQ },
   ];
 

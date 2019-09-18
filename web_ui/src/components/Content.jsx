@@ -9,6 +9,7 @@ import BannerPC from '../static/images/PC/Main/mainBanner.png';
 import BannerTablet from '../static/images/Tablet/Main/mainBanner.png';
 import BannerAndroid from '../static/images/Android/Main/mainBanner.png';
 import BannerLogo from '../static/images/PC/Main/bannerlogo.png';
+import BannerBox from '../static/images/PC/Main/bannerBox.png';
 import ShinyoungPC from '../static/images/PC/Main/shinyoung.png';
 import ShinyoungTablet from '../static/images/Tablet/Main/shinyoung.png';
 import ShinyoungAndroid from '../static/images/Android/Main/shinyoung.png';
@@ -42,16 +43,22 @@ const useStyles = makeStyles(theme => ({
     },
   },
 
-  myroot: {
-
-    backgroundColor: '#f7f7f7',
-
+  tmp: {
+    backgroundSize: 'cover',
+    // zIndex: '-1',
   },
-
+  myroot: {
+    backgroundColor: '#f7f7f7',
+  },
   bannerImage: {
     display: 'block',
-    margin: '0 auto 0 auto',
     width: '100%',
+    [theme.breakpoints.up(global.PCMinWidth)]: {
+ 
+    },
+    [theme.breakpoints.down(global.PCMinWidth)]: {
+      position: 'relative',
+    },
   },
   logo: {
     backgroundColor: 'transparent',
@@ -307,9 +314,8 @@ const useStyles = makeStyles(theme => ({
         fontFamily: 'Noto Sans KR',
         color: '#707070',
         [theme.breakpoints.up(global.PCMinWidth)]: {
-          // marginTop: '31px',
-          // marginBottom: '31px',
-          // margint: 
+          marginTop: '50px',
+          marginBottom: '31px',
           fontSize: '16px',
           lineHeight: '0.60',
         },
@@ -328,10 +334,11 @@ const useStyles = makeStyles(theme => ({
           fontWeight: 'bold',
           color: '#ffffff',
           fontFamily: 'Noto Sans KR',
+          // border: '1px solid black',
           [theme.breakpoints.up(global.PCMinWidth)]: {
             fontSize: '36px',
-            marginTop: '16px',
-            marginBottom: '16px',
+            // marginTop: '24px',
+            marginBottom: '32px',
             letterSpacing: '-0.42px',
           },
           [theme.breakpoints.down(global.PCMinWidth)]: {
@@ -348,8 +355,11 @@ const useStyles = makeStyles(theme => ({
           fontFamily: 'Noto Sans KR',
           color: '#ffffff',
           textAlign: 'center',
+          fontWeight: '300',
           [theme.breakpoints.up(global.PCMinWidth)]: {
+            // marginTop: '32px',
             fontSize: '21px',
+            marginBottom: '24px',
             lineHeight: '0.6',
             letterSpacing: '-0.42px',
           },
@@ -374,6 +384,7 @@ const useStyles = makeStyles(theme => ({
           [theme.breakpoints.up(global.PCMinWidth)]: {
             fontSize: '21px',
             letterSpacing: '-0.42px',
+            marginBottom: '16px',
           },
           [theme.breakpoints.down(global.PCMinWidth)]: {
             fontSize: '12px',
@@ -765,6 +776,7 @@ const useStyles = makeStyles(theme => ({
         fontWeight: '300',
         color: '#707070',
         border: 'none',
+        boxShadow: '5px 6px 11px 0 rgba(0,0,0,0.16)',
         [theme.breakpoints.up(global.PCMinWidth)]: {
           width: '80px',
           height: '80px',
@@ -905,17 +917,29 @@ const useStyles = makeStyles(theme => ({
     },
   },
 
+  bannerWidth: {
+    position: 'relative',
+    width: '1280px',
+    height: '533px',
+    // maxWidth: '1280px',
+    margin: 'auto',
+    // border: '10px solid black',
+  },
+
   bannerBox: {
-    // display: 'flex',
+    // // display: 'flex',
     // position: 'absolute',
+    // fontSize: '100px',
+    // top: '14.6%',
+    // right: '50px',
+    // width: '110px',
+    // lineHeight: '1.1',
+    // textAlign: 'center',
+    // border: '1px solid black',
     position: 'absolute',
-    fontSize: '100px',
-    top: '14.6%',
-    right: '50px',
-    width: '110px',
-    lineHeight: '1.1',
-    textAlign: 'center',
-    border: '1px solid black',
+    width: '9.1%',
+    top: '10%',
+    right: '70.4px',
   },
 
   bannerBox2: {
@@ -932,16 +956,25 @@ const useStyles = makeStyles(theme => ({
 
   bannerLogo: {
     position: 'absolute',
-    width: '15.6%',
-    top: '20%',
+    width: '17.2%',
+    top: '48%',
+    left: '85px',
+    // border: '1px solid white',
+    [theme.breakpoints.up(global.PCMinWidth)]: {
+
+    },
+    [theme.breakpoints.down(global.PCMinWidth)]: {
+
+    },
   },
+
 }));
 
 function DrawKakao(classes) {
   return (
     <div className={classes.kakao}>
       <p>
-        예약문의는 카톡 플러스친구로 문의주시면
+        예약문의는 카카오톡 플러스친구로 문의주시면
         <br />
         친절하게 상담 도와드리겠습니다.
       </p>
@@ -1365,30 +1398,32 @@ function DrawBannerAndroid(classes) {
 
 function DrawBannerPC(classes) {
   return (
-    <>
-      <picture>
-        <source srcSet={BannerPC} />
-        <img
-          className={classes.bannerImage}
-          src={BannerPC}
-          alt=""
-        />
-      </picture>
-      <div className={classes.bannerBox}>
-        웨<br />딩<br />포<br />토<br />부<br />스
+    <div className={classes.tmp} style={{'backgroundImage' : `url(${BannerPC})`}}>
+      <div className={classes.bannerWidth}>
+        {/* <div className={classes.bannerBox}>
+          웨<br />딩<br />포<br />토<br />부<br />스
+        </div>
+        <div className={classes.bannerBox2}>
+          THISISTHEMOMENT
+        </div> */}
+        <picture>
+          <source srcSet={BannerBox} />
+          <img
+            className={classes.bannerBox}
+            src={BannerBox}
+            alt=""
+          />
+        </picture>
+        <picture>
+          <source srcSet={BannerLogo} />
+          <img
+            className={classes.bannerLogo}
+            src={BannerLogo}
+            alt=""
+          />
+        </picture>
       </div>
-      <div className={classes.bannerBox2}>
-        THISISTHEMOMENT
-      </div>
-      <picture>
-        <source srcSet={BannerLogo} />
-        <img
-          className={classes.bannerLogo}
-          src={BannerLogo}
-          alt=""
-        />
-      </picture>
-    </>
+    </div>
   );
 }
 

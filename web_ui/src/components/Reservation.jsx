@@ -34,16 +34,20 @@ const DrawContact = () => (
     <h2>지금이순간 웨딩 포토부스</h2>
     <line />
     <div>
-      <img
-        className="icon"
-        src={InstagramIcon}
-        alt=""
-      />
-      <img
-        className="icon"
-        src={PhoneIcon}
-        alt=""
-      />
+      <a href="https://www.instagram.com/themoment_photobooth/">
+        <img
+          className="icon"
+          src={InstagramIcon}
+          alt=""
+        />
+      </a>
+      <a href="tel:02-6315-0503">
+        <img
+          className="icon"
+          src={PhoneIcon}
+          alt=""
+        />
+      </a>
     </div>
   </div>
 );

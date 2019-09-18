@@ -47,6 +47,7 @@ export default function App() {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (menu == global.BrandStory) {
       setBody(<BrandStoryContainer mediaAndroid={mediaAndroid} mediaTablet={mediaTablet} mediaPC={mediaPC} />);
     } else if (menu == global.Reservation) {

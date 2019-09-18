@@ -15,7 +15,7 @@
   width: 100%;
 }
 
-@media (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
   .root {
     max-width: 1280px;
     margin: 0 auto 0 auto;
@@ -26,18 +26,18 @@
     padding: 0;
     /* font-size: 0; */
   }
-  .my-info {
+  .my-info2 {
     margin-top: 64px;
     margin-bottom: 64px;
   }
-  .my-info > line1{
+  .my-info2 > line1{
     display: block;
     width: 0;
     height: 120px;
     border: solid 1px #707070;
     margin: 64px auto 0 auto;
   }
-  .my-info > h1{
+  .my-info2 > h1{
     margin-top: 16px;
     font-family: Noto Sans;
     font-size: 160px;
@@ -48,14 +48,14 @@
     /* border: 1px solid black; */
     
   }
-  .my-info > h2{
+  .my-info2 > h2{
     margin-top: 24px;
     font-family: Noto Sans KR;
     font-size: 36px;
     text-align: center;
     color: #707070;
   }
-  .my-info > h3{
+  .my-info2 > h3{
     margin-top: 16px;
     font-family: Noto Sans KR;
     font-size: 21px;
@@ -66,7 +66,7 @@
     margin-bottom: 64px;
     line-height: 1.76;
   }
-  .my-info > line2{
+  .my-info2 > line2{
     display: block;
     width: 0;
     height: 480px;
@@ -256,7 +256,7 @@
   }
 }
 
-@media (max-width: 1280px) {
+@media only screen and (max-width: 1279px) {
   .root {
     margin: 0 auto 0 auto;
     padding: 0;
@@ -268,21 +268,22 @@
     font-size: 0;
     /* border: 10px solid black; */
   }
-  .my-info {
+  .my-info2 {
     /* margin-top: 40px; */
     /* margin-bottom: 16px; */
   }
-  .my-info > line1{
+  .my-info2 > line1{
     display: block;
     width: 0;
     height: 60px;
     border: solid 0.5px #707070;
     margin: 40px auto 0 auto;
   }
-  .my-info > h1{
+  .my-info2 > h1{
     margin-top: 16px;
     font-family: Noto Sans;
     font-size: 96px;
+    /* border: 1px solid black; */
     font-weight: bold;
     text-align: center;
     letter-spacing: -3.84px;
@@ -290,7 +291,7 @@
     color: #b4a570;
     
   }
-  .my-info > h2{
+  .my-info2 > h2{
     margin-top: 0px;
     font-family: Noto Sans KR;
     font-size: 24px;
@@ -298,7 +299,7 @@
     letter-spacing: -0.48px;
     color: #707070;
   }
-  .my-info > h3{
+  .my-info2 > h3{
     margin-top: 8px;
     font-family: Noto Sans KR;
     font-size: 14px;
@@ -310,7 +311,7 @@
     line-height: 1.79;
     letter-spacing: -0.28px;
   }
-  .my-info > line2{
+  .my-info2 > line2{
     display: block;
     width: 0;
     height: 300px;
@@ -521,14 +522,14 @@
     /* border: 1px solid black; */
   }
 
-  .my-info > line1{
+  .my-info2 > line1{
     display: block;
     width: 0;
     height: 40px;
     border: solid 0.5px #707070;
     margin: 20px auto 0 auto;
   }
-  .my-info > h1{
+  .my-info2 > h1{
     margin-top: 8px;
     font-family: Noto Sans;
     font-size: 48px;
@@ -538,7 +539,7 @@
     color: #b4a570;
     
   }
-  .my-info > h2{
+  .my-info2 > h2{
     margin-top: 4px;
     font-family: Noto Sans KR;
     font-size: 14px;
@@ -546,7 +547,7 @@
     text-align: center;
     color: #707070;
   }
-  .my-info > h3{
+  .my-info2 > h3{
     margin-top: 8px;
     font-family: Noto Sans KR;
     font-size: 12px;
@@ -558,7 +559,7 @@
     line-height: 1.75;
     margin-bottom: 16px;
   }
-  .my-info > line2{
+  .my-info2 > line2{
     display: block;
     width: 0;
     height: 120px;

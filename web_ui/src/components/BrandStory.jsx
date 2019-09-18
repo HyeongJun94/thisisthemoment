@@ -248,7 +248,7 @@ const contentPC = () => (
 
 function DrawInfo(media) {
   return (
-    <div className="my-info">
+    <div className="my-info2">
       <line1 />
       <h1>BRAND STORY</h1>
       <h2>결혼식을 기억하지 못하는 하객들과 슬픈 신부님들을 위하여</h2>

@@ -42,6 +42,7 @@
     margin-bottom: 80px;
     text-align: center;
     font-size: 24px;
+    font-family: Noto Sans KR;
     font-weight: 100;
     font-style: normal;
     font-stretch: normal;
@@ -128,6 +129,7 @@
     color: #b4a570;
   }
   .product > h2 {
+    /* border: 1px solid black; */
     margin-bottom: 40px;
     font-family: Noto Sans KR;
     font-size: 24px;
@@ -142,52 +144,53 @@
     margin-top: 40px;
     display: grid;
     grid-template: 
-      'item1 item2 item3 item4 item5 item6'
-      'item7 item8 item9 item10 item11 item12';
+      'my-item1 my-item2 my-item3 my-item4 my-item5 my-item6'
+      'my-item7 my-item8 my-item9 my-item10 my-item11 my-item12';
     grid-auto-rows: 1fr;
     grid-auto-columns: 1fr;
     grid-gap: 16px;
   }
 
-  .item1,
-  .item1 > picture > img,
-  .item2,
-  .item2 > picture > img,
-  .item3,
-  .item3 > picture > img,
-  .item4,
-  .item4 > picture > img,
-  .item5,
-  .item5 > picture > img,
-  .item6,
-  .item6 > picture > img,
-  .item7,
-  .item7 > picture > img,
-  .item8,
-  .item8 > picture > img,
-  .item9,
-  .item9 > picture > img,
-  .item10,
-  .item10 > picture > img,
-  .item11,
-  .item11 > picture > img,
-  .item12,
-  .item12 > picture > img {
+  .my-item1,
+  .my-item1 > picture > img,
+  .my-item2,
+  .my-item2 > picture > img,
+  .my-item3,
+  .my-item3 > picture > img,
+  .my-item4,
+  .my-item4 > picture > img,
+  .my-item5,
+  .my-item5 > picture > img,
+  .my-item6,
+  .my-item6 > picture > img,
+  .my-item7,
+  .my-item7 > picture > img,
+  .my-item8,
+  .my-item8 > picture > img,
+  .my-item9,
+  .my-item9 > picture > img,
+  .my-item10,
+  .my-item10 > picture > img,
+  .my-item11,
+  .my-item11 > picture > img,
+  .my-item12,
+  .my-item12 > picture > img {
     border-radius: 25px 25px 0px 0px;
   }
 
-  .item1 > h1,
-  .item2 > h1,
-  .item3 > h1,
-  .item4 > h1,
-  .item5 > h1,
-  .item6 > h1,
-  .item7 > h1,
-  .item8 > h1,
-  .item9 > h1,
-  .item10 > h1,
-  .item11 > h1,
-  .item12 > h1 {
+
+  .my-item1 > h1,
+  .my-item2 > h1,
+  .my-item3 > h1,
+  .my-item4 > h1,
+  .my-item5 > h1,
+  .my-item6 > h1,
+  .my-item7 > h1,
+  .my-item8 > h1,
+  .my-item9 > h1,
+  .my-item10 > h1,
+  .my-item11 > h1,
+  .my-item12 > h1 {
     background-color: #b4a570;
     font-family: Noto Sans KR;
     font-size: 16px;
@@ -195,6 +198,8 @@
     font-style: normal;
     font-stretch: normal;
     letter-spacing: -0.32px;
+    /* line-height: 2.0; */
+    padding: 4px;
     color: #ffffff;
   }
 
@@ -359,6 +364,7 @@
   }
   
   .my-info > h1 {
+    margin-top: 40px;
     font-family: Playfair Display SC;
     font-size: 24px;
     font-weight: normal;
@@ -369,6 +375,7 @@
   }
 
   .my-info > h2 {
+    font-family: Noto Sans KR;
     margin-bottom: 24px;
     font-size: 21px;
     font-weight: 100;
@@ -456,54 +463,54 @@
   .product-container {
     display: grid;
     grid-template: 
-      'item1 item2 item3'
-      'item4 item5 item6'
-      'item7 item8 item9'
-      'item10 item11 item12';
+      'my-item1 my-item2 my-item3'
+      'my-item4 my-item5 my-item6'
+      'my-item7 my-item8 my-item9'
+      'my-item10 my-item11 my-item12';
     grid-auto-rows: 1fr;
     grid-auto-columns: 1fr;
     grid-gap: 16px;
   }
 
-  .item1,
-  .item1 > picture > img,
-  .item2,
-  .item2 > picture > img,
-  .item3,
-  .item3 > picture > img,
-  .item4,
-  .item4 > picture > img,
-  .item5,
-  .item5 > picture > img,
-  .item6,
-  .item6 > picture > img,
-  .item7,
-  .item7 > picture > img,
-  .item8,
-  .item8 > picture > img,
-  .item9,
-  .item9 > picture > img,
-  .item10,
-  .item10 > picture > img,
-  .item11,
-  .item11 > picture > img,
-  .item12,
-  .item12 > picture > img {
+  .my-item1,
+  .my-item1 > picture > img,
+  .my-item2,
+  .my-item2 > picture > img,
+  .my-item3,
+  .my-item3 > picture > img,
+  .my-item4,
+  .my-item4 > picture > img,
+  .my-item5,
+  .my-item5 > picture > img,
+  .my-item6,
+  .my-item6 > picture > img,
+  .my-item7,
+  .my-item7 > picture > img,
+  .my-item8,
+  .my-item8 > picture > img,
+  .my-item9,
+  .my-item9 > picture > img,
+  .my-item10,
+  .my-item10 > picture > img,
+  .my-item11,
+  .my-item11 > picture > img,
+  .my-item12,
+  .my-item12 > picture > img {
     border-radius: 25px 25px 0px 0px;
   }
 
-  .item1 > h1,
-  .item2 > h1,
-  .item3 > h1,
-  .item4 > h1,
-  .item5 > h1,
-  .item6 > h1,
-  .item7 > h1,
-  .item8 > h1,
-  .item9 > h1,
-  .item10 > h1,
-  .item11 > h1,
-  .item12 > h1 {
+  .my-item1 > h1,
+  .my-item2 > h1,
+  .my-item3 > h1,
+  .my-item4 > h1,
+  .my-item5 > h1,
+  .my-item6 > h1,
+  .my-item7 > h1,
+  .my-item8 > h1,
+  .my-item9 > h1,
+  .my-item10 > h1,
+  .my-item11 > h1,
+  .my-item12 > h1 {
     background-color: #b4a570;
     font-family: Noto Sans KR;
     font-size: 16px;
@@ -512,6 +519,7 @@
     font-stretch: normal;
     letter-spacing: -0.32px;
     color: #ffffff;
+    padding: 4px;
   }
 
   .service {
@@ -671,6 +679,7 @@
   }
 
   .my-info > h2 {
+    font-family: Noto Sans KR;
     margin-bottom: 12px;
     font-size: 14px;
     font-weight: 100;
@@ -757,53 +766,53 @@
   .product-container {
     display: grid;
     grid-template: 
-      'item1 item2 item3'
-      'item4 item5 item6'
-      'item7 item8 item9'
-      'item10 item11 item12';
+      'my-item1 my-item2 my-item3'
+      'my-item4 my-item5 my-item6'
+      'my-item7 my-item8 my-item9'
+      'my-item10 my-item11 my-item12';
     grid-auto-rows: 1fr;
     grid-auto-columns: 1fr;
     grid-gap: 16px;
   }
-  .item1,
-  .item1 > picture > img,
-  .item2,
-  .item2 > picture > img,
-  .item3,
-  .item3 > picture > img,
-  .item4,
-  .item4 > picture > img,
-  .item5,
-  .item5 > picture > img,
-  .item6,
-  .item6 > picture > img,
-  .item7,
-  .item7 > picture > img,
-  .item8,
-  .item8 > picture > img,
-  .item9,
-  .item9 > picture > img,
-  .item10,
-  .item10 > picture > img,
-  .item11,
-  .item11 > picture > img,
-  .item12,
-  .item12 > picture > img {
+  .my-item1,
+  .my-item1 > picture > img,
+  .my-item2,
+  .my-item2 > picture > img,
+  .my-item3,
+  .my-item3 > picture > img,
+  .my-item4,
+  .my-item4 > picture > img,
+  .my-item5,
+  .my-item5 > picture > img,
+  .my-item6,
+  .my-item6 > picture > img,
+  .my-item7,
+  .my-item7 > picture > img,
+  .my-item8,
+  .my-item8 > picture > img,
+  .my-item9,
+  .my-item9 > picture > img,
+  .my-item10,
+  .my-item10 > picture > img,
+  .my-item11,
+  .my-item11 > picture > img,
+  .my-item12,
+  .my-item12 > picture > img {
     border-radius: 25px 25px 0px 0px;
   }
 
-  .item1 > h1,
-  .item2 > h1,
-  .item3 > h1,
-  .item4 > h1,
-  .item5 > h1,
-  .item6 > h1,
-  .item7 > h1,
-  .item8 > h1,
-  .item9 > h1,
-  .item10 > h1,
-  .item11 > h1,
-  .item12 > h1 {
+  .my-item1 > h1,
+  .my-item2 > h1,
+  .my-item3 > h1,
+  .my-item4 > h1,
+  .my-item5 > h1,
+  .my-item6 > h1,
+  .my-item7 > h1,
+  .my-item8 > h1,
+  .my-item9 > h1,
+  .my-item10 > h1,
+  .my-item11 > h1,
+  .my-item12 > h1 {
     background-color: #b4a570;
     font-family: Noto Sans KR;
     font-size: 9px;
@@ -812,6 +821,7 @@
     font-stretch: normal;
     letter-spacing: -0.32px;
     color: #ffffff;
+    padding: 4px;
   }
 
   .service {
@@ -873,6 +883,7 @@
 
   .right-item1,
   .left-item2 {
+    display: block;
     /* border: 1px solid black; */
     text-align: center;
     margin: auto;

@@ -14,6 +14,30 @@ const Garland = 1;
 const Background = 2;
 const Invitation = 3;
 
+const DrawInvitation1 = () => (
+  <div>
+    <h3>
+      포토부스 티켓은 하객분들이 포토부스를 자유롭게 이용할 수 있는 티켓입니다. 티켓을 보유하고 있는 하객분들만 포토부스를 이용 할 수 있기 때문에 다른 결혼식의 하객분들과의 혼선을 방지 할 수 있습니다.
+      <br />
+      <br />
+      하객분들의 원활한 포토부스 참여를 유도 할 수 있습니다.
+    </h3>
+  </div>
+);
+
+function DrawInvitationInfo(key) {
+  let body = 'hello';
+  
+  if (key == 0) {
+    body = DrawInvitation1();
+  } 
+  return (
+    <div className="myinfo">
+      { body }
+    </div>
+  );
+}
+
 const Drawgarland3 = () => (
   <div>
     <h3>
@@ -99,7 +123,7 @@ const DrawGarland = ({ media }) => {
           <div className={section.className}>
             <picture>
               <img
-                className="mainBannerImage"
+                className="itemImage"
                 src={require(`../static/images/${media}/Customize/${section.srcImg}.png`)}
                 alt={section.value}
               />
@@ -118,46 +142,32 @@ const DrawGarland = ({ media }) => {
 const DrawInvitation = ({ media }) => {
   const sections = [
     {
-      name: 'SNOWY PURE WHITE',
-      name_kor: '스누위 퓨어 화이트',
+      name: 'PHOTO-BOOTH TICKET',
+      name_kor: '포토부스 티켓',
       className: 'item1',
-      srcImg: 'photoTemplate1',
+      srcImg: 'boothTicket',
       info: '0',
-    },
-    {
-      name: 'ALL WELCOMING BLACK',
-      name_kor: '올 웰커밍 블랙',
-      className: 'item2',
-      srcImg: 'photoTemplate2',
-      info: '1',
-    },
-    {
-      name: 'BLOOM BLOOM PINK',
-      name_kor: '블룸블룸 블루',
-      className: 'item3',
-      srcImg: 'photoTemplate3',
-      info: '2',
     },
   ];
   return (
     <div>
       <div className="wedding">
-        <h1>PHOTO TEMPLATE</h1>
-        <h2>포토템플릿</h2>
+        <h1>PHOTO-BOOTH TICKET</h1>
+        <h2>포토부스 티켓</h2>
       </div>
       <div className="grid-container">
         {sections.map(section => (
           <div className={section.className}>
             <picture>
               <img
-                className="mainBannerImage"
+                className="itemImage"
                 src={require(`../static/images/${media}/Customize/${section.srcImg}.png`)}
                 alt={section.value}
               />
             </picture>
             <h1>{section.name}</h1>
             <h2>{section.name_kor}</h2>
-            {DrawBackgroundInfo(`${section.info}`)}
+            {DrawInvitationInfo(`${section.info}`)}
             {/* hello */}
           </div>
         ))}
@@ -172,6 +182,55 @@ const DrawInvitation = ({ media }) => {
 //   </div>
 // );
 
+const DrawPhoto3 = () => (
+  <div>
+    <h3>
+    신랑신부님의 결혼을 축하하는 하객들의 마음이 모여 핑크빛 꽃들을 피워냈습니다.
+    <br/>
+    <br/>
+    이런 하객분들에게 은은하고 예쁜 블룸블룸 핑크로 감사함을 표현하세요! 
+    </h3>
+  </div>
+);
+
+const DrawPhoto2 = () => (
+  <div>
+    <h3>
+    검정색은 모든 빛을 받아들입니다.
+    <br/>
+    <br/>
+    올 웰커밍 블랙 템플릿 또한 모든 하객분들을 맞이하는마음을 함께 합니다. 고급스러운 블랙으로 하객의 즐거움을 생각하는 신랑 신부님의 마음을 전달하세요!
+    </h3>
+  </div>
+);
+
+const DrawPhoto1 = () => (
+  <div>
+    <h3>
+    스노위 퓨어 화이트는 앞으로 신랑신부님이 함께 나아갈 드넓은 설원과도 같습니다.
+    <br/>
+    <br/>
+    하객분들은 그 설원에 자신들의 발자국을 남깁니다. 신랑신부님의 멋진 결혼생활의 시작을 축복하러 온 하객분들에게 추억하고 싶은 마음을 전달하세요!
+    </h3>
+  </div>
+);
+
+function DrawPhotoInfo(key) {
+  let body = 'hello';
+  
+  if (key == 0) {
+    body = DrawPhoto1();
+  } else if (key == 1) {
+    body = DrawPhoto2();
+  } else if (key == 2) {
+    body = DrawPhoto3();
+  } 
+  return (
+    <div className="myinfo">
+      { body }
+    </div>
+  );
+}
 const DrawPhtoTemplate = ({ media }) => {
   const sections = [
     {
@@ -207,14 +266,14 @@ const DrawPhtoTemplate = ({ media }) => {
           <div className={section.className}>
             <picture>
               <img
-                className="mainBannerImage"
+                className="itemImage"
                 src={require(`../static/images/${media}/Customize/${section.srcImg}.png`)}
                 alt={section.value}
               />
             </picture>
             <h1>{section.name}</h1>
             <h2>{section.name_kor}</h2>
-            {DrawBackgroundInfo(`${section.info}`)}
+            {DrawPhotoInfo(`${section.info}`)}
             {/* hello */}
           </div>
         ))}
@@ -294,7 +353,6 @@ const pureWhite = () => (
   </div>
 );
 
-
 function DrawBackgroundInfo(key) {
   let body = 'hello';
   
@@ -338,7 +396,7 @@ const DrawBackground = ({ media }) => {
       info: '2',
     },
     {
-      name: 'WEDDI LACE',
+      name: 'WEDDING LACE',
       name_kor: '웨딩 레이스',
       className: 'item4',
       srcImg: 'background4',
@@ -347,7 +405,7 @@ const DrawBackground = ({ media }) => {
   ];
   return (
     <div>
-      <div className="wedding">
+      <div className="wedding2">
         <h1>BACKGROUND</h1>
         <h2>백그라운드</h2>
       </div>
@@ -356,7 +414,7 @@ const DrawBackground = ({ media }) => {
           <div className={section.className}>
             <picture>
               <img
-                className="mainBannerImage"
+                className="itemImage"
                 src={require(`../static/images/${media}/Customize/${section.srcImg}.png`)}
                 alt={section.value}
               />
@@ -400,17 +458,17 @@ const DrawSections = ({ info, media, onChangeInfo }) => {
       // srcImg: 'mainBanner',
     },
     {
-      name: 'INVITATION',
-      name_kor: '청첩장',
+      name: 'PHOTO-BOOTH TICKET',
+      name_kor: '포토부스 티켓',
       className: 'item4',
       value: Invitation,
-      srcImg: 'photoTemplate',
+      srcImg: 'boothTicket',
       // srcImg: 'mainBanner',
     },
   ];
   return (
     <div className="tmp">
-      <div className="wedding">
+      <div className="wedding2">
         <h1>CUSTOMIZING</h1>
         <h2>커스터마이징</h2>
       </div>
@@ -422,7 +480,7 @@ const DrawSections = ({ info, media, onChangeInfo }) => {
               {/* <source media="(max-width: 1280px)" srcSet={tmp} /> */}
               {/* <source media="(min-width: 1280px)" srcSet={tmp} /> */}
               <img
-                className="mainBannerImage"
+                className="itemImage"
                 onClick={onChangeInfo}
                 src={require(`../static/images/${media}/Customize/${section.srcImg}.png`)}
                 // src={require(`../static/images/${media}/Customize/photoTemplate.png`)}

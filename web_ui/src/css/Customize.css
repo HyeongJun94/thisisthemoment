@@ -3,7 +3,16 @@
   width: 100%;
   margin: auto;
   /* border: 1px solid black; */
-  /* margin-bottom: 0px; */
+  margin-bottom: 0px;
+  /* border-radius: 0%; */
+}
+
+.itemImage {
+  display: block;
+  width: 100%;
+  margin: auto;
+  /* border: 1px solid black; */
+  /* border-bottom: none; */
 }
 
 .root * {
@@ -25,15 +34,15 @@
     /* border: 1px solid black; */
   }
 
-  .wedding {
+  .wedding2 {
     display: block;
-    margin: 80px auto 40px auto;
+    /* margin: 80px auto 40px auto; */
     padding: 0px;
     /* border: 1px solid black; */
   }
 
-  .wedding > h1 {
-    margin-top: 0px;
+  .wedding2 > h1 {
+    margin-top: 80px;
     font-family: Playfair Display SC;
     font-size: 36px;
     font-weight: normal;
@@ -45,7 +54,7 @@
     color: #b4a570;
   }
 
-  .wedding > h2 {
+  .wedding2 > h2 {
     font-family: Noto Sans KR;
     font-size: 24px;
     font-weight: 100;
@@ -55,26 +64,33 @@
     letter-spacing: -0.48px;
     text-align: center;
     color: #707070;
+    margin-bottom: 40px;
   }
   
   .grid-container {
     display: grid;
     margin-top: 40px;
+    /* border: 1px solid black; */
     /* margin-bottom: 120px; */
     grid-template: 
      'item1 item2 item3 item4';
+    justify-content: center;
+    /* grid-auto-columns: 1fr 1fr 1fr 1fr; */
     grid-auto-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 40px;
   }
 
 
   .grid-container > div > h1 {
-    font-family: NotoSans;
+    border: 1px solid #707070;
+    border-bottom: none;
+    padding-top: 8px;
+    font-family: Noto Sans;
     font-size: 18px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: 2.22;
+    line-height: 0.8;
     letter-spacing: -0.54px;
     text-align: center;
     color: #707070;
@@ -82,24 +98,30 @@
   }
 
   .grid-container > div > h2 {
+    border: 1px solid #707070;
+    border-top: none;
+    padding-bottom: 8px;
     font-family: Noto Sans KR;
     font-size: 16px;
     font-weight: 100;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1;
+    line-height: 1.4;
     letter-spacing: -0.48px;
     text-align: center;
     color: #707070;
     margin-bottom: 14px;
   }
 
-  .item1 {
-    grid-area: item1;
+  .item1:hover,
+  .item2:hover,
+  .item3:hover,
+  .item4:hover {
+    opacity: 0.5;
   }
 
-  .item1 > h2 {
-    font-size: 10px;
+  .item1 {
+    grid-area: item1;
   }
   .item2 {
     grid-area: item2;
@@ -109,6 +131,20 @@
   }
   .item4 {
     grid-area: item4;
+  }
+
+  .item1,
+  .item2,
+  .item3,
+  .item4 {
+    border-radius: 0%;
+  }
+
+  .item1 > picture > img,
+  .item2 > picture > img,
+  .item3 > picture > img,
+  .item4 > picture > img {
+    border-radius: 0%;
   }
 
   .myinfo > div > h3 {
@@ -132,7 +168,7 @@
 
 @media (max-width: 1280px) {
 
-  .wedding > h1 {
+  .wedding2 > h1 {
     margin-top: 40px;
     font-family: Playfair Display SC;
     font-size: 24px;
@@ -145,7 +181,7 @@
     color: #b4a570;
   }
 
-  .wedding > h2 {
+  .wedding2 > h2 {
     margin-bottom: 24px;
     font-family: Noto Sans KR;
     font-size: 21px;
@@ -176,12 +212,15 @@
 
 
   .grid-container > div > h1 {
+    border: 1px solid #707070;
+    border-bottom: none;
+    padding-top: 8px;
     font-family: Noto Sans;
     font-size: 18px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: 2.22;
+    line-height: 0.8;
     letter-spacing: -0.54px;
     text-align: center;
     color: #707070;
@@ -189,6 +228,9 @@
   }
 
   .grid-container > div > h2 {
+    border: 1px solid #707070;
+    border-top: none;
+    padding-bottom: 8px;
     font-family: Noto Sans KR;
     font-size: 16px;
     font-weight: 100;
@@ -218,6 +260,20 @@
     grid-area: item4;
   }
 
+  .item1,
+  .item2,
+  .item3,
+  .item4 {
+    border-radius: 0%;
+  }
+
+  .item1 > picture > img,
+  .item2 > picture > img,
+  .item3 > picture > img,
+  .item4 > picture > img {
+    border-radius: 0%;
+  }
+
   .myinfo > div > h3 {
     /* display: block; */
     font-family: NotoSansCJKKR;
@@ -238,7 +294,7 @@
 
 @media (max-width: 720px) {
 
-  .wedding > h1 {
+  .wedding2 > h1 {
     margin-top: 20px;
     font-family: Playfair Display SC;
     font-size: 16px;
@@ -251,7 +307,7 @@
     color: #b4a570;
   }
 
-  .wedding > h2 {
+  .wedding2 > h2 {
     margin-bottom: 8px;
     font-family: Noto Sans KR;
     font-size: 14px;
@@ -276,18 +332,22 @@
     grid-auto-columns: 45% 45%;
     grid-auto-rows: 1fr 1fr;
     justify-content: center;
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
+    grid-column-gap: 12px;
+    grid-row-gap: 6px;
   }
 
 
   .grid-container > div > h1 {
+    border: 0.01em solid #707070;
+    /* border: 10px solid black; */
+    border-bottom: none;
+    padding-top: 8px;
     font-family: Noto Sans;
-    font-size: 18px;
+    font-size: 10px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.4;
+    line-height: 0.4;
     letter-spacing: -0.54px;
     text-align: center;
     color: #707070;
@@ -295,8 +355,11 @@
   }
 
   .grid-container > div > h2 {
+    border: 0.01em solid #707070;
+    border-top: none;
+    padding-top: 4px;
     font-family: Noto Sans KR;
-    font-size: 16px;
+    font-size: 9px;
     font-weight: 100;
     font-style: normal;
     font-stretch: normal;
@@ -304,7 +367,7 @@
     letter-spacing: -0.48px;
     text-align: center;
     color: #707070;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
 
   .item1 {
@@ -322,6 +385,20 @@
   }
   .item4 {
     grid-area: item4;
+  }
+
+  .item1,
+  .item2,
+  .item3,
+  .item4 {
+    border-radius: 0%;
+  }
+
+  .item1 > picture > img,
+  .item2 > picture > img,
+  .item3 > picture > img,
+  .item4 > picture > img {
+    border-radius: 0%;
   }
 
   .myinfo > div > h3 {
